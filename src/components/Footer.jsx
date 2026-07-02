@@ -27,30 +27,17 @@ export default function Footer() {
           
           {/* ── Logo ── */}
           <div className="flex flex-col gap-3">
-            <a href="#hero" className="flex items-center gap-2.5 group" aria-label="Verdaez home">
-              <svg
-                className="h-8 w-8 text-surface-tint transition-transform duration-300 group-hover:scale-110"
-                viewBox="0 0 32 32"
-                fill="none"
-                aria-hidden="true"
-              >
-                <path
-                  d="M16 2C16 2 6 10 6 20c0 5.523 4.477 10 10 10s10-4.477 10-10C26 10 16 2 16 2Z"
-                  fill="currentColor"
-                  opacity="0.1"
-                />
-                <path
-                  d="M16 2C16 2 6 10 6 20c0 5.523 4.477 10 10 10s10-4.477 10-10C26 10 16 2 16 2Z"
-                  stroke="currentColor"
-                  strokeWidth="1.8"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-                <path d="M16 30V14" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-              </svg>
-              <span className="font-heading text-2xl font-normal tracking-tight text-primary select-none">
-                Verdaez
-              </span>
+            <a href="#hero" className="flex items-center gap-3 group" aria-label="Ratnanjali Bioenergy home">
+              <img
+                src="/images/logo-icon.png"
+                alt="Ratnanjali Bioenergy Icon"
+                className="h-11 w-auto transition-transform duration-300 group-hover:scale-105"
+              />
+              <img
+                src="/images/logo-text.png"
+                alt="Ratnanjali Bioenergy"
+                className="h-6.5 w-auto"
+              />
             </a>
           </div>
 
@@ -166,7 +153,7 @@ export default function Footer() {
         {/* ─── Bottom copyright ─── */}
         <div className="mt-14 pt-8 border-t border-outline-variant/35 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-xs text-on-surface-variant font-body">
-            © {new Date().getFullYear()} Verdaez Technologies
+            © {new Date().getFullYear()} Ratnanjali Bioenergy Technologies
           </p>
           <div className="flex gap-4 text-xs text-on-surface-variant font-body">
             <a href="#" className="hover:text-primary transition-colors">Privacy</a>

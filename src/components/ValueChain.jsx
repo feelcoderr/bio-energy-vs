@@ -207,7 +207,7 @@ export default function ValueChain() {
               ${isVisible ? 'opacity-100 animate-fade-in-up delay-200' : ''}
             `}
           >
-            Verdaez bypasses commodity market price sensitivity. By structuring operations 
+            Ratnanjali Bioenergy bypasses commodity market price sensitivity. By structuring operations 
             into three cascading technology tiers, we capture immediate revenue streams 
             to fund proprietary high-margin, carbon-negative product refinement.
           </p>

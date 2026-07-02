@@ -89,40 +89,22 @@ export default function Navbar() {
           aria-label="Main navigation"
           className="flex h-full w-full items-center justify-between px-6 sm:px-8"
         >
-          {/* ── Logo ── */}
+          {/* ── Logo ──────────────────────────────────── */}
           <a
             href="#hero"
-            className="flex items-center gap-2 group"
-            aria-label="Verdaez — go to homepage"
+            className="flex items-center gap-3 group"
+            aria-label="Ratnanjali Bioenergy — go to homepage"
           >
-            <svg
-              className="h-6 w-6 text-primary transition-transform duration-300 group-hover:scale-115"
-              viewBox="0 0 32 32"
-              fill="none"
-              aria-hidden="true"
-            >
-              <path
-                d="M16 2C16 2 6 10 6 20c0 5.523 4.477 10 10 10s10-4.477 10-10C26 10 16 2 16 2Z"
-                fill="currentColor"
-                opacity="0.1"
-              />
-              <path
-                d="M16 2C16 2 6 10 6 20c0 5.523 4.477 10 10 10s10-4.477 10-10C26 10 16 2 16 2Z"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-              <path
-                d="M16 30V14"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-              />
-            </svg>
-            <span className="font-heading text-lg font-bold tracking-tight text-primary select-none">
-              Verdaez
-            </span>
+            <img
+              src="/images/logo-icon.png"
+              alt="Ratnanjali Bioenergy Icon"
+              className="h-11 w-auto transition-transform duration-300 group-hover:scale-105"
+            />
+            <img
+              src="/images/logo-text.png"
+              alt="Ratnanjali Bioenergy"
+              className="h-6.5 w-auto hidden sm:block"
+            />
           </a>
 
           {/* ── Desktop links (Editorial layout) ── */}
@@ -338,7 +320,7 @@ export default function Navbar() {
 
         <div className="border-t border-outline-variant/30 px-8 py-5 bg-surface-container-low">
           <p className="text-xs text-on-surface-variant text-center select-none font-body">
-            © {new Date().getFullYear()} Verdaez Bioenergy
+            © {new Date().getFullYear()} Ratnanjali Bioenergy
           </p>
         </div>
       </aside>

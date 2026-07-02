@@ -107,7 +107,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen pt-20 overflow-hidden bg-background"
+      className="relative min-h-screen pt-20 overflow-hidden bg-white"
     >
       {/* ===== Full Background Image ===== */}
       <div className="absolute inset-0">
@@ -115,8 +115,10 @@ export default function Hero() {
           src="/images/hero-bg-new.png"
           alt=""
           aria-hidden="true"
-          className="w-full h-full object-cover object-left"
+          className="w-full h-full object-cover object-center lg:object-right-bottom"
         />
+        {/* Subtle color contrast mask to ensure text legibility on all viewports, especially mobile */}
+        <div className="absolute inset-0 bg-white/40 lg:bg-transparent pointer-events-none" />
       </div>
 
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
