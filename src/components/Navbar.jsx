@@ -76,29 +76,27 @@ export default function Navbar() {
 
   return (
     <>
-      {/* ── Navbar ──────────────────────────────────────── */}
+      {/* ── Island Floating Navbar ───────────────────────── */}
       <header
         ref={headerRef}
-        className={`fixed top-0 inset-x-0 z-50 h-[76px] transition-all duration-500 ${
+        className={`fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[92%] max-w-7xl h-16 rounded-full border transition-all duration-500 ${
           scrolled
-            ? 'bg-verdaez-900/90 backdrop-blur-md border-b border-white/10 shadow-lg shadow-black/10'
-            : 'bg-white/80 backdrop-blur-sm border-b border-transparent'
+            ? 'bg-surface-container/80 backdrop-blur-md border-outline-variant/30 shadow-ambient'
+            : 'bg-surface/70 backdrop-blur-sm border-transparent'
         }`}
       >
         <nav
           aria-label="Main navigation"
-          className="mx-auto flex h-full max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8"
+          className="flex h-full w-full items-center justify-between px-6 sm:px-8"
         >
-          {/* ── Logo ──────────────────────────────────── */}
+          {/* ── Logo ── */}
           <a
             href="#hero"
-            className="flex items-center gap-2.5 group"
+            className="flex items-center gap-2 group"
             aria-label="Verdaez — go to homepage"
           >
             <svg
-              className={`h-8 w-8 transition-transform duration-300 group-hover:scale-110 ${
-                scrolled ? 'text-gold-400' : 'text-verdaez-700'
-              }`}
+              className="h-6 w-6 text-primary transition-transform duration-300 group-hover:scale-115"
               viewBox="0 0 32 32"
               fill="none"
               aria-hidden="true"
@@ -106,31 +104,29 @@ export default function Navbar() {
               <path
                 d="M16 2C16 2 6 10 6 20c0 5.523 4.477 10 10 10s10-4.477 10-10C26 10 16 2 16 2Z"
                 fill="currentColor"
-                opacity="0.15"
+                opacity="0.1"
               />
               <path
                 d="M16 2C16 2 6 10 6 20c0 5.523 4.477 10 10 10s10-4.477 10-10C26 10 16 2 16 2Z"
                 stroke="currentColor"
-                strokeWidth="1.8"
+                strokeWidth="2"
                 strokeLinecap="round"
                 strokeLinejoin="round"
               />
               <path
                 d="M16 30V14"
                 stroke="currentColor"
-                strokeWidth="1.8"
+                strokeWidth="2"
                 strokeLinecap="round"
               />
             </svg>
-            <span className={`font-heading text-xl font-bold tracking-tight select-none transition-colors duration-300 ${
-              scrolled ? 'text-white' : 'text-verdaez-800'
-            }`}>
+            <span className="font-heading text-lg font-bold tracking-tight text-primary select-none">
               Verdaez
             </span>
           </a>
 
-          {/* ── Desktop links ─────────────────────────── */}
-          <ul className="hidden xl:flex items-center gap-1.5 h-full" role="list">
+          {/* ── Desktop links (Editorial layout) ── */}
+          <ul className="hidden xl:flex items-center gap-1 h-full" role="list">
             {navStructure.map((item, idx) => {
               const hasDropdown = !!item.dropdown;
               const isOpen = activeDropdown === idx;
@@ -146,16 +142,14 @@ export default function Navbar() {
                     <>
                       <button
                         type="button"
-                        className={`flex items-center gap-1 px-4 py-2 text-sm font-medium transition-all duration-300 rounded-full hover:bg-white/5 ${
-                          scrolled
-                            ? 'text-gray-200 hover:text-white'
-                            : 'text-gray-700 hover:text-verdaez-700'
-                        } ${isOpen ? 'bg-white/10 text-white' : ''}`}
+                        className={`flex items-center gap-1.5 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-on-surface hover:text-primary transition-all duration-300 rounded-full hover:bg-on-surface/5 ${
+                          isOpen ? 'bg-on-surface/5 text-primary' : ''
+                        }`}
                         aria-expanded={isOpen}
                       >
                         {item.label}
                         <svg
-                          className={`w-4 h-4 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}
+                          className={`w-3.5 h-3.5 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}
                           fill="none"
                           viewBox="0 0 24 24"
                           stroke="currentColor"
@@ -165,26 +159,26 @@ export default function Navbar() {
                         </svg>
                       </button>
 
-                      {/* Dropdown Panel */}
+                      {/* Dropdown Panel - Editorial style */}
                       <div
-                        className={`absolute top-[72px] left-1/2 -translate-x-1/2 w-80 bg-verdaez-900 border border-white/10 rounded-2xl shadow-xl p-4 transition-all duration-300 origin-top ${
+                        className={`absolute top-[56px] left-1/2 -translate-x-1/2 w-80 bg-surface-container-lowest border border-outline-variant/40 rounded-2xl shadow-ambient p-3 transition-all duration-300 origin-top ${
                           isOpen
                             ? 'opacity-100 scale-100 pointer-events-auto'
                             : 'opacity-0 scale-95 pointer-events-none'
                         }`}
                       >
-                        <ul className="space-y-1">
+                        <ul className="space-y-0.5">
                           {item.dropdown.map((subItem) => (
                             <li key={subItem.href}>
                               <a
                                 href={subItem.href}
-                                className="block p-3 rounded-xl hover:bg-white/5 transition-colors group"
+                                className="block p-3 rounded-xl hover:bg-surface-container-low transition-colors group"
                                 onClick={() => setActiveDropdown(null)}
                               >
-                                <p className="text-sm font-semibold text-white group-hover:text-gold-300 transition-colors">
+                                <p className="text-sm font-semibold text-on-surface group-hover:text-primary transition-colors">
                                   {subItem.label}
                                 </p>
-                                <p className="text-xs text-gray-400 mt-1 leading-snug">
+                                <p className="text-xs text-on-surface-variant mt-0.5 leading-snug">
                                   {subItem.desc}
                                 </p>
                               </a>
@@ -196,11 +190,7 @@ export default function Navbar() {
                   ) : (
                     <a
                       href={item.href}
-                      className={`px-4 py-2 text-sm font-medium transition-all duration-300 rounded-full hover:bg-white/5 ${
-                        scrolled
-                          ? 'text-gray-200 hover:text-white'
-                          : 'text-gray-700 hover:text-verdaez-700'
-                      }`}
+                      className="px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-on-surface hover:text-primary transition-all duration-300 rounded-full hover:bg-on-surface/5"
                     >
                       {item.label}
                     </a>
@@ -210,15 +200,11 @@ export default function Navbar() {
             })}
           </ul>
 
-          {/* ── Desktop CTA + Mobile hamburger ────────── */}
+          {/* ── Desktop CTA / Mobile hamburger ── */}
           <div className="flex items-center gap-4">
             <a
               href="#contact"
-              className={`btn-primary hidden xl:inline-flex !py-2.5 !px-6 text-sm ${
-                scrolled
-                  ? 'bg-gold-400 text-verdaez-900 hover:bg-gold-300 hover:shadow-gold-400/20'
-                  : 'bg-verdaez-700 text-white hover:bg-verdaez-600'
-              }`}
+              className="btn-primary hidden xl:inline-flex !py-2 !px-5 text-xs uppercase tracking-widest"
             >
               Contact Us
             </a>
@@ -227,9 +213,7 @@ export default function Navbar() {
             <button
               type="button"
               onClick={() => setMobileOpen((v) => !v)}
-              className={`xl:hidden relative z-50 flex h-10 w-10 items-center justify-center rounded-lg transition-colors hover:bg-white/10 focus-visible:outline-2 focus-visible:outline-offset-2 ${
-                scrolled ? 'text-white' : 'text-gray-700'
-              }`}
+              className="xl:hidden relative z-50 flex h-10 w-10 items-center justify-center rounded-full text-on-surface hover:bg-on-surface/5 transition-colors focus-visible:outline-2"
               aria-expanded={mobileOpen}
               aria-controls="mobile-menu"
               aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
@@ -257,31 +241,29 @@ export default function Navbar() {
         </nav>
       </header>
 
-      {/* ── Mobile overlay ──────────────────────────────── */}
+      {/* ── Mobile Overlay ── */}
       <div
-        className={`fixed inset-0 z-40 bg-black/60 backdrop-blur-sm transition-opacity duration-300 xl:hidden ${
+        className={`fixed inset-0 z-40 bg-inverse-surface/40 backdrop-blur-sm transition-opacity duration-300 xl:hidden ${
           mobileOpen ? 'opacity-100' : 'pointer-events-none opacity-0'
         }`}
         aria-hidden="true"
         onClick={closeMobile}
       />
 
-      {/* ── Mobile slide-in drawer ──────────────────────── */}
+      {/* ── Mobile slide-in drawer ── */}
       <aside
         id="mobile-menu"
         role="dialog"
         aria-modal="true"
         aria-label="Mobile navigation"
-        className={`fixed top-0 right-0 z-40 flex h-full w-[320px] max-w-[85vw] flex-col bg-verdaez-900 text-white shadow-2xl transition-transform duration-300 ease-in-out xl:hidden ${
+        className={`fixed top-0 right-0 z-40 flex h-full w-[300px] max-w-[85vw] flex-col bg-surface border-l border-outline-variant/35 shadow-ambient-lg transition-transform duration-300 ease-in-out xl:hidden ${
           mobileOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
-        {/* Drawer header spacer (same height as navbar) */}
-        <div className="h-[76px] shrink-0 border-b border-white/10 flex items-center px-6">
-          <span className="font-heading text-lg font-bold text-white">Menu Navigation</span>
+        <div className="h-20 shrink-0 border-b border-outline-variant/30 flex items-center px-6">
+          <span className="font-heading text-lg font-bold text-primary">Menu</span>
         </div>
 
-        {/* Links */}
         <nav aria-label="Mobile navigation" className="flex-1 overflow-y-auto px-4 py-6">
           <ul className="flex flex-col gap-2" role="list">
             {navStructure.map((item) => {
@@ -295,11 +277,11 @@ export default function Navbar() {
                       <button
                         type="button"
                         onClick={() => toggleMobileAccordion(item.label)}
-                        className="flex w-full items-center justify-between rounded-xl px-4 py-3 text-base font-medium text-gray-200 transition-colors hover:bg-white/5 hover:text-white"
+                        className="flex w-full items-center justify-between rounded-xl px-4 py-3 text-[14px] font-semibold uppercase tracking-widest text-on-surface hover:bg-surface-container-low"
                       >
                         {item.label}
                         <svg
-                          className={`w-5 h-5 transition-transform duration-300 ${isAccordionOpen ? 'rotate-180 text-gold-300' : 'text-gray-400'}`}
+                          className={`w-4 h-4 transition-transform duration-300 ${isAccordionOpen ? 'rotate-180 text-primary' : 'text-on-surface-variant'}`}
                           fill="none"
                           viewBox="0 0 24 24"
                           stroke="currentColor"
@@ -314,13 +296,13 @@ export default function Navbar() {
                           isAccordionOpen ? 'max-h-80 opacity-100 mt-1 pl-4' : 'max-h-0 opacity-0 pointer-events-none'
                         }`}
                       >
-                        <ul className="space-y-1 border-l border-white/10 pl-3">
+                        <ul className="space-y-1 border-l border-outline-variant/40 pl-3">
                           {item.dropdown.map((subItem) => (
                             <li key={subItem.href}>
                               <a
                                 href={subItem.href}
                                 onClick={closeMobile}
-                                className="block rounded-lg px-4 py-2 text-sm text-gray-300 hover:bg-white/5 hover:text-white transition-colors"
+                                className="block rounded-lg px-4 py-2 text-sm text-on-surface hover:bg-surface-container-low transition-colors"
                               >
                                 {subItem.label}
                               </a>
@@ -333,7 +315,7 @@ export default function Navbar() {
                     <a
                       href={item.href}
                       onClick={closeMobile}
-                      className="flex items-center rounded-xl px-4 py-3 text-base font-medium text-gray-200 transition-colors hover:bg-white/5 hover:text-white"
+                      className="flex items-center rounded-xl px-4 py-3 text-[14px] font-semibold uppercase tracking-widest text-on-surface hover:bg-surface-container-low"
                     >
                       {item.label}
                     </a>
@@ -343,21 +325,19 @@ export default function Navbar() {
             })}
           </ul>
 
-          {/* Mobile CTA */}
           <div className="mt-8 px-4">
             <a
               href="#contact"
               onClick={closeMobile}
-              className="btn-primary w-full justify-center text-center bg-gold-400 text-verdaez-900 hover:bg-gold-300"
+              className="btn-primary w-full justify-center text-center text-xs uppercase tracking-widest py-3"
             >
               Contact Us
             </a>
           </div>
         </nav>
 
-        {/* Drawer footer */}
-        <div className="border-t border-white/10 px-8 py-5 bg-verdaez-950/40">
-          <p className="text-xs text-gray-400 text-center select-none">
+        <div className="border-t border-outline-variant/30 px-8 py-5 bg-surface-container-low">
+          <p className="text-xs text-on-surface-variant text-center select-none font-body">
             © {new Date().getFullYear()} Verdaez Bioenergy
           </p>
         </div>

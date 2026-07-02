@@ -1,27 +1,70 @@
 @import "tailwindcss";
 
 @theme {
-  --color-verdaez-900: #0d1f16;
-  --color-verdaez-800: #142e1f;
-  --color-verdaez-700: #1a3d2a;
-  --color-verdaez-600: #234e36;
-  --color-verdaez-500: #2d6344;
-  --color-verdaez-400: #3a7d56;
-  --color-verdaez-300: #5a9e74;
-  --color-verdaez-200: #89c49e;
-  --color-verdaez-100: #c1e2cd;
-  --color-verdaez-50: #eaf5ef;
+  /* New Semantic Design Tokens (Refined Spruce/Eucalyptus Palette) */
+  --color-surface: #faf8f5;
+  --color-surface-dim: #d8dad5;
+  --color-surface-bright: #faf8f5;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #f4f5f0;
+  --color-surface-container: #edebeb;
+  --color-surface-container-high: #e6e6e0;
+  --color-surface-container-highest: #dfdfdb;
+  --color-on-surface: #181b19;
+  --color-on-surface-variant: #454a46;
+  --color-inverse-surface: #2d312e;
+  --color-inverse-on-surface: #f1f2ec;
+  --color-outline: #747a76;
+  --color-outline-variant: #c6ccc8;
+  --color-surface-tint: #4c6c54;
+  --color-primary: #0d2214;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #1b3523;
+  --color-on-primary-container: #83ab8e;
+  --color-inverse-primary: #afd4b9;
+  --color-secondary: #5a605c;
+  --color-on-secondary: #ffffff;
+  --color-secondary-container: #dee3df;
+  --color-on-secondary-container: #5e6460;
+  --color-tertiary: #0f1612;
+  --color-on-tertiary: #ffffff;
+  --color-tertiary-container: #212c25;
+  --color-on-tertiary-container: #88938c;
+  --color-error: #ba1a1a;
+  --color-on-error: #ffffff;
+  --color-background: #faf8f5;
+  --color-on-background: #181b19;
+  --color-surface-variant: #dfdfdb;
 
-  --color-gold-500: #c4a24e;
-  --color-gold-400: #d4b562;
-  --color-gold-300: #e0c97e;
+  /* Legacy aliases to maintain backward-compatibility with components */
+  --color-verdaez-950: #0d2214;
+  --color-verdaez-900: #0d2214;
+  --color-verdaez-800: #1b3523;
+  --color-verdaez-700: #324e3a;
+  --color-verdaez-600: #4c6c54;
+  --color-verdaez-500: #587d61;
+  --color-verdaez-400: #83ab8e;
+  --color-verdaez-300: #a7c5af;
+  --color-verdaez-200: #c1d6c8;
+  --color-verdaez-100: #dce7e0;
+  --color-verdaez-50: #f4f5f0;
 
-  --color-cream-50: #fdfcf8;
-  --color-cream-100: #f9f6ed;
-  --color-cream-200: #f2edde;
+  --color-gold-500: #d4b562;
+  --color-gold-400: #e0c97e;
+  --color-gold-300: #efeeeb;
 
-  --font-heading: 'Playfair Display', Georgia, serif;
-  --font-body: 'Inter', system-ui, sans-serif;
+  --color-cream-50: #fbf9f6;
+  --color-cream-100: #f5f3f0;
+  --color-cream-200: #efeeeb;
+
+  /* New Typographic Pairings */
+  --font-heading: 'Libre Caslon Text', Georgia, serif;
+  --font-body: 'Hanken Grotesk', system-ui, sans-serif;
+
+  /* Ambient Double Shadows */
+  --shadow-ambient-sm: 0 1px 2px rgba(27, 28, 26, 0.03), 0 4px 12px rgba(27, 28, 26, 0.05);
+  --shadow-ambient: 0 2px 4px rgba(27, 28, 26, 0.04), 0 12px 32px rgba(27, 28, 26, 0.08);
+  --shadow-ambient-lg: 0 4px 8px rgba(27, 28, 26, 0.05), 0 24px 64px rgba(27, 28, 26, 0.1);
 }
 
 @layer base {
@@ -37,40 +80,42 @@
 
   body {
     font-family: var(--font-body);
-    color: #1a1a1a;
-    background-color: #ffffff;
+    color: var(--color-on-background);
+    background-color: var(--color-background);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    line-height: 1.6;
   }
 
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
+    font-weight: 400; /* Editorial Style: serif headlines should never be bold */
   }
 }
 
 @layer components {
   .btn-primary {
-    @apply inline-flex items-center gap-2 px-7 py-3.5 bg-verdaez-700 text-white font-body font-semibold text-sm tracking-wide rounded-full transition-all duration-300 hover:bg-verdaez-600 hover:shadow-lg hover:shadow-verdaez-700/25 hover:-translate-y-0.5 active:translate-y-0;
+    @apply inline-flex items-center gap-2 px-7 py-3.5 bg-primary-container text-white font-body font-semibold text-sm tracking-wide rounded-full shadow-ambient-sm transition-all duration-300 hover:bg-primary hover:shadow-ambient hover:-translate-y-0.5 active:translate-y-0;
   }
 
   .btn-secondary {
-    @apply inline-flex items-center gap-2 px-7 py-3.5 border-2 border-verdaez-700 text-verdaez-700 font-body font-semibold text-sm tracking-wide rounded-full transition-all duration-300 hover:bg-verdaez-700 hover:text-white hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0;
+    @apply inline-flex items-center gap-2 px-7 py-3.5 border border-outline text-on-surface font-body font-semibold text-sm tracking-wide rounded-full bg-transparent transition-all duration-300 hover:bg-surface-tint/10 hover:shadow-ambient-sm hover:-translate-y-0.5 active:translate-y-0;
   }
 
   .section-heading {
-    @apply font-heading text-3xl md:text-4xl lg:text-[2.75rem] leading-tight text-verdaez-900 font-bold;
+    @apply font-heading text-3xl md:text-4xl lg:text-[2.75rem] leading-tight text-primary font-normal tracking-tight;
   }
 
   .section-description {
-    @apply font-body text-base md:text-lg text-gray-600 leading-relaxed max-w-2xl;
+    @apply font-body text-base md:text-lg text-on-surface-variant leading-relaxed max-w-2xl;
   }
 
   .glass-card {
-    @apply bg-white/80 backdrop-blur-sm border border-white/60 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-500;
+    @apply bg-surface-container/70 backdrop-blur-md border border-white/50 rounded-xl shadow-ambient-sm hover:shadow-ambient hover:-translate-y-1 transition-all duration-500;
   }
 
   .gradient-text {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-verdaez-700 to-verdaez-400;
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-surface-tint;
   }
 }
 

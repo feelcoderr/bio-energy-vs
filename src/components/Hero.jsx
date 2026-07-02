@@ -1,8 +1,8 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 
 const highlights = [
   {
-    label: 'Fuel Pellets',
+    label: "Fuel Pellets",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -26,7 +26,7 @@ const highlights = [
     ),
   },
   {
-    label: 'Biochar',
+    label: "Biochar",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -45,7 +45,7 @@ const highlights = [
     ),
   },
   {
-    label: 'Pyrolysis Oil',
+    label: "Pyrolysis Oil",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -64,7 +64,7 @@ const highlights = [
     ),
   },
   {
-    label: 'Carbon Materials',
+    label: "Carbon Materials",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -83,7 +83,7 @@ const highlights = [
     ),
   },
   {
-    label: 'Carbon Impact',
+    label: "Carbon Impact",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -107,24 +107,22 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen pt-20 overflow-hidden bg-white"
+      className="relative min-h-screen pt-20 overflow-hidden bg-background"
     >
       {/* ===== Full Background Image ===== */}
       <div className="absolute inset-0">
         <img
-          src="/images/hero-bg-final.jpg"
+          src="/images/hero-bg-new.png"
           alt=""
           aria-hidden="true"
-          className="w-full h-full object-cover object-right"
+          className="w-full h-full object-cover object-left"
         />
       </div>
 
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row items-center py-12 lg:py-20">
-
           {/* ===== Left Content ===== */}
           <div className="w-full lg:w-[45%] animate-fade-in-left">
-
             {/* Badge (Commented out because it is baked into the background image) */}
             {/* 
             <span className="inline-block bg-verdaez-100/90 text-verdaez-700 rounded-full px-4 py-1.5 text-xs font-semibold tracking-wider uppercase mb-6 backdrop-blur-sm">
@@ -132,15 +130,17 @@ export default function Hero() {
             </span>
             */}
 
-            {/* Heading */}
-            <h1 className="font-heading text-4xl md:text-5xl lg:text-[3.5rem] font-bold text-verdaez-900 leading-tight mb-6 mt-12">
-              Turning Biomass Waste into Bioenergy, Biochar{' '}
-              <span className="italic font-normal text-verdaez-600">&amp;</span>{' '}
+            {/* Heading - Editorial style: serif headlines should never be bold */}
+            <h1 className="font-heading text-4xl md:text-5xl lg:text-[3.5rem] font-normal tracking-tight text-primary leading-tight mb-6 mt-12">
+              Turning Biomass Waste into Bioenergy, Biochar{" "}
+              <span className="italic font-normal text-surface-tint">
+                &amp;
+              </span>{" "}
               Advanced Carbon Materials
             </h1>
 
             {/* Description */}
-            <p className="text-lg text-gray-700 leading-relaxed max-w-xl mb-8">
+            <p className="text-body-lg text-on-surface-variant leading-relaxed max-w-xl mb-8">
               A scalable biorefinery platform converting agricultural waste into
               high-value fuels, carbon products, and measurable climate impact —
               starting at 30&nbsp;TPD and scaling to 300&nbsp;TPD within five
@@ -158,7 +158,7 @@ export default function Hero() {
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
-                  strokeWidth="2"
+                  strokeWidth="2.0"
                   strokeLinecap="round"
                   strokeLinejoin="round"
                 >
@@ -166,7 +166,7 @@ export default function Hero() {
                   <polyline points="12 5 19 12 12 19" />
                 </svg>
               </a>
-              <a href="#partner" className="btn-secondary bg-white/50 backdrop-blur-sm">
+              <a href="#partner" className="btn-secondary">
                 Partner With Us
               </a>
             </div>
@@ -188,12 +188,11 @@ export default function Hero() {
             </div>
             */}
           </div>
-
         </div>
       </div>
 
       {/* Bottom gradient fade for smooth transition to next section */}
-      <div className="absolute bottom-0 left-0 right-0 h-12 bg-gradient-to-t from-white to-transparent pointer-events-none" />
+      <div className="absolute bottom-0 left-0 right-0 h-12 bg-gradient-to-t from-background to-transparent pointer-events-none" />
     </section>
   );
 }

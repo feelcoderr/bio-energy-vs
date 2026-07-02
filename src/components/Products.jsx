@@ -51,32 +51,34 @@ function ProductCard({ product, index, isVisible }) {
 
   return (
     <div
-      className={`group rounded-2xl overflow-hidden bg-white shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 ${
+      className={`group rounded-[24px] overflow-hidden bg-surface-container-lowest shadow-ambient-sm hover:shadow-ambient hover:-translate-y-1 transition-all duration-500 flex flex-col h-full ${
         isVisible ? `animate-fade-in-up ${delayClass}` : 'opacity-0'
       }`}
     >
       {/* Image Area */}
-      <div className="relative h-56 w-full overflow-hidden">
+      <div className="relative h-60 w-full overflow-hidden">
         <img
           src={product.image}
           alt={product.name}
-          className="h-56 w-full object-cover transition-transform duration-500 group-hover:scale-105"
+          className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-103"
         />
-        {/* Subtle gradient overlay at bottom */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent pointer-events-none" />
+        {/* Subtle dark gradient overlay at top for image depth */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-transparent pointer-events-none" />
+        {/* Editorial bottom-fade mask to integrate the image with the text area */}
+        <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-surface-container-lowest to-transparent pointer-events-none" />
       </div>
 
-      {/* Content */}
-      <div className="p-6">
-        <h3 className="font-heading text-xl font-bold text-verdaez-900">
+      {/* Content Area - 32px (p-8) padding as per design spec */}
+      <div className="p-8 flex flex-col flex-grow">
+        <h3 className="font-heading text-xl font-normal text-primary">
           {product.name}
         </h3>
-        <p className="text-sm text-gray-500 mt-2 leading-relaxed">
+        <p className="font-body text-sm text-on-surface-variant mt-3 leading-relaxed flex-grow">
           {product.description}
         </p>
         <a
           href="#"
-          className="text-sm font-semibold text-verdaez-600 hover:text-verdaez-400 mt-4 inline-flex items-center gap-1 transition"
+          className="text-xs font-semibold uppercase tracking-widest text-surface-tint hover:text-primary mt-6 inline-flex items-center gap-1.5 transition-all duration-300 group-hover:translate-x-0.5"
         >
           Learn More
           <span className="transition-transform duration-300 group-hover:translate-x-1">
@@ -111,7 +113,7 @@ export default function Products() {
   }, []);
 
   return (
-    <section id="products" className="py-24 bg-white" ref={sectionRef}>
+    <section id="products" className="py-28 bg-background" ref={sectionRef}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Heading */}
         <h2
@@ -124,7 +126,7 @@ export default function Products() {
 
         {/* Subtext */}
         <p
-          className={`section-description mx-auto text-center max-w-3xl ${
+          className={`section-description mx-auto text-center max-w-3xl mt-4 ${
             isVisible ? 'animate-fade-in-up delay-100' : 'opacity-0'
           }`}
         >

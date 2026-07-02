@@ -25,7 +25,7 @@ export default function CallToAction() {
   return (
     <section
       ref={sectionRef}
-      className="relative w-full overflow-hidden"
+      className="relative w-full overflow-hidden py-28"
     >
       {/* Background Image (Misty pine forest) */}
       <div
@@ -34,13 +34,13 @@ export default function CallToAction() {
       />
 
       {/* Dark Green Gradient Overlay matching screenshot styling */}
-      <div className="absolute inset-0 bg-gradient-to-r from-verdaez-900/90 via-verdaez-900/80 to-verdaez-900/90" />
+      <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/90 to-primary/95" />
 
       {/* Content Container */}
-      <div className="relative z-10 max-w-4xl mx-auto py-20 px-6 text-center">
+      <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
         {/* Heading */}
         <h2
-          className={`font-heading text-3xl md:text-4xl lg:text-[2.75rem] font-bold text-white leading-tight transition-all duration-700 ${
+          className={`font-heading text-3xl md:text-4xl lg:text-[2.75rem] font-normal text-white leading-tight transition-all duration-700 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
           }`}
         >
@@ -49,7 +49,7 @@ export default function CallToAction() {
 
         {/* Description */}
         <p
-          className={`text-base md:text-lg text-white/80 mt-4 max-w-2xl mx-auto leading-relaxed transition-all duration-700 delay-200 ${
+          className={`text-body-lg text-white/80 mt-6 max-w-2xl mx-auto leading-relaxed transition-all duration-700 delay-200 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
           }`}
         >
@@ -58,13 +58,13 @@ export default function CallToAction() {
 
         {/* Button */}
         <div
-          className={`mt-8 transition-all duration-700 delay-400 ${
+          className={`mt-10 transition-all duration-700 delay-400 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
           }`}
         >
           <a
             href="#contact"
-            className="inline-flex items-center justify-center bg-verdaez-900 hover:bg-verdaez-950 text-white rounded-full px-8 py-3 text-sm font-semibold shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 border border-white/10"
+            className="inline-flex items-center justify-center bg-white text-primary hover:bg-surface-container-low text-sm font-semibold uppercase tracking-widest px-8 py-3.5 rounded-full shadow-ambient-sm hover:shadow-ambient hover:-translate-y-0.5 transition-all duration-300"
           >
             Get Started
           </a>

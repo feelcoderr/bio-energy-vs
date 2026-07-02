@@ -161,7 +161,7 @@ export default function PlatformBenefits() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="relative py-24 overflow-hidden">
+    <section ref={sectionRef} className="relative py-28 overflow-hidden bg-background">
       {/* ===== Full Background Image ===== */}
       <div className="absolute inset-0">
         <img
@@ -170,8 +170,8 @@ export default function PlatformBenefits() {
           aria-hidden="true"
           className="w-full h-full object-cover"
         />
-        {/* White overlay for text readability */}
-        <div className="absolute inset-0 bg-white/80 backdrop-blur-[2px]" />
+        {/* Editorial surface overlay for text readability */}
+        <div className="absolute inset-0 bg-surface/80 backdrop-blur-[2px]" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -186,7 +186,7 @@ export default function PlatformBenefits() {
 
         {/* Subtext */}
         <p
-          className={`section-description mx-auto text-center max-w-3xl ${
+          className={`section-description mx-auto text-center max-w-3xl mt-4 ${
             isVisible ? 'animate-fade-in-up delay-100' : 'opacity-0'
           }`}
         >
@@ -199,24 +199,24 @@ export default function PlatformBenefits() {
           {benefitsData.map((benefit, index) => (
             <div
               key={benefit.title}
-              className={`bg-white/70 backdrop-blur-md border border-white/80 rounded-2xl shadow-sm hover:shadow-xl p-8 hover:-translate-y-1 transition-all duration-500 ${
+              className={`bg-surface-container-lowest/80 backdrop-blur-md border border-outline-variant/30 rounded-[24px] shadow-ambient-sm hover:shadow-ambient hover:-translate-y-1 transition-all duration-500 p-8 flex flex-col h-full ${
                 isVisible
                   ? `animate-fade-in-up ${delayClasses[index]}`
                   : 'opacity-0'
               }`}
             >
-              {/* Icon */}
-              <div className="h-12 w-12 rounded-full bg-verdaez-50 flex items-center justify-center">
+              {/* Icon Circle */}
+              <div className="h-12 w-12 rounded-full bg-surface-container flex items-center justify-center text-primary">
                 {benefit.icon}
               </div>
 
               {/* Title */}
-              <h3 className="font-heading text-lg font-bold text-verdaez-900 mt-4">
+              <h3 className="font-heading text-xl font-normal text-primary mt-6">
                 {benefit.title}
               </h3>
 
               {/* Description */}
-              <p className="text-sm text-gray-500 mt-2 leading-relaxed">
+              <p className="font-body text-sm text-on-surface-variant mt-2 leading-relaxed flex-grow">
                 {benefit.description}
               </p>
             </div>
