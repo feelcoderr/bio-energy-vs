@@ -31,14 +31,14 @@ export default function Footer() {
               aria-label="Verdaez home"
             >
               <img
-                src="/images/logo-icon-verdez.png"
+                src="/images/verdaez-logo.png"
                 alt="Verdaez Icon"
                 className="h-11 w-auto transition-transform duration-300 group-hover:scale-105"
               />
               <img
-                src="/images/logo-name-verdez.png"
+                src="/images/verdaez-logo-text.png"
                 alt="Verdaez"
-                className="h-8 w-auto"
+                className="h-10 w-auto"
               />
             </a>
           </div>

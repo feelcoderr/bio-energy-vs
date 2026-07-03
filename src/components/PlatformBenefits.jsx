@@ -1,10 +1,10 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from "react";
 
 const benefitsData = [
   {
-    title: '30 TPD Modular Start',
+    title: "30 TPD Modular Start",
     description:
-      'Initial facility capacity engineered for rapid deployment and proven unit economics.',
+      "Initial facility capacity engineered for rapid deployment and proven unit economics.",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -23,9 +23,9 @@ const benefitsData = [
     ),
   },
   {
-    title: '300 TPD Scale Target',
+    title: "300 TPD Scale Target",
     description:
-      'Modular scale-up to 300 TPD within five years through replication.',
+      "Modular scale-up to 300 TPD within five years through replication.",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -44,9 +44,9 @@ const benefitsData = [
     ),
   },
   {
-    title: 'Multi-Product Revenue',
+    title: "Multi-Product Revenue",
     description:
-      'Diversified revenue across fuel pellets, biochar, carbon materials, and pyrolysis derivatives.',
+      "Diversified revenue across fuel pellets, biochar, carbon materials, and pyrolysis derivatives.",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -65,9 +65,9 @@ const benefitsData = [
     ),
   },
   {
-    title: 'Circular Biorefinery',
+    title: "Circular Biorefinery",
     description:
-      'Upcycling agricultural waste into industrial-grade products in a closed-loop system.',
+      "Upcycling agricultural waste into industrial-grade products in a closed-loop system.",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -86,9 +86,9 @@ const benefitsData = [
     ),
   },
   {
-    title: 'Carbon Removal Ready',
+    title: "Carbon Removal Ready",
     description:
-      'Biochar and advanced carbon materials enabling measurable, verifiable climate impact.',
+      "Biochar and advanced carbon materials enabling measurable, verifiable climate impact.",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -107,9 +107,9 @@ const benefitsData = [
     ),
   },
   {
-    title: 'Rural Supply Network',
+    title: "Rural Supply Network",
     description:
-      'Building an inclusive procurement ecosystem that generates rural livelihoods.',
+      "Building an inclusive procurement ecosystem that generates rural livelihoods.",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -130,12 +130,12 @@ const benefitsData = [
 ];
 
 const delayClasses = [
-  'delay-100',
-  'delay-200',
-  'delay-300',
-  'delay-400',
-  'delay-500',
-  'delay-600',
+  "delay-100",
+  "delay-200",
+  "delay-300",
+  "delay-400",
+  "delay-500",
+  "delay-600",
 ];
 
 export default function PlatformBenefits() {
@@ -150,7 +150,7 @@ export default function PlatformBenefits() {
           observer.unobserve(entry.target);
         }
       },
-      { threshold: 0.15 }
+      { threshold: 0.15 },
     );
 
     if (sectionRef.current) {
@@ -161,7 +161,10 @@ export default function PlatformBenefits() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="relative py-28 overflow-hidden bg-background">
+    <section
+      ref={sectionRef}
+      className="relative py-28 overflow-hidden bg-background"
+    >
       {/* ===== Full Background Image ===== */}
       <div className="absolute inset-0">
         <img
@@ -171,14 +174,14 @@ export default function PlatformBenefits() {
           className="w-full h-full object-cover"
         />
         {/* Editorial surface overlay for text readability */}
-        <div className="absolute inset-0 bg-surface/80 backdrop-blur-[2px]" />
+        <div className="absolute inset-0" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Heading */}
         <h2
           className={`section-heading text-center ${
-            isVisible ? 'animate-fade-in-up' : 'opacity-0'
+            isVisible ? "animate-fade-in-up" : "opacity-0"
           }`}
         >
           One Platform. Multiple Revenue Streams. Measurable Impact.
@@ -187,7 +190,7 @@ export default function PlatformBenefits() {
         {/* Subtext */}
         <p
           className={`section-description mx-auto text-center max-w-3xl mt-4 ${
-            isVisible ? 'animate-fade-in-up delay-100' : 'opacity-0'
+            isVisible ? "animate-fade-in-up delay-100" : "opacity-0"
           }`}
         >
           Engineered to reduce biomass waste, generate rural income, enable
@@ -202,7 +205,7 @@ export default function PlatformBenefits() {
               className={`bg-surface-container-lowest/80 backdrop-blur-md border border-outline-variant/30 rounded-[24px] shadow-ambient-sm hover:shadow-ambient hover:-translate-y-1 transition-all duration-500 p-8 flex flex-col h-full ${
                 isVisible
                   ? `animate-fade-in-up ${delayClasses[index]}`
-                  : 'opacity-0'
+                  : "opacity-0"
               }`}
             >
               {/* Icon Circle */}

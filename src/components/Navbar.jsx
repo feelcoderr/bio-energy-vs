@@ -134,14 +134,14 @@ export default function Navbar() {
             aria-label="Verdaez — go to homepage"
           >
             <img
-              src="/images/logo-icon-verdez.png"
+              src="/images/verdaez-logo.png"
               alt="Verdaez Icon"
               className="h-11 w-auto transition-transform duration-300 group-hover:scale-105"
             />
             <img
-              src="/images/logo-name-verdez.png"
+              src="/images/verdaez-logo-text.png"
               alt="Verdaez"
-              className="h-8 w-auto hidden sm:block"
+              className="h-11 w-auto hidden sm:block"
             />
           </a>
 
