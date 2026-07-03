@@ -57,6 +57,18 @@
   --color-cream-100: #f5f3f0;
   --color-cream-200: #efeeeb;
 
+  /* Olive & Espresso Palette for Value Chain */
+  --color-olive-600: #828826;
+  --color-olive-500: #9a9f30;
+  --color-olive-400: #b2b83e;
+  --color-olive-300: #c5ca6a;
+  --color-espresso-900: #221f18;
+  --color-espresso-800: #2e2a1f;
+  --color-espresso-700: #3a3520;
+  --color-harvest-500: #c9a227;
+  --color-harvest-400: #d4b562;
+  --color-harvest-300: #e0c97e;
+
   /* New Typographic Pairings */
   --font-heading: 'Libre Caslon Text', Georgia, serif;
   --font-body: 'Hanken Grotesk', system-ui, sans-serif;
@@ -242,3 +254,57 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #2d6344;
 }
+
+/* 3D Card Flip Utilities (Premium Bounce & Speed) */
+.flip-card {
+  perspective: 1500px;
+  overflow: visible;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.85s cubic-bezier(0.175, 0.885, 0.32, 1.15);
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+.flip-card-front {
+  z-index: 2;
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+  z-index: 1;
+}
+
+/* Premium Dark Glassmorphism definition */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(20px) saturate(120%);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.glass-panel-light {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+

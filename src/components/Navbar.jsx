@@ -1,29 +1,65 @@
-import { useState, useEffect, useCallback, useRef } from 'react';
+import { useState, useEffect, useCallback, useRef } from "react";
 
 const navStructure = [
-  { label: 'Home', href: '#hero' },
+  { label: "Home", href: "#hero" },
   {
-    label: 'Platform',
+    label: "Platform",
     dropdown: [
-      { label: 'Technology', href: '#technology', desc: 'Our modular bioenergy refinery platform' },
-      { label: 'Products', href: '#products', desc: 'Fuel pellets, biochar, & carbon products' },
-      { label: 'Business Model', href: '#business-model', desc: 'Modular scalability from 30 to 300 TPD' },
+      {
+        label: "Technology",
+        href: "#technology",
+        desc: "Our modular bioenergy refinery platform",
+      },
+      {
+        label: "Products",
+        href: "#products",
+        desc: "Fuel pellets, biochar, & carbon products",
+      },
+      {
+        label: "Business Model",
+        href: "#business-model",
+        desc: "Modular scalability from 30 to 300 TPD",
+      },
     ],
   },
   {
-    label: 'Impact & Markets',
+    label: "Impact & Markets",
     dropdown: [
-      { label: 'Markets', href: '#markets', desc: 'Target industries and market sizes' },
-      { label: 'Climate Impact', href: '#impact', desc: 'Measurable, verifiable carbon sequestration' },
-      { label: 'Investors', href: '#investors', desc: 'Unit economics and investment framework' },
+      {
+        label: "Markets",
+        href: "#markets",
+        desc: "Target industries and market sizes",
+      },
+      {
+        label: "Climate Impact",
+        href: "#impact",
+        desc: "Measurable, verifiable carbon sequestration",
+      },
+      {
+        label: "Investors",
+        href: "#investors",
+        desc: "Unit economics and investment framework",
+      },
     ],
   },
   {
-    label: 'Company',
+    label: "Company",
     dropdown: [
-      { label: 'About Us', href: '#about', desc: 'Our vision for a circular bioenergy future' },
-      { label: 'Partners', href: '#partners', desc: 'Feedstock supply & off-take partners' },
-      { label: 'Contact Us', href: '#contact', desc: 'Get in touch with our team' },
+      {
+        label: "About Us",
+        href: "#about",
+        desc: "Our vision for a circular bioenergy future",
+      },
+      {
+        label: "Partners",
+        href: "#partners",
+        desc: "Feedstock supply & off-take partners",
+      },
+      {
+        label: "Contact Us",
+        href: "#contact",
+        desc: "Get in touch with our team",
+      },
     ],
   },
 ];
@@ -34,7 +70,7 @@ export default function Navbar() {
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [mobileAccordions, setMobileAccordions] = useState({
     Platform: false,
-    'Impact & Markets': false,
+    "Impact & Markets": false,
     Company: false,
   });
 
@@ -43,15 +79,17 @@ export default function Navbar() {
   /* ── Scroll listener ─────────────────────────────────── */
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
-    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener("scroll", onScroll, { passive: true });
     onScroll();
-    return () => window.removeEventListener('scroll', onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   /* ── Lock body scroll when mobile drawer is open ────── */
   useEffect(() => {
-    document.body.style.overflow = mobileOpen ? 'hidden' : '';
-    return () => { document.body.style.overflow = ''; };
+    document.body.style.overflow = mobileOpen ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
   }, [mobileOpen]);
 
   /* ── Close dropdowns on outside click ────────────────── */
@@ -61,8 +99,8 @@ export default function Navbar() {
         setActiveDropdown(null);
       }
     };
-    document.addEventListener('click', handleOutsideClick);
-    return () => document.removeEventListener('click', handleOutsideClick);
+    document.addEventListener("click", handleOutsideClick);
+    return () => document.removeEventListener("click", handleOutsideClick);
   }, []);
 
   const closeMobile = () => setMobileOpen(false);
@@ -81,8 +119,8 @@ export default function Navbar() {
         ref={headerRef}
         className={`fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[92%] max-w-7xl h-16 rounded-full border transition-all duration-500 ${
           scrolled
-            ? 'bg-surface-container/80 backdrop-blur-md border-outline-variant/30 shadow-ambient'
-            : 'bg-surface/70 backdrop-blur-sm border-transparent'
+            ? "bg-surface-container/80 backdrop-blur-md border-outline-variant/30 shadow-ambient"
+            : "bg-surface/70 backdrop-blur-sm border-transparent"
         }`}
       >
         <nav
@@ -93,17 +131,17 @@ export default function Navbar() {
           <a
             href="#hero"
             className="flex items-center gap-3 group"
-            aria-label="Ratnanjali Bioenergy — go to homepage"
+            aria-label="Verdaez — go to homepage"
           >
             <img
-              src="/images/logo-icon.png"
-              alt="Ratnanjali Bioenergy Icon"
+              src="/images/logo-icon-verdez.png"
+              alt="Verdaez Icon"
               className="h-11 w-auto transition-transform duration-300 group-hover:scale-105"
             />
             <img
-              src="/images/logo-text.png"
-              alt="Ratnanjali Bioenergy"
-              className="h-6.5 w-auto hidden sm:block"
+              src="/images/logo-name-verdez.png"
+              alt="Verdaez"
+              className="h-8 w-auto hidden sm:block"
             />
           </a>
 
@@ -125,19 +163,23 @@ export default function Navbar() {
                       <button
                         type="button"
                         className={`flex items-center gap-1.5 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-on-surface hover:text-primary transition-all duration-300 rounded-full hover:bg-on-surface/5 ${
-                          isOpen ? 'bg-on-surface/5 text-primary' : ''
+                          isOpen ? "bg-on-surface/5 text-primary" : ""
                         }`}
                         aria-expanded={isOpen}
                       >
                         {item.label}
                         <svg
-                          className={`w-3.5 h-3.5 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}
+                          className={`w-3.5 h-3.5 transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`}
                           fill="none"
                           viewBox="0 0 24 24"
                           stroke="currentColor"
                           strokeWidth={2}
                         >
-                          <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            d="M19 9l-7 7-7-7"
+                          />
                         </svg>
                       </button>
 
@@ -145,8 +187,8 @@ export default function Navbar() {
                       <div
                         className={`absolute top-[56px] left-1/2 -translate-x-1/2 w-80 bg-surface-container-lowest border border-outline-variant/40 rounded-2xl shadow-ambient p-3 transition-all duration-300 origin-top ${
                           isOpen
-                            ? 'opacity-100 scale-100 pointer-events-auto'
-                            : 'opacity-0 scale-95 pointer-events-none'
+                            ? "opacity-100 scale-100 pointer-events-auto"
+                            : "opacity-0 scale-95 pointer-events-none"
                         }`}
                       >
                         <ul className="space-y-0.5">
@@ -198,23 +240,25 @@ export default function Navbar() {
               className="xl:hidden relative z-50 flex h-10 w-10 items-center justify-center rounded-full text-on-surface hover:bg-on-surface/5 transition-colors focus-visible:outline-2"
               aria-expanded={mobileOpen}
               aria-controls="mobile-menu"
-              aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
+              aria-label={mobileOpen ? "Close menu" : "Open menu"}
             >
-              <span className="sr-only">{mobileOpen ? 'Close' : 'Open'} main menu</span>
+              <span className="sr-only">
+                {mobileOpen ? "Close" : "Open"} main menu
+              </span>
               <span className="flex flex-col items-center justify-center gap-[5px]">
                 <span
                   className={`block h-[2px] w-5 rounded-full bg-current transition-all duration-300 origin-center ${
-                    mobileOpen ? 'translate-y-[7px] rotate-45' : ''
+                    mobileOpen ? "translate-y-[7px] rotate-45" : ""
                   }`}
                 />
                 <span
                   className={`block h-[2px] w-5 rounded-full bg-current transition-all duration-300 ${
-                    mobileOpen ? 'opacity-0 scale-x-0' : ''
+                    mobileOpen ? "opacity-0 scale-x-0" : ""
                   }`}
                 />
                 <span
                   className={`block h-[2px] w-5 rounded-full bg-current transition-all duration-300 origin-center ${
-                    mobileOpen ? '-translate-y-[7px] -rotate-45' : ''
+                    mobileOpen ? "-translate-y-[7px] -rotate-45" : ""
                   }`}
                 />
               </span>
@@ -226,7 +270,7 @@ export default function Navbar() {
       {/* ── Mobile Overlay ── */}
       <div
         className={`fixed inset-0 z-40 bg-inverse-surface/40 backdrop-blur-sm transition-opacity duration-300 xl:hidden ${
-          mobileOpen ? 'opacity-100' : 'pointer-events-none opacity-0'
+          mobileOpen ? "opacity-100" : "pointer-events-none opacity-0"
         }`}
         aria-hidden="true"
         onClick={closeMobile}
@@ -239,14 +283,19 @@ export default function Navbar() {
         aria-modal="true"
         aria-label="Mobile navigation"
         className={`fixed top-0 right-0 z-40 flex h-full w-[300px] max-w-[85vw] flex-col bg-surface border-l border-outline-variant/35 shadow-ambient-lg transition-transform duration-300 ease-in-out xl:hidden ${
-          mobileOpen ? 'translate-x-0' : 'translate-x-full'
+          mobileOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
         <div className="h-20 shrink-0 border-b border-outline-variant/30 flex items-center px-6">
-          <span className="font-heading text-lg font-bold text-primary">Menu</span>
+          <span className="font-heading text-lg font-bold text-primary">
+            Menu
+          </span>
         </div>
 
-        <nav aria-label="Mobile navigation" className="flex-1 overflow-y-auto px-4 py-6">
+        <nav
+          aria-label="Mobile navigation"
+          className="flex-1 overflow-y-auto px-4 py-6"
+        >
           <ul className="flex flex-col gap-2" role="list">
             {navStructure.map((item) => {
               const hasDropdown = !!item.dropdown;
@@ -263,19 +312,25 @@ export default function Navbar() {
                       >
                         {item.label}
                         <svg
-                          className={`w-4 h-4 transition-transform duration-300 ${isAccordionOpen ? 'rotate-180 text-primary' : 'text-on-surface-variant'}`}
+                          className={`w-4 h-4 transition-transform duration-300 ${isAccordionOpen ? "rotate-180 text-primary" : "text-on-surface-variant"}`}
                           fill="none"
                           viewBox="0 0 24 24"
                           stroke="currentColor"
                           strokeWidth={2}
                         >
-                          <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            d="M19 9l-7 7-7-7"
+                          />
                         </svg>
                       </button>
 
                       <div
                         className={`overflow-hidden transition-all duration-300 ${
-                          isAccordionOpen ? 'max-h-80 opacity-100 mt-1 pl-4' : 'max-h-0 opacity-0 pointer-events-none'
+                          isAccordionOpen
+                            ? "max-h-80 opacity-100 mt-1 pl-4"
+                            : "max-h-0 opacity-0 pointer-events-none"
                         }`}
                       >
                         <ul className="space-y-1 border-l border-outline-variant/40 pl-3">
