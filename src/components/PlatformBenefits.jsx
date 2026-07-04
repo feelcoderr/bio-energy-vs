@@ -198,11 +198,11 @@ export default function PlatformBenefits() {
         </p>
 
         {/* Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-16">
+        <div className="grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 gap-6 mt-16 ">
           {benefitsData.map((benefit, index) => (
             <div
               key={benefit.title}
-              className={`bg-surface-container-lowest/80 backdrop-blur-md border border-outline-variant/30 rounded-[24px] shadow-ambient-sm hover:shadow-ambient hover:-translate-y-1 transition-all duration-500 p-8 flex flex-col h-full ${
+              className={`bg-surface-container-lowest/80 backdrop-blur-md border-1 border-outline-variant/30 rounded-[24px] shadow-ambient-sm hover:shadow-ambient hover:-translate-y-1 transition-all duration-500 p-8 flex flex-col h-full ${
                 isVisible
                   ? `animate-fade-in-up ${delayClasses[index]}`
                   : "opacity-0"

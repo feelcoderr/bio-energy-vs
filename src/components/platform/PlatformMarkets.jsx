@@ -78,6 +78,7 @@ export default function PlatformMarkets() {
   const containerRef = useRef(null);
 
   useGSAP(() => {
+    // Initial reveal on scroll
     gsap.fromTo(".markets-reveal",
       { opacity: 0, y: 40 },
       {
@@ -91,6 +92,14 @@ export default function PlatformMarkets() {
       }
     );
   }, { scope: containerRef });
+
+  // Slide-in and fade content change transition trigger on activeTab change
+  useGSAP(() => {
+    gsap.fromTo(".market-content-inner",
+      { opacity: 0, x: 20 },
+      { opacity: 1, x: 0, duration: 0.4, ease: "power2.out" }
+    );
+  }, { dependencies: [activeTab], scope: containerRef });
 
   const activeInd = industries.find(ind => ind.id === activeTab);
 
@@ -121,9 +130,9 @@ export default function PlatformMarkets() {
                 key={ind.id}
                 onClick={() => setActiveTab(ind.id)}
                 type="button"
-                className={`w-full text-left px-6 py-4.5 rounded-2xl border transition-all duration-300 font-heading text-lg ${
+                className={`w-full text-left px-6 py-4.5 rounded-2xl border transition-all duration-300 font-heading text-lg relative ${
                   activeTab === ind.id
-                    ? "bg-primary text-white border-primary shadow-ambient-sm"
+                    ? "bg-primary text-white border-primary shadow-ambient-sm lg:after:content-[''] lg:after:absolute lg:after:-right-3 lg:after:top-1/2 lg:after:-translate-y-1/2 lg:after:w-0 lg:after:h-0 lg:after:border-y-[10px] lg:after:border-y-transparent lg:after:border-l-[12px] lg:after:border-l-primary"
                     : "bg-white border-outline-variant/30 text-on-surface-variant hover:border-outline hover:text-primary"
                 }`}
               >
@@ -136,7 +145,7 @@ export default function PlatformMarkets() {
           <div className="lg:col-span-8 bg-surface-container-low border border-outline-variant/35 rounded-[2.5rem] p-10 shadow-ambient-sm min-h-[480px] flex flex-col justify-between relative overflow-hidden">
             <div className="absolute top-0 right-0 w-48 h-48 bg-surface-tint/5 rounded-full blur-3xl pointer-events-none" />
 
-            <div className="space-y-8">
+            <div className="market-content-inner space-y-8">
               {/* Header */}
               <div>
                 <span className="text-[9px] font-body font-bold text-surface-tint uppercase tracking-widest block mb-1">
