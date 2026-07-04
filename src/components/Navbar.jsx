@@ -1,67 +1,31 @@
-import { useState, useEffect, useCallback, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
+import { Link, useLocation } from "react-router-dom";
 
 const navStructure = [
-  { label: "Home", href: "#hero" },
-  {
-    label: "Platform",
-    dropdown: [
-      {
-        label: "Technology",
-        href: "#technology",
-        desc: "Our modular bioenergy refinery platform",
-      },
-      {
-        label: "Products",
-        href: "#products",
-        desc: "Fuel pellets, biochar, & carbon products",
-      },
-      {
-        label: "Business Model",
-        href: "#business-model",
-        desc: "Modular scalability from 30 to 300 TPD",
-      },
-    ],
-  },
-  {
-    label: "Impact & Markets",
-    dropdown: [
-      {
-        label: "Markets",
-        href: "#markets",
-        desc: "Target industries and market sizes",
-      },
-      {
-        label: "Climate Impact",
-        href: "#impact",
-        desc: "Measurable, verifiable carbon sequestration",
-      },
-      {
-        label: "Investors",
-        href: "#investors",
-        desc: "Unit economics and investment framework",
-      },
-    ],
-  },
+  { label: "Home", href: "/" },
   {
     label: "Company",
     dropdown: [
       {
         label: "About Us",
-        href: "#about",
+        href: "/about",
         desc: "Our vision for a circular bioenergy future",
       },
       {
-        label: "Partners",
-        href: "#partners",
-        desc: "Feedstock supply & off-take partners",
+        label: "Platform",
+        href: "/platform",
+        desc: "Our business model, scaling capacity & TAM",
       },
       {
-        label: "Contact Us",
-        href: "#contact",
-        desc: "Get in touch with our team",
+        label: "Ecosystem",
+        href: "/ecosystem",
+        desc: "Feedstock suppliers, off-takers & investors",
       },
     ],
   },
+  { label: "Products", href: "/products" },
+  { label: "Careers", href: "/careers" },
+  { label: "Contact Us", href: "/#contact" },
 ];
 
 export default function Navbar() {
@@ -128,22 +92,20 @@ export default function Navbar() {
           className="flex h-full w-full items-center justify-between px-6 sm:px-8"
         >
           {/* ── Logo ──────────────────────────────────── */}
-          <a
-            href="#hero"
-            className="flex items-center gap-3 group"
-            aria-label="Verdaez — go to homepage"
+          <Link
+            to="/"
+            className="flex items-center gap-2.5 group"
+            aria-label="Verdaez home"
           >
-            <img
-              src="/images/verdaez-logo.png"
-              alt="Verdaez Icon"
-              className="h-11 w-auto transition-transform duration-300 group-hover:scale-105"
-            />
+            <div className="relative flex items-center justify-center w-11 h-11 transition-transform duration-300 group-hover:scale-105">
+                <img src="/images/verdaez-logo.png" alt="Verdaez Icon" />
+            </div>
             <img
               src="/images/verdaez-logo-text.png"
               alt="Verdaez"
               className="h-11 w-auto hidden sm:block"
             />
-          </a>
+          </Link>
 
           {/* ── Desktop links (Editorial layout) ── */}
           <ul className="hidden xl:flex items-center gap-1 h-full" role="list">
@@ -192,32 +154,32 @@ export default function Navbar() {
                         }`}
                       >
                         <ul className="space-y-0.5">
-                          {item.dropdown.map((subItem) => (
-                            <li key={subItem.href}>
-                              <a
-                                href={subItem.href}
-                                className="block p-3 rounded-xl hover:bg-surface-container-low transition-colors group"
+                          {item.dropdown.map((subItem, subIdx) => (
+                            <li key={subIdx}>
+                              <Link
+                                to={subItem.href}
+                                className="group/link flex flex-col p-4 rounded-xl hover:bg-surface-tint/5 transition-colors duration-300"
                                 onClick={() => setActiveDropdown(null)}
                               >
-                                <p className="text-sm font-semibold text-on-surface group-hover:text-primary transition-colors">
+                                <span className="font-heading text-primary group-hover/link:text-surface-tint transition-colors">
                                   {subItem.label}
-                                </p>
+                                </span>
                                 <p className="text-xs text-on-surface-variant mt-0.5 leading-snug">
                                   {subItem.desc}
                                 </p>
-                              </a>
+                              </Link>
                             </li>
                           ))}
                         </ul>
                       </div>
                     </>
                   ) : (
-                    <a
-                      href={item.href}
+                    <Link
+                      to={item.href}
                       className="px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-on-surface hover:text-primary transition-all duration-300 rounded-full hover:bg-on-surface/5"
                     >
                       {item.label}
-                    </a>
+                    </Link>
                   )}
                 </li>
               );
@@ -226,12 +188,12 @@ export default function Navbar() {
 
           {/* ── Desktop CTA / Mobile hamburger ── */}
           <div className="flex items-center gap-4">
-            <a
-              href="#contact"
-              className="btn-primary hidden xl:inline-flex !py-2 !px-5 text-xs uppercase tracking-widest"
+            <Link
+              to="/#contact"
+              className="hidden lg:flex items-center gap-2 bg-primary-container text-white px-7 py-3 rounded-full font-body font-semibold text-sm hover:bg-primary transition-all duration-300 shadow-ambient-sm hover:shadow-ambient hover:-translate-y-0.5"
             >
               Contact Us
-            </a>
+            </Link>
 
             {/* Hamburger */}
             <button
@@ -334,28 +296,30 @@ export default function Navbar() {
                         }`}
                       >
                         <ul className="space-y-1 border-l border-outline-variant/40 pl-3">
-                          {item.dropdown.map((subItem) => (
-                            <li key={subItem.href}>
-                              <a
-                                href={subItem.href}
-                                onClick={closeMobile}
-                                className="block rounded-lg px-4 py-2 text-sm text-on-surface hover:bg-surface-container-low transition-colors"
+                          {item.dropdown.map((subItem, subIdx) => (
+                            <li key={subIdx}>
+                              <Link
+                                to={subItem.href}
+                                onClick={() => setMobileOpen(false)}
+                                className="block font-heading text-lg text-on-surface-variant hover:text-primary transition-colors"
                               >
                                 {subItem.label}
-                              </a>
+                              </Link>
                             </li>
                           ))}
                         </ul>
                       </div>
                     </div>
                   ) : (
-                    <a
-                      href={item.href}
-                      onClick={closeMobile}
-                      className="flex items-center rounded-xl px-4 py-3 text-[14px] font-semibold uppercase tracking-widest text-on-surface hover:bg-surface-container-low"
+                    <Link
+                      to={item.href}
+                      onClick={() => setMobileOpen(false)}
+                      className="flex justify-between items-center w-full py-5 border-b border-outline-variant/20"
                     >
-                      {item.label}
-                    </a>
+                      <span className="font-heading text-2xl text-primary">
+                        {item.label}
+                      </span>
+                    </Link>
                   )}
                 </li>
               );

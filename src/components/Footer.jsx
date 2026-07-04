@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
@@ -25,8 +25,8 @@ export default function Footer() {
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-[1.5fr_1fr_1fr_1fr_1fr] items-start">
           {/* ── Logo ── */}
           <div className="flex flex-col gap-3">
-            <a
-              href="#hero"
+            <Link
+              to="/"
               className="flex items-center gap-3 group"
               aria-label="Verdaez home"
             >
@@ -40,43 +40,43 @@ export default function Footer() {
                 alt="Verdaez"
                 className="h-10 w-auto"
               />
-            </a>
+            </Link>
           </div>
 
           {/* ── Column 1 ── */}
           <div className="flex flex-col gap-3.5">
             <ul className="space-y-2.5" role="list">
               <li>
-                <a
-                  href="#hero"
+                <Link
+                  to="/"
                   className="text-sm font-medium text-on-surface-variant hover:text-primary transition-colors"
                 >
                   Home
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#about"
+                <Link
+                  to="/about"
                   className="text-sm font-medium text-on-surface-variant hover:text-primary transition-colors"
                 >
                   About
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#technology"
+                <Link
+                  to="/platform"
                   className="text-sm font-medium text-on-surface-variant hover:text-primary transition-colors"
                 >
-                  Technology
-                </a>
+                  Platform
+                </Link>
               </li>
               <li>
-                <a
-                  href="#investors"
+                <Link
+                  to="/ecosystem?role=investor"
                   className="text-sm font-medium text-on-surface-variant hover:text-primary transition-colors"
                 >
                   Investors
-                </a>
+                </Link>
               </li>
               <li>
                 <a
@@ -93,36 +93,36 @@ export default function Footer() {
           <div className="flex flex-col gap-3.5">
             <ul className="space-y-2.5" role="list">
               <li>
-                <a
-                  href="#products"
+                <Link
+                  to="/products"
                   className="text-sm font-medium text-on-surface-variant hover:text-primary transition-colors"
                 >
                   Products
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#business-model"
+                <Link
+                  to="/platform#flywheel"
                   className="text-sm font-medium text-on-surface-variant hover:text-primary transition-colors"
                 >
-                  Business Model
-                </a>
+                  Conversion Process
+                </Link>
               </li>
               <li>
-                <a
-                  href="#markets"
+                <Link
+                  to="/platform#markets"
                   className="text-sm font-medium text-on-surface-variant hover:text-primary transition-colors"
                 >
                   Markets
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#partners"
+                <Link
+                  to="/ecosystem?role=partner"
                   className="text-sm font-medium text-on-surface-variant hover:text-primary transition-colors"
                 >
                   Partners
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -131,12 +131,12 @@ export default function Footer() {
           <div className="flex flex-col gap-3.5">
             <ul className="space-y-2.5" role="list">
               <li>
-                <a
-                  href="#about"
+                <Link
+                  to="/careers"
                   className="text-sm font-medium text-on-surface-variant hover:text-primary transition-colors"
                 >
-                  About
-                </a>
+                  Careers
+                </Link>
               </li>
               <li>
                 <a
@@ -249,7 +249,7 @@ export default function Footer() {
         {/* ─── Bottom copyright ─── */}
         <div className="mt-14 pt-8 border-t border-outline-variant/35 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-xs text-on-surface-variant font-body">
-            © {new Date().getFullYear()} Ratnanjali Bioenergy Technologies
+            © {new Date().getFullYear()} Verdaez Bioenergy. All rights reserved.
           </p>
           <div className="flex gap-4 text-xs text-on-surface-variant font-body">
             <a href="#" className="hover:text-primary transition-colors">
