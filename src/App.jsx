@@ -7,6 +7,7 @@ import ProductsPage from './pages/ProductsPage'
 import Platform from './pages/Platform'
 import Ecosystem from './pages/Ecosystem'
 import Careers from './pages/Careers'
+import Contact from './pages/Contact'
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
             <Route path="/platform" element={<Platform />} />
             <Route path="/ecosystem" element={<Ecosystem />} />
             <Route path="/careers" element={<Careers />} />
+            <Route path="/contact" element={<Contact />} />
           </Routes>
         </main>
         <Footer />

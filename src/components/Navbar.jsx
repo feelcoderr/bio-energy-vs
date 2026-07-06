@@ -4,13 +4,13 @@ import { Link, useLocation } from "react-router-dom";
 const navStructure = [
   { label: "Home", href: "/" },
   {
+    label: "About Us",
+    href: "/about",
+    desc: "Our vision for a circular bioenergy future",
+  },
+  {
     label: "Company",
     dropdown: [
-      {
-        label: "About Us",
-        href: "/about",
-        desc: "Our vision for a circular bioenergy future",
-      },
       {
         label: "Platform",
         href: "/platform",
@@ -25,7 +25,6 @@ const navStructure = [
   },
   { label: "Products", href: "/products" },
   { label: "Careers", href: "/careers" },
-  { label: "Contact Us", href: "/#contact" },
 ];
 
 export default function Navbar() {
@@ -98,7 +97,7 @@ export default function Navbar() {
             aria-label="Verdaez home"
           >
             <div className="relative flex items-center justify-center w-11 h-11 transition-transform duration-300 group-hover:scale-105">
-                <img src="/images/verdaez-logo.png" alt="Verdaez Icon" />
+              <img src="/images/verdaez-logo.png" alt="Verdaez Icon" />
             </div>
             <img
               src="/images/verdaez-logo-text.png"
@@ -189,7 +188,7 @@ export default function Navbar() {
           {/* ── Desktop CTA / Mobile hamburger ── */}
           <div className="flex items-center gap-4">
             <Link
-              to="/#contact"
+              to="/contact"
               className="hidden lg:flex items-center gap-2 bg-primary-container text-white px-7 py-3 rounded-full font-body font-semibold text-sm hover:bg-primary transition-all duration-300 shadow-ambient-sm hover:shadow-ambient hover:-translate-y-0.5"
             >
               Contact Us
@@ -327,13 +326,13 @@ export default function Navbar() {
           </ul>
 
           <div className="mt-8 px-4">
-            <a
-              href="#contact"
+            <Link
+              to="/contact"
               onClick={closeMobile}
               className="btn-primary w-full justify-center text-center text-xs uppercase tracking-widest py-3"
             >
               Contact Us
-            </a>
+            </Link>
           </div>
         </nav>
 

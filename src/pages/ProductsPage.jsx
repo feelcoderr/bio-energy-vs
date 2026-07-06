@@ -23,34 +23,37 @@ export default function ProductsPage() {
     window.scrollTo(0, 0);
   }, []);
 
-  useGSAP(() => {
-    // Overlapping scale transition for the category cards
-    const cards = gsap.utils.toArray(".product-category-card");
-    
-    cards.forEach((card, index) => {
-      if (index === cards.length - 1) return; // Don't scale the last card
+  useGSAP(
+    () => {
+      // Overlapping scale transition for the category cards
+      const cards = gsap.utils.toArray(".product-category-card");
 
-      gsap.to(card, {
-        scale: 0.94,
-        opacity: 0.5,
-        ease: "none",
-        scrollTrigger: {
-          trigger: cards[index + 1],
-          start: "top bottom",
-          end: "top top+=96", // Matches sticky top-24 position
-          scrub: true,
-        }
+      cards.forEach((card, index) => {
+        if (index === cards.length - 1) return; // Don't scale the last card
+
+        gsap.to(card, {
+          scale: 0.94,
+          opacity: 0.5,
+          ease: "none",
+          scrollTrigger: {
+            trigger: cards[index + 1],
+            start: "top bottom",
+            end: "top top+=96", // Matches sticky top-24 position
+            scrub: true,
+          },
+        });
       });
-    });
-  }, { scope: containerRef });
+    },
+    { scope: containerRef },
+  );
 
   return (
     <div ref={containerRef}>
       <ProductsHero />
       <ProductsEcosystemOverview />
-      
+
       {/* Categories Stacking Wrapper */}
-      <div className="max-w-7xl mx-auto px-6 relative pb-20">
+      <div className="max-w-7xl mx-auto px-6 relative py-20">
         <ProductsEnergy />
         <ProductsCarbon />
         <ProductsAdvanced />
