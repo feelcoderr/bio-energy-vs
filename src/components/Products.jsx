@@ -1,58 +1,59 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from "react";
 
 const products = [
   {
-    name: 'Fuel Pellets',
+    name: "Fuel Pellets",
     description:
-      'Clean, consistent energy for industrial boilers and heat applications. High calorific value with low ash content.',
-    image: '/images/fuel-pellets.png',
+      "Clean, consistent energy for industrial boilers and heat applications. High calorific value with low ash content.",
+    image: "/images/fuel-pellets.png",
   },
   {
-    name: 'Biochar',
+    name: "Biochar",
     description:
-      'Premium soil amendment and carbon sequestration agent for healthier soils and verified climate impact.',
-    image: '/images/biochar.png',
+      "Premium soil amendment and carbon sequestration agent for healthier soils and verified climate impact.",
+    image: "/images/biochar.png",
   },
   {
-    name: 'Slow-Release Fertilizer',
+    name: "Slow-Release Fertilizer",
     description:
-      'Biochar-enhanced fertilizer that boosts crop yield while reducing nutrient runoff and loss.',
-    image: '/images/slow-release-fertilizer.png',
+      "Biochar-enhanced fertilizer that boosts crop yield while reducing nutrient runoff and loss.",
+    image: "/images/slow-release-fertilizer.png",
   },
   {
-    name: 'Filtration Media',
+    name: "Filtration Media",
     description:
-      'High-performance activated carbon media for water treatment and industrial filtration systems.',
-    image: '/images/filter-media.png',
+      "High-performance activated carbon media for water treatment and industrial filtration systems.",
+    image: "/images/filter-media.png",
   },
   {
-    name: 'Pyrolysis Oil Derivatives',
+    name: "Pyrolysis Oil Derivatives",
     description:
-      'Valuable chemical fractions for fuels, solvents, and industrial process feedstocks.',
-    image: '/images/pyrolysis-oil.png',
+      "Valuable chemical fractions for fuels, solvents, and industrial process feedstocks.",
+    image: "/images/pyrolysis-oil.png",
   },
   {
-    name: 'Carbon & Graphene Derivatives',
+    name: "Carbon & Graphene Derivatives",
     description:
-      'Advanced carbon nanomaterials for high-tech, energy storage, and industrial applications.',
-    image: '/images/carbon-graphene.png',
+      "Advanced carbon nanomaterials for high-tech, energy storage, and industrial applications.",
+    image: "/images/carbon-graphene.png",
   },
 ];
 
 function ProductCard({ product, index, isVisible }) {
-  const delayClass = [
-    'delay-100',
-    'delay-200',
-    'delay-300',
-    'delay-400',
-    'delay-500',
-    'delay-600',
-  ][index] || 'delay-100';
+  const delayClass =
+    [
+      "delay-100",
+      "delay-200",
+      "delay-300",
+      "delay-400",
+      "delay-500",
+      "delay-600",
+    ][index] || "delay-100";
 
   return (
     <div
       className={`group rounded-[24px] overflow-hidden bg-surface-container-lowest shadow-ambient-sm hover:shadow-ambient hover:-translate-y-1 transition-all duration-500 flex flex-col h-full ${
-        isVisible ? `animate-fade-in-up ${delayClass}` : 'opacity-0'
+        isVisible ? `animate-fade-in-up ${delayClass}` : "opacity-0"
       }`}
     >
       {/* Image Area */}
@@ -65,7 +66,7 @@ function ProductCard({ product, index, isVisible }) {
         {/* Subtle dark gradient overlay at top for image depth */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-transparent pointer-events-none" />
         {/* Editorial bottom-fade mask to integrate the image with the text area */}
-        <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-surface-container-lowest to-transparent pointer-events-none" />
+        {/* <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-surface-container-lowest to-transparent pointer-events-none" /> */}
       </div>
 
       {/* Content Area - 32px (p-8) padding as per design spec */}
@@ -102,7 +103,7 @@ export default function Products() {
           observer.unobserve(entry.target);
         }
       },
-      { threshold: 0.1 }
+      { threshold: 0.1 },
     );
 
     if (sectionRef.current) {
@@ -118,7 +119,7 @@ export default function Products() {
         {/* Heading */}
         <h2
           className={`section-heading text-center ${
-            isVisible ? 'animate-fade-in-up' : 'opacity-0'
+            isVisible ? "animate-fade-in-up" : "opacity-0"
           }`}
         >
           Products Built from Biomass Carbon
@@ -127,7 +128,7 @@ export default function Products() {
         {/* Subtext */}
         <p
           className={`section-description mx-auto text-center max-w-3xl mt-4 ${
-            isVisible ? 'animate-fade-in-up delay-100' : 'opacity-0'
+            isVisible ? "animate-fade-in-up delay-100" : "opacity-0"
           }`}
         >
           Each product stream targets a practical market with industrial,

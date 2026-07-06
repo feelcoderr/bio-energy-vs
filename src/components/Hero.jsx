@@ -126,11 +126,10 @@ export default function Hero() {
           {/* ===== Left Content ===== */}
           <div className="w-full lg:w-[45%] animate-fade-in-left">
             {/* Badge (Commented out because it is baked into the background image) */}
-            {/* 
-            <span className="inline-block bg-verdaez-100/90 text-verdaez-700 rounded-full px-4 py-1.5 text-xs font-semibold tracking-wider uppercase mb-6 backdrop-blur-sm">
+
+            {/* <span className="inline-block bg-verdaez-100/90 text-verdaez-700 rounded-full px-4 py-1.5 text-xs font-semibold tracking-wider uppercase mb-6 backdrop-blur-sm">
               Biomass to Value · Circular Future
-            </span>
-            */}
+            </span> */}
 
             {/* Heading - Editorial style: serif headlines should never be bold */}
             <h1 className="font-heading text-4xl md:text-5xl lg:text-[3.5rem] font-normal tracking-tight text-primary leading-tight mb-6 mt-12">

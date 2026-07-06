@@ -5,12 +5,12 @@ export default function Footer() {
     <footer className="relative w-full bg-[#fdfcf8] text-on-surface border-t border-outline-variant/35 py-20 overflow-hidden">
       {/* ===== Floating Biocarbon Background Watermarks (Elegant Visible Contrast) ===== */}
       <div className="absolute bottom-[80px] left-[-80px] w-[300px] h-[150px] opacity-[0.8] pointer-events-none z-0 mix-blend-multiply">
-        <img
+        {/* <img
           src="/images/carbon-graphene-bg.png"
           alt=""
           aria-hidden="true"
           className="w-full h-full object-contain"
-        />
+        /> */}
       </div>
       <div className="absolute top-[150px] right-[-60px] w-[320px] h-[220px] opacity-[0.8] pointer-events-none z-0 mix-blend-multiply">
         <img
