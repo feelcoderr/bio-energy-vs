@@ -102,7 +102,7 @@ export default function Navbar() {
             <img
               src="/images/verdaez-logo-text.png"
               alt="Verdaez"
-              className="h-11 w-auto hidden sm:block"
+              className="h-9 w-auto hidden sm:block"
             />
           </Link>
 

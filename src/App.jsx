@@ -8,11 +8,13 @@ import Platform from './pages/Platform'
 import Ecosystem from './pages/Ecosystem'
 import Careers from './pages/Careers'
 import Contact from './pages/Contact'
+import CustomCursor from './components/CustomCursor'
 
 function App() {
   return (
     <Router>
       <div className="min-h-screen bg-background text-on-background">
+        <CustomCursor />
         <Navbar />
         <main>
           <Routes>
