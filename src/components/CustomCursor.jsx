@@ -146,8 +146,8 @@ export default function CustomCursor() {
         }
 
         .custom-cursor-dot.hovered {
-          width: 40px;
-          height: 40px;
+          width: 30px;
+          height: 30px;
         }
 
         .custom-cursor-follower {
@@ -166,8 +166,8 @@ export default function CustomCursor() {
         }
 
         .custom-cursor-follower.hovered {
-          width: 68px;
-          height: 68px;
+          width: 42px;
+          height: 42px;
           border-color: var(--color-surface-tint, #4c6c54);
           background-color: var(--color-surface-tint-08, rgba(76, 108, 84, 0.08));
         }
