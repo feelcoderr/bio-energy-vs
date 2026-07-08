@@ -25,7 +25,8 @@ export default function CustomCursor() {
       mouseCoords.current.y = e.clientY;
 
       if (dotRef.current) {
-        dotRef.current.style.transform = `translate3d(${e.clientX}px, ${e.clientY}px, 0)`;
+        // Appending translate(-50%, -50%) centers the pointer image on the exact cursor coordinates
+        dotRef.current.style.transform = `translate3d(${e.clientX}px, ${e.clientY}px, 0) translate(-50%, -50%)`;
       }
 
       // Calculate distance from last particle spawn
@@ -58,7 +59,7 @@ export default function CustomCursor() {
     // Smooth spring physics loop for the trailing circular follower
     let animationFrameId;
     const updateFollower = () => {
-      const ease = 0.16; // Spring ease speed
+      const ease = 0.14; // Easing speed for the trailing chase effect
 
       const dx = mouseCoords.current.x - followerCoords.current.x;
       const dy = mouseCoords.current.y - followerCoords.current.y;
@@ -67,7 +68,8 @@ export default function CustomCursor() {
       followerCoords.current.y += dy * ease;
 
       if (followerRef.current) {
-        followerRef.current.style.transform = `translate3d(${followerCoords.current.x}px, ${followerCoords.current.y}px, 0)`;
+        // Appending translate(-50%, -50%) centers the circle exactly on its tracking position
+        followerRef.current.style.transform = `translate3d(${followerCoords.current.x}px, ${followerCoords.current.y}px, 0) translate(-50%, -50%)`;
       }
 
       animationFrameId = requestAnimationFrame(updateFollower);
@@ -128,8 +130,8 @@ export default function CustomCursor() {
         }
         
         .custom-cursor-dot {
-          width: 86px;
-          height: 86px;
+          width: 22px;
+          height: 22px;
           background-image: url('/images/cursor.png');
           background-size: contain;
           background-position: center;
@@ -139,53 +141,35 @@ export default function CustomCursor() {
           left: 0;
           pointer-events: none;
           z-index: 9999;
-          transform: translate3d(-50%, -50%, 0);
           will-change: transform;
-          transition: width 0.25s ease, height 0.25s ease, transform 0.25s ease;
+          transition: width 0.25s ease, height 0.25s ease;
         }
 
         .custom-cursor-dot.hovered {
-          width: 86px;
-          height: 86px;
+          width: 40px;
+          height: 40px;
         }
 
         .custom-cursor-follower {
-          width: 28px;
-          height: 28px;
+          width: 32px;
+          height: 32px;
           border-radius: 50%;
-          border: 1px solid var(--color-surface-tint-35, rgba(76, 108, 84, 0.35));
+          border: 1.5px solid var(--color-surface-tint-35, rgba(76, 108, 84, 0.35));
           position: fixed;
           top: 0;
           left: 0;
           pointer-events: none;
           z-index: 9998;
-          transform: translate3d(-50%, -50%, 0);
           will-change: transform;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          color: var(--color-surface-tint, #4c6c54);
-          transition: transform 0.1s ease-out, border-color 0.25s ease, background-color 0.25s ease, width 0.25s ease, height 0.25s ease;
-        }
-
-        .custom-cursor-follower .follower-icon {
-          width: 20px;
-          height: 20px;
-          color: var(--color-surface-tint, #4c6c54);
-          transition: transform 0.3s ease, width 0.25s ease, height 0.25s ease;
-          opacity: 0.8;
+          display: block;
+          transition: border-color 0.25s ease, background-color 0.25s ease, width 0.25s ease, height 0.25s ease;
         }
 
         .custom-cursor-follower.hovered {
-          width: 34px;
-          height: 34px;
+          width: 68px;
+          height: 68px;
           border-color: var(--color-surface-tint, #4c6c54);
           background-color: var(--color-surface-tint-08, rgba(76, 108, 84, 0.08));
-        }
-
-        .custom-cursor-follower.hovered .follower-icon {
-          transform: rotate(45deg) scale(1.3);
-          opacity: 1;
         }
 
         .leaf-trail-particle {
@@ -222,13 +206,11 @@ export default function CustomCursor() {
         className={`custom-cursor-dot ${isHovered ? "hovered" : ""}`}
       />
 
-      {/* Lagging circular follower containing the abstract mini leaf */}
+      {/* Lagging circular follower frame */}
       <div
         ref={followerRef}
         className={`custom-cursor-follower ${isHovered ? "hovered" : ""}`}
-      >
-        <img src="/images/cursor.png" className="follower-icon" />
-      </div>
+      />
 
       {/* Absolute particle spawner registry container */}
       <div
