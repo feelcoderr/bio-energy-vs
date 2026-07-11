@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from "react";
 
 export default function CallToAction() {
   const [isVisible, setIsVisible] = useState(false);
@@ -12,7 +12,7 @@ export default function CallToAction() {
           observer.unobserve(entry.target);
         }
       },
-      { threshold: 0.15 }
+      { threshold: 0.15 },
     );
 
     if (sectionRef.current) {
@@ -30,9 +30,9 @@ export default function CallToAction() {
       {/* Background Image - High-quality Biorefinery illustration */}
       <div
         className="absolute inset-0 bg-cover bg-center transition-transform duration-[2000ms] ease-out"
-        style={{ 
+        style={{
           backgroundImage: "url('/images/cta-bg-biorefinery.jpg')",
-          transform: isVisible ? 'scale(1.03)' : 'scale(1)'
+          transform: isVisible ? "scale(1.03)" : "scale(1)",
         }}
       />
 
@@ -41,9 +41,11 @@ export default function CallToAction() {
 
       {/* Content Container - Premium Glassmorphism Card */}
       <div className="relative z-10 max-w-4xl mx-auto px-6 w-full text-center">
-        <div 
+        <div
           className={`bg-surface-container-lowest/85 backdrop-blur-xl border border-white/20 rounded-[32px] p-10 md:p-16 shadow-ambient-lg transition-all duration-[1000ms] ${
-            isVisible ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-8 scale-98'
+            isVisible
+              ? "opacity-100 translate-y-0 scale-100"
+              : "opacity-0 translate-y-8 scale-98"
           }`}
         >
           {/* Subtle brand tag */}
@@ -53,12 +55,13 @@ export default function CallToAction() {
 
           {/* Heading */}
           <h2 className="font-heading text-3xl md:text-4xl lg:text-[2.75rem] font-normal text-primary leading-tight">
-            Build the Next Biomass-to-Carbon Value Chain With Us
+            Build the Next Biomass to Carbon Value Chain With Us
           </h2>
 
           {/* Description */}
           <p className="font-body text-base md:text-lg text-on-surface-variant mt-6 max-w-2xl mx-auto leading-relaxed">
-            Creating sustainable bioenergy, premium biochar, and advanced carbon materials for a circular, low-carbon future.
+            Creating sustainable bioenergy, premium biochar, and advanced carbon
+            materials for a circular, low-carbon future.
           </p>
 
           {/* Button */}
@@ -90,4 +93,3 @@ export default function CallToAction() {
     </section>
   );
 }
-

@@ -19,7 +19,7 @@ const tiers = [
       { label: "Volume", value: "High" },
     ],
     description:
-      "High-demand heating fuel providing immediate baseload revenues.",
+      "High demand heating fuel providing immediate baseload revenues.",
     backTitle: "Commodity Products",
     backProducts: [
       { name: "Fuel Pellets", detail: "Industrial heating, power generation" },
@@ -29,7 +29,7 @@ const tiers = [
       },
       {
         name: "Biochar Fertilizer",
-        detail: "Slow-release, improves soil health",
+        detail: "Slow release, improves soil health",
       },
     ],
     backHighlight:
@@ -70,7 +70,7 @@ const tiers = [
       { label: "Value", value: "Premium" },
     ],
     description:
-      "Next-gen high-conductivity carbon for energy storage, electronics, and advanced applications.",
+      "Next gen high conductivity carbon for energy storage, electronics, and advanced applications.",
     backTitle: "Premium Products",
     backProducts: [
       {
@@ -121,7 +121,7 @@ function TierCard({ tier, index, isVisible }) {
           </div>
 
           {/* Stats row */}
-          <div className="px-6 mt-5 grid grid-cols-3 gap-3">
+          {/* <div className="px-6 mt-5 grid grid-cols-3 gap-3">
             {tier.stats.map((stat) => (
               <div key={stat.label} className="text-center">
                 <p className="text-[9px] font-body font-semibold uppercase tracking-widest text-on-surface-variant/50">
@@ -132,7 +132,7 @@ function TierCard({ tier, index, isVisible }) {
                 </p>
               </div>
             ))}
-          </div>
+          </div> */}
 
           {/* Description */}
           <div className="px-6 mt-4">
@@ -229,7 +229,7 @@ function TierCard({ tier, index, isVisible }) {
             </div>
 
             {/* Stats */}
-            <div
+            {/* <div
               className="grid grid-cols-3 gap-3 mt-4 pt-4"
               style={{ borderTop: "1px solid rgba(255,255,255,0.08)" }}
             >
@@ -243,7 +243,7 @@ function TierCard({ tier, index, isVisible }) {
                   </p>
                 </div>
               ))}
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
@@ -286,13 +286,13 @@ export default function ValueChain() {
             className={`section-heading text-center ${isVisible ? "animate-fade-in-up delay-100" : "opacity-0"}`}
           >
             From Commodity Biomass to{" "}
-            <span className="italic text-surface-tint">High‑Margin</span> Carbon
+            <span className="italic text-surface-tint">High Margin</span> Carbon
             Products
           </h2>
           <p
             className={`section-description mx-auto text-center mt-4 ${isVisible ? "animate-fade-in-up delay-200" : "opacity-0"}`}
           >
-            Three cascading technology tiers — each funding the next — transform
+            Three cascading technology tiers each funding the next transform
             biomass into increasingly premium products with deeper competitive
             moats.
           </p>

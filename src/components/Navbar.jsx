@@ -93,16 +93,18 @@ export default function Navbar() {
           {/* ── Logo ──────────────────────────────────── */}
           <Link
             to="/"
-            className="flex items-center gap-2.5 group"
-            aria-label="Verdaez home"
+            aria-label="Ratnanjali BioEnergy home"
+            className="flex items-center gap-2.5 shrink-0"
           >
-            <div className="relative flex items-center justify-center w-11 h-11 transition-transform duration-300 group-hover:scale-105">
-              <img src="/images/verdaez-logo.png" alt="Verdaez Icon" />
-            </div>
             <img
+              className="h-11 w-auto object-contain hidden md:block"
+              src="/images/verdaez-logo.png"
+              alt="Ratnanjali BioEnergy Icon"
+            />
+            <img
+              className="h-10 w-auto object-contain hidden md:block"
               src="/images/verdaez-logo-text.png"
-              alt="Verdaez"
-              className="h-9 w-auto hidden sm:block"
+              alt="Ratnanjali BioEnergy"
             />
           </Link>
 

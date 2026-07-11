@@ -154,7 +154,7 @@ export default function CustomCursor() {
           width: 32px;
           height: 32px;
           border-radius: 50%;
-          border: 1.5px solid var(--color-surface-tint-35, rgba(76, 108, 84, 0.35));
+          border: 1.5px solid var(--color-surface-tint-35, rgba(100, 128, 50, 0.35));
           position: fixed;
           top: 0;
           left: 0;
@@ -169,7 +169,7 @@ export default function CustomCursor() {
           width: 42px;
           height: 42px;
           border-color: var(--color-surface-tint, #4c6c54);
-          background-color: var(--color-surface-tint-08, rgba(76, 108, 84, 0.08));
+          background-color: var(--color-surface-tint-08, rgba(100, 128, 50, 0.08));
         }
 
         .leaf-trail-particle {
@@ -178,7 +178,7 @@ export default function CustomCursor() {
           height: 8px;
           pointer-events: none;
           z-index: 9997;
-          color: var(--color-surface-tint-40, rgba(76, 108, 84, 0.4));
+          color: var(--color-surface-tint-40, rgba(100, 128, 50, 0.4));
           transform: translate3d(-50%, -50%, 0);
           animation: leafDriftAnimation 0.85s cubic-bezier(0.1, 0.8, 0.3, 1) forwards;
           will-change: transform, opacity;

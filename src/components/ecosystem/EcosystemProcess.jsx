@@ -13,20 +13,20 @@ const stages = [
     checklist: [
       "Submit residue source types and approximate tonnage",
       "Specify volume demands for fuel pellets or biochars",
-      "Initial regulatory and land zoning review"
+      "Initial regulatory and land zoning review",
     ],
-    duration: "Week 1 - 2"
+    duration: "Week 1–2",
   },
   {
     num: "02",
     title: "Feasibility Evaluation",
-    desc: "Verdaez chemists analyze sample feedstocks for moisture, ash, and volatile carbon content to confirm pyrolysis yields.",
+    desc: "Ratnanjali Bioenergy chemists analyze sample feedstocks for moisture, ash, and volatile carbon content to confirm pyrolysis yields.",
     checklist: [
       "Laboratory testing of biomass sample characteristics",
       "EBITDA and local logistics radius modeling",
-      "Preliminary carbon sequestration yield projections"
+      "Preliminary carbon sequestration yield projections",
     ],
-    duration: "Week 2 - 4"
+    duration: "Week 2–4",
   },
   {
     num: "03",
@@ -35,20 +35,20 @@ const stages = [
     checklist: [
       "Modular facility blueprint sizing and zoning specs",
       "Draft Letter of Intent (LOI) for off-take pricing structures",
-      "Feedstock procurement cooperative logistics design"
+      "Feedstock procurement cooperative logistics design",
     ],
-    duration: "Week 4 - 8"
+    duration: "Week 4–8",
   },
   {
     num: "04",
     title: "Validation Pilot Run",
-    desc: "Execute pilot-scale pyrolysis batches to test actual output quality and obtain third-party MRV carbon auditing baseline data.",
+    desc: "Execute pilot scale pyrolysis batches to test actual output quality and obtain third-party MRV carbon auditing baseline data.",
     checklist: [
       "Process 5-10 tons of feedstock sample",
       "Certify biochar carbon stability (H:C ratio testing)",
-      "Submit pilot dataset to Puro.earth alignment auditors"
+      "Submit pilot dataset to Puro.earth alignment auditors",
     ],
-    duration: "Month 2 - 3"
+    duration: "Month 2–3",
   },
   {
     num: "05",
@@ -57,35 +57,42 @@ const stages = [
     checklist: [
       "Execute multi-year procurement and off-take contracts",
       "Secure project financing approvals (EBITDA backed)",
-      "Establish regional facility construction blueprints"
+      "Establish regional facility construction blueprints",
     ],
-    duration: "Month 3+"
-  }
+    duration: "Month 3+",
+  },
 ];
 
 export default function EcosystemProcess() {
   const [expandedStage, setExpandedStage] = useState("01");
   const containerRef = useRef(null);
 
-  useGSAP(() => {
-    gsap.fromTo(".process-timeline-reveal",
-      { opacity: 0, y: 40 },
-      {
-        opacity: 1,
-        y: 0,
-        duration: 1,
-        scrollTrigger: {
-          trigger: containerRef.current,
-          start: "top 75%",
-        }
-      }
-    );
-  }, { scope: containerRef });
+  useGSAP(
+    () => {
+      gsap.fromTo(
+        ".process-timeline-reveal",
+        { opacity: 0, y: 40 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1,
+          scrollTrigger: {
+            trigger: containerRef.current,
+            start: "top 75%",
+          },
+        },
+      );
+    },
+    { scope: containerRef },
+  );
 
   return (
-    <section id="process" ref={containerRef} className="py-32 bg-surface-container-low border-t border-outline-variant/30">
+    <section
+      id="process"
+      ref={containerRef}
+      className="py-32 bg-surface-container-low border-t border-outline-variant/30"
+    >
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        
         {/* Section Header */}
         <div className="process-timeline-reveal text-center mb-24 max-w-3xl mx-auto">
           <span className="text-[10px] font-body font-semibold uppercase tracking-[0.2em] text-surface-tint mb-4 inline-block px-4 py-1.5 border border-outline-variant/60 rounded-full bg-white shadow-ambient-sm">
@@ -95,7 +102,8 @@ export default function EcosystemProcess() {
             The Staged Partnership Pipeline
           </h2>
           <p className="font-body text-base md:text-lg text-on-surface-variant leading-relaxed">
-            A transparent, engineering-first roadmap guiding collaboration from feedstock testing through modular facility launch.
+            A transparent, engineering first roadmap guiding collaboration from
+            feedstock testing through modular facility launch.
           </p>
         </div>
 
@@ -104,7 +112,7 @@ export default function EcosystemProcess() {
           {stages.map((stage) => {
             const isExpanded = expandedStage === stage.num;
             return (
-              <div 
+              <div
                 key={stage.num}
                 className="bg-white border border-outline-variant/35 rounded-3xl overflow-hidden shadow-ambient-sm transition-all duration-300"
               >
@@ -128,37 +136,45 @@ export default function EcosystemProcess() {
                 </button>
 
                 {/* Body Content */}
-                <div 
+                <div
                   className={`transition-all duration-500 overflow-hidden ${
-                    isExpanded ? "max-h-[500px] border-t border-outline-variant/30" : "max-h-0"
+                    isExpanded
+                      ? "max-h-[500px] border-t border-outline-variant/30"
+                      : "max-h-0"
                   }`}
                 >
                   <div className="p-6 md:p-8 grid grid-cols-1 md:grid-cols-2 gap-8 bg-surface-container-low/10">
                     <div>
-                      <span className="block text-[8px] font-body font-bold tracking-widest text-on-surface-variant/70 uppercase mb-2">STAGE SUMMARY</span>
+                      <span className="block text-[8px] font-body font-bold tracking-widest text-on-surface-variant/70 uppercase mb-2">
+                        STAGE SUMMARY
+                      </span>
                       <p className="font-body text-sm text-on-surface leading-relaxed">
                         {stage.desc}
                       </p>
                     </div>
                     <div>
-                      <span className="block text-[8px] font-body font-bold tracking-widest text-on-surface-variant/70 uppercase mb-3">Deliverables & Checklist</span>
+                      <span className="block text-[8px] font-body font-bold tracking-widest text-on-surface-variant/70 uppercase mb-3">
+                        Deliverables & Checklist
+                      </span>
                       <ul className="space-y-2.5">
                         {stage.checklist.map((item, idx) => (
                           <li key={idx} className="flex gap-2.5 items-start">
-                            <span className="text-surface-tint font-bold text-xs leading-none mt-0.5">✓</span>
-                            <span className="font-body text-xs text-on-surface-variant leading-normal">{item}</span>
+                            <span className="text-surface-tint font-bold text-xs leading-none mt-0.5">
+                              ✓
+                            </span>
+                            <span className="font-body text-xs text-on-surface-variant leading-normal">
+                              {item}
+                            </span>
                           </li>
                         ))}
                       </ul>
                     </div>
                   </div>
                 </div>
-
               </div>
             );
           })}
         </div>
-
       </div>
     </section>
   );

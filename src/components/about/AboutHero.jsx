@@ -52,8 +52,7 @@ export default function AboutHero() {
           A Bioenergy Company Designed for Circular Carbon Value
         </span>
         <h1 className="font-heading text-5xl md:text-6xl lg:text-7xl text-white font-normal leading-[1.1] drop-shadow-lg">
-          Engineering the<br/>
-          <span className="italic text-verdaez-200">Circular Carbon Future</span>
+          Engineering the <span className="italic text-verdaez-200">Circular Carbon Future</span>
         </h1>
       </div>
     </section>

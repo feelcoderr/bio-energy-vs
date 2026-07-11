@@ -112,7 +112,7 @@ export default function Hero() {
       {/* ===== Full Background Image ===== */}
       <div className="absolute inset-0">
         <img
-          src="/images/hero-bg-new.png"
+          src="/images/hero-bg.png"
           alt=""
           aria-hidden="true"
           className="w-full h-full object-cover object-center lg:object-right-bottom"
@@ -143,7 +143,7 @@ export default function Hero() {
             {/* Description */}
             <p className="text-body-lg text-on-surface-variant leading-relaxed max-w-xl mb-8">
               A scalable biorefinery platform converting agricultural waste into
-              high-value fuels, carbon products, and measurable climate impact —
+              high-value fuels, carbon products, and measurable climate impact
               starting at 30&nbsp;TPD and scaling to 300&nbsp;TPD within five
               years.
             </p>

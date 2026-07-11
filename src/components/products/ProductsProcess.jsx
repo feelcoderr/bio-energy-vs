@@ -62,7 +62,7 @@ export default function ProductsProcess() {
                 0{step.id}
               </div>
               <div className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center mb-6 border border-white/20">
-                <div className="w-3 h-3 bg-verdaez-400 rounded-full shadow-[0_0_15px_rgba(235,243,237,0.8)]" />
+                <div className="w-3 h-3 bg-verdaez-400 rounded-full shadow-[0_0_15px_rgba(241,246,233,0.8)]" />
               </div>
               <h3 className="font-heading text-2xl text-white mb-4 relative z-10">{step.title}</h3>
               <p className="font-body text-white/70 leading-relaxed relative z-10">

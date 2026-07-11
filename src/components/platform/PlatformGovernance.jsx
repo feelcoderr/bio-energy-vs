@@ -59,7 +59,7 @@ export default function PlatformGovernance() {
   }, { scope: containerRef });
 
   return (
-    <section ref={containerRef} className="py-32 bg-surface-container-low border-b border-outline-variant/35">
+    <section ref={containerRef} className="py-32 bg-surface-container-low border-b border-outline-variant/35 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         
         {/* Section Header */}

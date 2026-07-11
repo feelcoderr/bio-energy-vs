@@ -1,73 +1,73 @@
 @import "tailwindcss";
 
 @theme {
-  /* New Semantic Design Tokens (Refined Spruce/Eucalyptus Palette) */
-  --color-surface: #faf8f5;
-  --color-surface-dim: #d8dad5;
-  --color-surface-bright: #faf8f5;
-  --color-surface-container-lowest: #ffffff;
-  --color-surface-container-low: #f4f5f0;
-  --color-surface-container: #edebeb;
-  --color-surface-container-high: #e6e6e0;
-  --color-surface-container-highest: #dfdfdb;
-  --color-on-surface: #181b19;
-  --color-on-surface-variant: #454a46;
-  --color-inverse-surface: #2d312e;
-  --color-inverse-on-surface: #f1f2ec;
-  --color-outline: #747a76;
-  --color-outline-variant: #c6ccc8;
-  --color-surface-tint: #4c6c54;
-  --color-primary: #0d2214;
-  --color-on-primary: #ffffff;
-  --color-primary-container: #4c6c54;
-  --color-on-primary-container: #83ab8e;
-  --color-inverse-primary: #afd4b9;
-  --color-secondary: #5a605c;
-  --color-on-secondary: #ffffff;
-  --color-secondary-container: #dee3df;
-  --color-on-secondary-container: #5e6460;
-  --color-tertiary: #0f1612;
-  --color-on-tertiary: #ffffff;
-  --color-tertiary-container: #212c25;
-  --color-on-tertiary-container: #88938c;
-  --color-error: #ba1a1a;
-  --color-on-error: #ffffff;
-  --color-background: #faf8f5;
-  --color-on-background: #181b19;
-  --color-surface-variant: #dfdfdb;
+  /* New Semantic Design Tokens (Cohesive Olive, Obsidian, & Oatmeal Palette) */
+  --color-surface: #FCFBF7;
+  --color-surface-dim: #EDECD8;
+  --color-surface-bright: #FCFBF7;
+  --color-surface-container-lowest: #FFFFFF;
+  --color-surface-container-low: #F6F4EB;
+  --color-surface-container: #EDECD8;
+  --color-surface-container-high: #E3E1C9;
+  --color-surface-container-highest: #D8D6BE;
+  --color-on-surface: #151C12;
+  --color-on-surface-variant: #4D5346;
+  --color-inverse-surface: #2E3228;
+  --color-inverse-on-surface: #F5F6F0;
+  --color-outline: #7D8475;
+  --color-outline-variant: #C8CEC0;
+  --color-surface-tint: #648032;
+  --color-primary: #151C12;
+  --color-on-primary: #FFFFFF;
+  --color-primary-container: #648032;
+  --color-on-primary-container: #F1F6E9;
+  --color-inverse-primary: #A2C470;
+  --color-secondary: #C69855;
+  --color-on-secondary: #FFFFFF;
+  --color-secondary-container: #FAF5EB;
+  --color-on-secondary-container: #6E5127;
+  --color-tertiary: #849667;
+  --color-on-tertiary: #FFFFFF;
+  --color-tertiary-container: #EEF3E7;
+  --color-on-tertiary-container: #3D4F28;
+  --color-error: #BA1A1A;
+  --color-on-error: #FFFFFF;
+  --color-background: #FCFBF7;
+  --color-on-background: #151C12;
+  --color-surface-variant: #E3E1C9;
 
-  /* Legacy aliases to maintain backward-compatibility with components */
-  --color-verdaez-950: #0d2214;
-  --color-verdaez-900: #0d2214;
-  --color-verdaez-800: #1b3523;
-  --color-verdaez-700: #324e3a;
-  --color-verdaez-600: #4c6c54;
-  --color-verdaez-500: #587d61;
-  --color-verdaez-400: #83ab8e;
-  --color-verdaez-300: #a7c5af;
-  --color-verdaez-200: #c1d6c8;
-  --color-verdaez-100: #dce7e0;
-  --color-verdaez-50: #f4f5f0;
+  /* Legacy aliases mapped to warm Olive and Deep Olive Ink */
+  --color-verdaez-950: #151C12;
+  --color-verdaez-900: #242E1E;
+  --color-verdaez-800: #35442C;
+  --color-verdaez-700: #4B5F3E;
+  --color-verdaez-600: #648032;
+  --color-verdaez-500: #7A9B4B;
+  --color-verdaez-400: #93B462;
+  --color-verdaez-300: #B2CE87;
+  --color-verdaez-200: #D0E5B5;
+  --color-verdaez-100: #E6F2DB;
+  --color-verdaez-50: #F6F4EB;
 
-  --color-gold-500: #d4b562;
-  --color-gold-400: #e0c97e;
-  --color-gold-300: #efeeeb;
+  --color-gold-500: #C69855;
+  --color-gold-400: #D8AF72;
+  --color-gold-300: #ECD7B7;
 
-  --color-cream-50: #fbf9f6;
-  --color-cream-100: #f5f3f0;
-  --color-cream-200: #efeeeb;
+  --color-cream-50: #FCFBF7;
+  --color-cream-100: #F6F4EB;
+  --color-cream-200: #EDECD8;
 
   /* Olive & Espresso Palette for Value Chain */
-  --color-olive-600: #828826;
-  --color-olive-500: #9a9f30;
-  --color-olive-400: #b2b83e;
-  --color-olive-300: #c5ca6a;
-  --color-espresso-900: #221f18;
-  --color-espresso-800: #2e2a1f;
-  --color-espresso-700: #3a3520;
-  --color-harvest-500: #c9a227;
-  --color-harvest-400: #d4b562;
-  --color-harvest-300: #e0c97e;
+  --color-olive-600: #648032;
+  --color-olive-500: #7A9B4B;
+  --color-olive-400: #93B462;
+  --color-olive-300: #B2CE87;
+  --color-espresso-900: #1D1A15;
+  --color-espresso-800: #29251E;
+  --color-espresso-700: #353026;
+  --color-harvest-500: #C69855;
+  --color-harvest-400: #D8AF72;
+  --color-harvest-300: #ECD7B7;
 
   /* New Typographic Pairings */
   --font-heading: "Libre Caslon Text", Georgia, serif;
@@ -100,6 +100,7 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     line-height: 1.6;
+    text-wrap: pretty; /* Prevents paragraph body orphans */
   }
 
   h1,
@@ -110,6 +111,7 @@
   h6 {
     font-family: var(--font-heading);
     font-weight: 400; /* Editorial Style: serif headlines should never be bold */
+    text-wrap: balance; /* Automatically balances title lines and prevents single-word wrap orphans */
   }
 }
 
@@ -186,10 +188,10 @@
 @keyframes pulse-glow {
   0%,
   100% {
-    box-shadow: 0 0 20px rgba(42, 99, 68, 0.15);
+    box-shadow: 0 0 20px rgba(100, 128, 50, 0.15);
   }
   50% {
-    box-shadow: 0 0 40px rgba(42, 99, 68, 0.3);
+    box-shadow: 0 0 40px rgba(100, 128, 50, 0.3);
   }
 }
 
@@ -259,7 +261,7 @@
   top: 50%;
   transform: translateY(-50%);
   font-size: 1.5rem;
-  color: #3a7d56;
+  color: #648032;
   font-weight: bold;
 }
 
@@ -269,16 +271,16 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: #F6F4EB;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #3a7d56;
+  background: #648032;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #2d6344;
+  background: #4B5F3E;
 }
 
 /* 3D Card Flip Utilities (Premium Bounce & Speed) */

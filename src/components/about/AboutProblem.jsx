@@ -45,8 +45,7 @@ export default function AboutProblem() {
             The Circular Carbon Opportunity
           </span>
           <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl font-normal text-primary leading-tight mb-8">
-            Solving the<br/>
-            <span className="italic text-surface-tint">Biomass Paradox.</span>
+            Solving the <span className="italic text-surface-tint">Biomass Paradox.</span>
           </h2>
           <p className="font-body text-lg text-on-surface-variant leading-relaxed max-w-md">
             Millions of tons of organic biomass go unutilized or are burned openly every year, releasing massive amounts of CO₂ and particulate matter into the atmosphere. 

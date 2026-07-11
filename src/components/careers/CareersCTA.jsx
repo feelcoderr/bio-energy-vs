@@ -32,7 +32,7 @@ export default function CareersCTA() {
 
   return (
     <section id="careers-cta" ref={containerRef} className="py-32 bg-white relative overflow-hidden border-t border-outline-variant/30">
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-[60%] bg-[radial-gradient(circle_at_bottom,rgba(76,108,84,0.025)_0%,transparent_70%)] pointer-events-none" />
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-[60%] bg-[radial-gradient(circle_at_bottom,rgba(100,128,50,0.025)_0%,transparent_70%)] pointer-events-none" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
@@ -43,8 +43,7 @@ export default function CareersCTA() {
               Talent Pool
             </span>
             <h2 className="cta-reveal font-heading text-4xl md:text-5xl lg:text-6xl text-primary font-normal leading-[1.1] mb-6">
-              Didn't Find a Specific <br/>
-              <span className="italic text-surface-tint">Open Role?</span>
+              Didn't Find a Specific <span className="italic text-surface-tint">Open Role?</span>
             </h2>
             <p className="cta-reveal font-body text-base md:text-lg text-on-surface-variant leading-relaxed max-w-lg mb-8">
               We are constantly looking for researchers, logistics architects, process control engineers, and regional operational managers. Submit a speculative application to enter our active talent pool.

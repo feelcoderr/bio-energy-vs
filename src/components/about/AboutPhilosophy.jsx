@@ -44,7 +44,7 @@ export default function AboutPhilosophy() {
         <div className="max-w-3xl mb-20">
           <h2 className="section-heading mb-6">Operating Philosophy</h2>
           <p className="section-description">
-            Verdaez Bioenergy transforms underutilized organic biomass into
+            Ratnanjali Bioenergy transforms underutilized organic biomass into
             practical products for energy, agriculture, water, industry, and
             climate markets.
           </p>
@@ -70,7 +70,7 @@ export default function AboutPhilosophy() {
             </div>
             <h3 className="font-heading text-2xl text-primary mb-4">Mission</h3>
             <p className="font-body text-on-surface-variant leading-relaxed">
-              Convert biomass waste into durable, high-value and market-ready
+              Convert biomass waste into durable, high value and market ready
               products.
             </p>
           </div>
@@ -94,7 +94,7 @@ export default function AboutPhilosophy() {
             </div>
             <h3 className="font-heading text-2xl text-primary mb-4">Vision</h3>
             <p className="font-body text-on-surface-variant leading-relaxed">
-              Become a scalable biomass-to-carbon materials company serving
+              Become a scalable biomass to carbon materials company serving
               energy, agriculture, water, infrastructure, and emerging
               technology markets.
             </p>
@@ -121,7 +121,7 @@ export default function AboutPhilosophy() {
               Philosophy
             </h3>
             <p className="font-body text-on-surface-variant leading-relaxed">
-              Build cash-flow products first, validate advanced products step by
+              Build cash flow products first, validate advanced products step by
               step, use partnerships where internal capex is inefficient, and
               create measurable environmental and social benefits with
               transparent data.

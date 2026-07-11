@@ -15,7 +15,7 @@ export default function ContactHero() {
   return (
     <section ref={containerRef} className="relative min-h-[50vh] flex items-center bg-surface-container-lowest pt-28 pb-16 overflow-hidden">
       {/* Background subtle radial texture */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-[radial-gradient(circle_at_center,rgba(76,108,84,0.02)_0%,transparent_50%)] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-[radial-gradient(circle_at_center,rgba(100,128,50,0.02)_0%,transparent_50%)] pointer-events-none" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 w-full">
         <div className="flex flex-col items-center text-center max-w-3xl mx-auto">
@@ -23,8 +23,7 @@ export default function ContactHero() {
             Operational Channels
           </span>
           <h1 className="contact-reveal font-heading text-5xl md:text-6xl text-primary font-normal leading-[1.1] mb-6">
-            Partner for Sustainable <br/>
-            <span className="italic text-surface-tint">Carbon Infrastructure.</span>
+            Partner for Sustainable <span className="italic text-surface-tint">Carbon Infrastructure.</span>
           </h1>
           <p className="contact-reveal font-body text-base md:text-lg text-on-surface-variant leading-relaxed">
             Select your communication intent below to route your request directly to our process engineering, feedstock logistics, or investment teams.

@@ -28,16 +28,16 @@ export default function Footer() {
             <Link
               to="/"
               className="flex items-center gap-3 group"
-              aria-label="Verdaez home"
+              aria-label="Ratnanjali BioEnergy home"
             >
               <img
                 src="/images/verdaez-logo.png"
-                alt="Verdaez Icon"
+                alt="Ratnanjali BioEnergy Icon"
                 className="h-11 w-auto transition-transform duration-300 group-hover:scale-105"
               />
               <img
                 src="/images/verdaez-logo-text.png"
-                alt="Verdaez"
+                alt="Ratnanjali BioEnergy"
                 className="h-10 w-auto"
               />
             </Link>
@@ -230,7 +230,7 @@ export default function Footer() {
             </div>
 
             <p className="text-[10px] text-on-surface-variant/80 font-body lg:text-right mt-2">
-              Headquarters: Bangalore, India
+              Headquarters: Ahmedabad, India
             </p>
           </div>
         </div>
@@ -238,7 +238,8 @@ export default function Footer() {
         {/* Bottom copyright and legal line */}
         <div className="mt-16 pt-8 border-t border-outline-variant/35 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-xs text-on-surface-variant font-body">
-            © {new Date().getFullYear()} Verdaez Bioenergy. All rights reserved.
+            © {new Date().getFullYear()} Ratnanjali Bioenergy. All rights
+            reserved.
           </p>
           <div className="flex gap-4 text-xs text-on-surface-variant font-body">
             <a href="#" className="hover:text-primary transition-colors">

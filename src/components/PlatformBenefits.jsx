@@ -25,7 +25,7 @@ const benefitsData = [
   {
     title: "300 TPD Scale Target",
     description:
-      "Modular scale-up to 300 TPD within five years through replication.",
+      "Modular scale up to 300 TPD within five years through replication.",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -44,7 +44,7 @@ const benefitsData = [
     ),
   },
   {
-    title: "Multi-Product Revenue",
+    title: "Multi Product Revenue",
     description:
       "Diversified revenue across fuel pellets, biochar, carbon materials, and pyrolysis derivatives.",
     icon: (
@@ -67,7 +67,7 @@ const benefitsData = [
   {
     title: "Circular Biorefinery",
     description:
-      "Upcycling agricultural waste into industrial-grade products in a closed-loop system.",
+      "Upcycling agricultural waste into industrial grade products in a closed loop system.",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -194,7 +194,7 @@ export default function PlatformBenefits() {
           }`}
         >
           Engineered to reduce biomass waste, generate rural income, enable
-          low-carbon materials, and unlock carbon-value opportunities.
+          low-carbon materials, and unlock carbon value opportunities.
         </p>
 
         {/* Cards Grid */}

@@ -16,13 +16,13 @@ const products = [
   {
     name: "Slow-Release Fertilizer",
     description:
-      "Biochar-enhanced fertilizer that boosts crop yield while reducing nutrient runoff and loss.",
+      "Biochar enhanced fertilizer that boosts crop yield while reducing nutrient runoff and loss.",
     image: "/images/slow-release-fertilizer.png",
   },
   {
     name: "Filtration Media",
     description:
-      "High-performance activated carbon media for water treatment and industrial filtration systems.",
+      "High performance activated carbon media for water treatment and industrial filtration systems.",
     image: "/images/filter-media.png",
   },
   {
@@ -34,7 +34,7 @@ const products = [
   {
     name: "Carbon & Graphene Derivatives",
     description:
-      "Advanced carbon nanomaterials for high-tech, energy storage, and industrial applications.",
+      "Advanced carbon nanomaterials for high tech, energy storage, and industrial applications.",
     image: "/images/carbon-graphene.png",
   },
 ];
