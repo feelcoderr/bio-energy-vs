@@ -10,7 +10,7 @@ gsap.registerPlugin(ScrollTrigger);
 const tiers = [
   {
     id: 1,
-    label: "Tier 1 – Bioenergy Commodity",
+    label: "Tier 1 - Bioenergy Commodity",
     badge: "Low Risk, High Volume",
     image: "/images/tier1-pellets.jpg",
     stats: [
@@ -37,7 +37,7 @@ const tiers = [
   },
   {
     id: 2,
-    label: "Tier 2 – Specialized Biocarbon",
+    label: "Tier 2 - Specialized Biocarbon",
     badge: "Increasing Value, Diversified",
     image: "/images/tier2-biochar.jpg",
     stats: [
@@ -61,7 +61,7 @@ const tiers = [
   },
   {
     id: 3,
-    label: "Tier 3 – Advanced Materials",
+    label: "Tier 3 - Advanced Materials",
     badge: "High Margin, Deep Moats",
     image: "/images/tier3-graphene.jpg",
     stats: [
@@ -280,7 +280,7 @@ export default function ValueChain() {
           <p
             className={`text-xs font-body font-semibold uppercase tracking-[0.2em] text-surface-tint mb-4 ${isVisible ? "animate-fade-in-up" : "opacity-0"}`}
           >
-            Ratnanjali Bioenergy — One Platform
+            Ratnanjali Bioenergy - One Platform
           </p>
           <h2
             className={`section-heading text-center ${isVisible ? "animate-fade-in-up delay-100" : "opacity-0"}`}
