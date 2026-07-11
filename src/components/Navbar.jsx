@@ -82,8 +82,8 @@ export default function Navbar() {
         ref={headerRef}
         className={`fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[92%] max-w-7xl h-16 rounded-full border transition-all duration-500 ${
           scrolled
-            ? "bg-surface-container/80 backdrop-blur-md border-outline-variant/30 shadow-ambient"
-            : "bg-surface/70 backdrop-blur-sm border-transparent"
+            ? "bg-white border-outline-variant/20 shadow-[0_4px_20px_rgba(0,0,0,0.08)]"
+            : "bg-white border-outline-variant/10 shadow-[0_2px_12px_rgba(0,0,0,0.05)]"
         }`}
       >
         <nav
