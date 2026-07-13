@@ -242,17 +242,17 @@ export default function Footer() {
             reserved.
           </p>
           <div className="flex gap-4 text-xs text-on-surface-variant font-body">
-            <a href="#" className="hover:text-primary transition-colors">
+            <Link to="/contact" className="hover:text-primary transition-colors">
               Privacy Policy
-            </a>
+            </Link>
             <span>|</span>
-            <a href="#" className="hover:text-primary transition-colors">
+            <Link to="/contact" className="hover:text-primary transition-colors">
               Terms of Use
-            </a>
+            </Link>
             <span>|</span>
-            <a href="#" className="hover:text-primary transition-colors">
+            <Link to="/contact" className="hover:text-primary transition-colors">
               Cookie Settings
-            </a>
+            </Link>
           </div>
         </div>
       </div>

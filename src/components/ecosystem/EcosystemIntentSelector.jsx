@@ -209,7 +209,7 @@ export default function EcosystemIntentSelector() {
                   </div>
                   <div className="border-t border-outline-variant/20 pt-6 mt-6">
                     <a
-                      href="#contact"
+                      href="/contact"
                       className="btn-secondary w-full justify-center text-xs py-2 px-4"
                     >
                       Submit Sourcing Profile
@@ -234,7 +234,7 @@ export default function EcosystemIntentSelector() {
                   </div>
                   <div className="border-t border-outline-variant/20 pt-6 mt-6">
                     <a
-                      href="#contact"
+                      href="/contact"
                       className="btn-secondary w-full justify-center text-xs py-2 px-4"
                     >
                       Apply as Off-taker
@@ -259,7 +259,7 @@ export default function EcosystemIntentSelector() {
                   </div>
                   <div className="border-t border-outline-variant/20 pt-6 mt-6">
                     <a
-                      href="#contact"
+                      href="/contact"
                       className="btn-secondary w-full justify-center text-xs py-2 px-4"
                     >
                       Discuss Joint Research

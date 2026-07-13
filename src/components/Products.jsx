@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { Link } from "react-router-dom";
 
 const products = [
   {
@@ -77,15 +78,15 @@ function ProductCard({ product, index, isVisible }) {
         <p className="font-body text-sm text-on-surface-variant mt-3 leading-relaxed flex-grow">
           {product.description}
         </p>
-        <a
-          href="#"
+        <Link
+          to="/products"
           className="text-xs font-semibold uppercase tracking-widest text-surface-tint hover:text-primary mt-6 inline-flex items-center gap-1.5 transition-all duration-300 group-hover:translate-x-0.5"
         >
           Learn More
           <span className="transition-transform duration-300 group-hover:translate-x-1">
             →
           </span>
-        </a>
+        </Link>
       </div>
     </div>
   );

@@ -65,13 +65,13 @@ export default function ProductsHero() {
 
         <div className="hero-element flex flex-col sm:flex-row items-center justify-center gap-4">
           <a
-            href="#portfolio"
+            href="#ecosystem"
             className="btn-primary w-full sm:w-auto text-center"
           >
             Explore Portfolio
           </a>
           <a
-            href="#contact"
+            href="/contact"
             className="px-8 py-4 rounded-full font-heading font-medium tracking-wide transition-all duration-300 border border-white/20 bg-white/5 text-white hover:bg-white/10 w-full sm:w-auto text-center"
           >
             Request Catalogue

@@ -62,7 +62,7 @@ export default function PlatformCTA() {
             </p>
 
             <div className="cta-reveal flex flex-col sm:flex-row gap-4">
-              <a href="#" className="btn-primary justify-center">
+              <a href="mailto:info@ratnanjalibioenergy.com?subject=Platform%20Overview%20Request" className="btn-primary justify-center">
                 <span>Download Platform Overview</span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

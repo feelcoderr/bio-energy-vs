@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const highlights = [
   {
@@ -150,7 +151,7 @@ export default function Hero() {
 
             {/* CTA Buttons */}
             <div className="flex flex-wrap items-center gap-4 mb-12">
-              <a href="#platform" className="btn-primary">
+              <Link to="/platform" className="btn-primary">
                 Explore Our Platform
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -166,10 +167,10 @@ export default function Hero() {
                   <line x1="5" y1="12" x2="19" y2="12" />
                   <polyline points="12 5 19 12 12 19" />
                 </svg>
-              </a>
-              <a href="#partner" className="btn-secondary">
+              </Link>
+              <Link to="/contact" className="btn-secondary">
                 Partner With Us
-              </a>
+              </Link>
             </div>
 
             {/* Highlights Row (Commented out because it is baked into the background image) */}

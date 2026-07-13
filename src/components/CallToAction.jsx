@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 
 export default function CallToAction() {
   const [isVisible, setIsVisible] = useState(false);
@@ -66,8 +67,8 @@ export default function CallToAction() {
 
           {/* Button */}
           <div className="mt-10">
-            <a
-              href="#contact"
+            <Link
+              to="/contact"
               className="inline-flex items-center justify-center bg-primary text-white hover:bg-primary-container font-body text-sm font-semibold uppercase tracking-widest px-10 py-4 rounded-full shadow-ambient-sm hover:shadow-ambient hover:-translate-y-0.5 transition-all duration-300 group"
             >
               Get Started
@@ -86,7 +87,7 @@ export default function CallToAction() {
                 <line x1="5" y1="12" x2="19" y2="12" />
                 <polyline points="12 5 19 12 12 19" />
               </svg>
-            </a>
+            </Link>
           </div>
         </div>
       </div>
