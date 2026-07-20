@@ -9,6 +9,7 @@ import Ecosystem from './pages/Ecosystem'
 import Careers from './pages/Careers'
 import Contact from './pages/Contact'
 import CustomCursor from './components/CustomCursor'
+import WhatsAppButton from './components/WhatsAppButton'
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
           </Routes>
         </main>
         <Footer />
+        <WhatsAppButton />
       </div>
     </Router>
   )

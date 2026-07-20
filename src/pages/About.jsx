@@ -4,6 +4,7 @@ import AboutProblem from '../components/about/AboutProblem';
 import AboutPhilosophy from '../components/about/AboutPhilosophy';
 import AboutRoadmap from '../components/about/AboutRoadmap';
 import AboutDiscipline from '../components/about/AboutDiscipline';
+import AboutCollaboration from '../components/about/AboutCollaboration';
 import CallToAction from '../components/CallToAction';
 
 export default function About() {
@@ -19,6 +20,7 @@ export default function About() {
       <AboutPhilosophy />
       <AboutRoadmap />
       <AboutDiscipline />
+      <AboutCollaboration />
       {/* Reusing existing CTA which was redesigned to match this theme perfectly */}
       <CallToAction />
     </>
