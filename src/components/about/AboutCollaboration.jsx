@@ -9,26 +9,23 @@ export default function AboutCollaboration() {
   const sectionRef = useRef(null);
   const [isHovered, setIsHovered] = useState(false);
 
-  useGSAP(
-    () => {
-      const ctx = gsap.context(() => {
-        gsap.from(".collab-element", {
-          y: 40,
-          opacity: 0,
-          duration: 0.8,
-          stagger: 0.15,
-          ease: "power3.out",
-          scrollTrigger: {
-            trigger: sectionRef.current,
-            start: "top 80%",
-            once: true,
-          },
-        });
-      }, sectionRef);
-      return () => ctx.revert();
-    },
-    { scope: sectionRef },
-  );
+  useGSAP(() => {
+    const ctx = gsap.context(() => {
+      gsap.from(".collab-element", {
+        y: 40,
+        opacity: 0,
+        duration: 0.8,
+        stagger: 0.15,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: "top 80%",
+          once: true,
+        },
+      });
+    }, sectionRef);
+    return () => ctx.revert();
+  }, { scope: sectionRef });
 
   return (
     <section
@@ -52,8 +49,7 @@ export default function AboutCollaboration() {
             className="inline-block text-[10px] font-body font-bold uppercase tracking-[0.25em] px-4 py-1.5 rounded-full mb-5"
             style={{
               color: "var(--color-surface-tint)",
-              backgroundColor: "var(--color-surface-tint, #648032)",
-              background: "rgba(100,128,50,0.08)",
+              backgroundColor: "rgba(100,128,50,0.08)",
               border: "1px solid rgba(100,128,50,0.15)",
             }}
           >
@@ -70,93 +66,138 @@ export default function AboutCollaboration() {
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
           style={{
-            backgroundColor: "rgba(255,255,255,0.7)",
-            backdropFilter: "blur(16px)",
-            border:
-              "1px solid var(--color-outline-variant, rgba(200,206,192,0.4))",
+            backgroundColor: "#FFFFFF",
+            border: "1px solid rgba(200,206,192,0.5)",
             boxShadow: isHovered
-              ? "0 20px 60px rgba(100,128,50,0.1), 0 8px 24px rgba(0,0,0,0.06)"
-              : "0 4px 20px rgba(0,0,0,0.04)",
+              ? "0 20px 60px rgba(100,128,50,0.12), 0 8px 24px rgba(0,0,0,0.08)"
+              : "0 4px 20px rgba(0,0,0,0.06)",
             transform: isHovered ? "translateY(-4px)" : "translateY(0)",
           }}
         >
           <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12 p-8 md:p-12">
             {/* Logo */}
             <div
-              className="flex-shrink-0 w-40 h-40 md:w-48 md:h-48 rounded-2xl overflow-hidden flex items-center justify-center p-4 transition-all duration-500"
+              className="flex-shrink-0 transition-all duration-500"
               style={{
-                backgroundColor:
-                  "var(--color-surface-container-lowest, #FFFFFF)",
-                border:
-                  "1px solid var(--color-outline-variant, rgba(200,206,192,0.3))",
-                boxShadow: "0 2px 12px rgba(0,0,0,0.04)",
+                width: "180px",
+                height: "180px",
+                borderRadius: "20px",
+                overflow: "hidden",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                padding: "12px",
+                backgroundColor: "#FAFAF7",
+                border: "1px solid rgba(200,206,192,0.4)",
+                boxShadow: "inset 0 2px 8px rgba(0,0,0,0.03)",
                 transform: isHovered ? "scale(1.03)" : "scale(1)",
               }}
             >
               <img
                 src="/images/AnandParivarLogo.png"
                 alt="Anand Parivar - આનંદ પરિવાર"
-                className="w-full h-full object-contain"
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "contain",
+                  display: "block",
+                }}
               />
             </div>
 
             {/* Details */}
-            <div className="flex-grow text-center md:text-left">
+            <div style={{ flex: 1, textAlign: "left" }}>
               <h3
-                className="font-heading text-xl md:text-2xl font-normal mb-1"
-                style={{ color: "var(--color-primary)" }}
+                style={{
+                  fontFamily: "var(--font-heading)",
+                  fontSize: "1.5rem",
+                  fontWeight: "normal",
+                  color: "var(--color-primary)",
+                  marginBottom: "4px",
+                }}
               >
                 આનંદ પરિવાર
               </h3>
               <p
-                className="font-body text-sm font-semibold mb-4"
-                style={{ color: "var(--color-surface-tint)" }}
+                style={{
+                  fontFamily: "var(--font-body)",
+                  fontSize: "0.8rem",
+                  fontWeight: 600,
+                  color: "var(--color-surface-tint)",
+                  marginBottom: "16px",
+                  letterSpacing: "0.05em",
+                }}
               >
                 Anand Parivar Karyalay
               </p>
 
               {/* Divider */}
               <div
-                className="w-12 h-[2px] rounded-full mb-5 mx-auto md:mx-0"
                 style={{
-                  background:
-                    "linear-gradient(90deg, var(--color-surface-tint), var(--color-secondary))",
+                  width: "48px",
+                  height: "2px",
+                  borderRadius: "9999px",
+                  background: "linear-gradient(90deg, var(--color-surface-tint), var(--color-secondary))",
+                  marginBottom: "20px",
                 }}
               />
 
               <p
-                className="font-body text-sm leading-relaxed mb-1"
-                style={{ color: "var(--color-on-surface)" }}
+                style={{
+                  fontFamily: "var(--font-body)",
+                  fontSize: "0.9rem",
+                  lineHeight: 1.7,
+                  color: "var(--color-on-surface)",
+                  marginBottom: "6px",
+                  fontWeight: 500,
+                }}
               >
                 પૂજ્ય ગણિ શ્રી કલ્પરક્ષિત વિજયજી મહારાજ સાહેબ
               </p>
               <p
-                className="font-body text-xs leading-relaxed"
-                style={{ color: "var(--color-on-surface-variant)" }}
+                style={{
+                  fontFamily: "var(--font-body)",
+                  fontSize: "0.8rem",
+                  lineHeight: 1.8,
+                  color: "var(--color-on-surface-variant)",
+                }}
               >
+                આનંદ પરિવાર કાર્યાલય
+                <br />
                 ડો. પોપટલાલના દવાખાનાની પાછળની ગલીમાં,
                 <br />
                 ભીલડી, તા.ડીસા, જિ.બનાસકાંઠા – 385530
               </p>
 
-              {/* Contact */}
+              {/* Contact Button */}
               <a
                 href="tel:+917227021777"
-                className="inline-flex items-center gap-2 mt-5 px-5 py-2 rounded-full font-body text-xs font-semibold tracking-wide transition-all duration-300"
                 style={{
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: "8px",
+                  marginTop: "20px",
+                  padding: "8px 20px",
+                  borderRadius: "9999px",
+                  fontFamily: "var(--font-body)",
+                  fontSize: "0.8rem",
+                  fontWeight: 600,
+                  letterSpacing: "0.03em",
                   color: "var(--color-surface-tint)",
                   backgroundColor: "rgba(100,128,50,0.08)",
                   border: "1px solid rgba(100,128,50,0.2)",
+                  textDecoration: "none",
+                  transition: "all 0.3s ease",
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.backgroundColor =
-                    "var(--color-surface-tint)";
+                  e.currentTarget.style.backgroundColor = "var(--color-surface-tint)";
                   e.currentTarget.style.color = "#FFFFFF";
+                  e.currentTarget.style.borderColor = "var(--color-surface-tint)";
                 }}
                 onMouseLeave={(e) => {
-                  e.currentTarget.style.backgroundColor =
-                    "rgba(100,128,50,0.08)";
+                  e.currentTarget.style.backgroundColor = "rgba(100,128,50,0.08)";
                   e.currentTarget.style.color = "var(--color-surface-tint)";
+                  e.currentTarget.style.borderColor = "rgba(100,128,50,0.2)";
                 }}
               >
                 {/* Phone icon */}
