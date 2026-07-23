@@ -11,10 +11,10 @@ const revenueStreams = [
     category: "High-Volume Cash Flow",
     frontDesc:
       "Sustainable fuel replacements for coal-fired power stations and heavy industry boilers.",
-    margin: "15%–25% EBITDA",
+    margin: "Displaces ~1.5t CO2 per ton",
     market: "Industrial thermal, cement plants, power utilities",
     terms: "Multi-year fixed-volume off-take contracts",
-    growth: "12.4% CAGR",
+    growth: "50,000 MT/Year",
     image: "/images/product-pellets.jpg",
     icon: (
       <svg
@@ -43,10 +43,10 @@ const revenueStreams = [
     category: "High-Margin Agricultural",
     frontDesc:
       "Premium soil amendments that retain moisture, lock in nutrients, and permanently store carbon.",
-    margin: "45%–55% EBITDA",
+    margin: "Sequesters Carbon 100+ Years",
     market: "Commercial agriculture, soil mixers, specialty farms",
     terms: "Spot sales & subscription-based supply agreements",
-    growth: "18.1% CAGR",
+    growth: "20,000 MT/Year",
     image: "/images/product-biochar.jpg",
     icon: (
       <svg
@@ -70,10 +70,10 @@ const revenueStreams = [
     category: "Premium Environmental",
     frontDesc:
       "Super porous carbon media engineered for municipal water filtration and air purification.",
-    margin: "35%–45% EBITDA",
+    margin: "Ultra-high porosity for purification",
     market: "Water treatment plants, industrial gas filters",
     terms: "Annual municipal bids & direct industrial contracts",
-    growth: "9.2% CAGR",
+    growth: "5,000 MT/Year",
     image: "/images/product-filter.jpg",
     icon: (
       <svg
@@ -97,10 +97,10 @@ const revenueStreams = [
     category: "Liquid Biofuels & Chemistry",
     frontDesc:
       "Bio-oil recovered from oxygen free thermal conversion, suitable for bio-crude and chemical feeds.",
-    margin: "25%–35% EBITDA",
+    margin: "Fossil-fuel equivalent thermal value",
     market: "Refineries, bio-chemical plants, maritime fuel users",
     terms: "Industrial fuel contracts and spot marketing",
-    growth: "14.7% CAGR",
+    growth: "10,000 Liters/Day",
     image: "/images/product-oil.jpg",
     icon: (
       <svg
@@ -310,13 +310,13 @@ export default function PlatformRevenueEngine() {
                 <div className="flip-card-back bg-primary text-white p-8 flex flex-col justify-between shadow-ambient">
                   <div>
                     <span className="text-[9px] font-body font-bold uppercase tracking-widest text-olive-scale-400 block mb-6">
-                      FINANCIAL PROFILE & BUYERS
+                      PRODUCT PROFILE & MARKETS
                     </span>
 
                     <div className="space-y-4">
                       <div>
                         <span className="block text-[8px] uppercase tracking-widest text-white/50">
-                          MARGIN PROFILE
+                          KEY ADVANTAGE
                         </span>
                         <span className="font-heading text-xl text-olive-scale-200">
                           {stream.margin}
@@ -324,7 +324,7 @@ export default function PlatformRevenueEngine() {
                       </div>
                       <div>
                         <span className="block text-[8px] uppercase tracking-widest text-white/50">
-                          PRIMARY BUYERS
+                          PRIMARY APPLICATIONS
                         </span>
                         <span className="font-body text-xs text-white/90 leading-relaxed block mt-0.5">
                           {stream.market}
@@ -332,7 +332,7 @@ export default function PlatformRevenueEngine() {
                       </div>
                       <div>
                         <span className="block text-[8px] uppercase tracking-widest text-white/50">
-                          CONTRACTUAL STRUCTURE
+                          SUPPLY STRUCTURE
                         </span>
                         <span className="font-body text-xs text-white/90 leading-relaxed block mt-0.5">
                           {stream.terms}
@@ -343,7 +343,7 @@ export default function PlatformRevenueEngine() {
 
                   <div className="flex justify-between items-center border-t border-white/10 pt-4 text-xs font-body mt-6">
                     <span className="text-white/60 uppercase text-[9px] tracking-wider font-semibold">
-                      EST. CAGR: {stream.growth}
+                      CAPACITY: {stream.growth}
                     </span>
                     <span className="text-olive-scale-400 font-semibold font-heading text-sm">
                       Ratnanjali Bioenergy
