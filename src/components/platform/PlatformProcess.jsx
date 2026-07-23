@@ -134,7 +134,7 @@ export default function PlatformProcess() {
                   key={step.id}
                   onClick={() => setActiveStep(step.id)}
                   type="button"
-                  className={`flex flex-col md:flex-row items-center gap-4 px-6 py-4.5 rounded-full border-2 bg-white transition-all duration-300 shadow-ambient-sm cursor-none-layout ${
+                  className={`flex flex-row items-center gap-3 md:gap-4 px-5 py-3 md:px-6 md:py-4.5 rounded-full border-2 bg-white transition-all duration-300 shadow-ambient-sm cursor-pointer ${
                     isActive
                       ? "border-surface-tint text-primary font-semibold shadow-[0_0_20px_rgba(100,128,50,0.1)]"
                       : "border-outline-variant/40 text-on-surface-variant/70 hover:border-outline hover:text-primary"
@@ -159,7 +159,7 @@ export default function PlatformProcess() {
         </div>
 
         {/* Consolidated Details Dashboard Card (Below) */}
-        <div className="process-reveal bg-surface-container-low border border-outline-variant/35 rounded-[3rem] p-8 md:p-12 shadow-ambient-sm relative overflow-hidden">
+        <div className="process-reveal bg-surface-container-low border border-outline-variant/35 rounded-[2rem] md:rounded-[3rem] p-6 sm:p-8 md:p-12 shadow-ambient-sm relative overflow-hidden">
           <div className="absolute top-0 left-0 w-64 h-64 bg-surface-tint/5 rounded-full blur-3xl pointer-events-none" />
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-stretch">
@@ -197,7 +197,7 @@ export default function PlatformProcess() {
             </div>
 
             {/* Right Column: Dynamic Specification Specs Sheet (Replaces circles) */}
-            <div className="lg:col-span-5 bg-white border border-outline-variant/45 rounded-3xl p-8 flex flex-col justify-between shadow-ambient-sm relative">
+            <div className="lg:col-span-5 bg-white border border-outline-variant/45 rounded-2xl md:rounded-3xl p-6 md:p-8 flex flex-col justify-between shadow-ambient-sm relative mt-2 lg:mt-0">
               <div>
                 <span className="text-[8px] font-body font-bold uppercase tracking-widest text-on-surface-variant/60 block mb-6">
                   Process Parameters

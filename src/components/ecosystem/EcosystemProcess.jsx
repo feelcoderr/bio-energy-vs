@@ -120,17 +120,17 @@ export default function EcosystemProcess() {
                 <button
                   onClick={() => setExpandedStage(stage.num)}
                   type="button"
-                  className="w-full text-left p-6 md:p-8 flex justify-between items-center hover:bg-surface-container-low/20 transition-all duration-350"
+                  className="w-full text-left p-5 sm:p-6 md:p-8 flex justify-between items-start md:items-center hover:bg-surface-container-low/20 transition-all duration-350"
                 >
-                  <div className="flex gap-6 items-center">
-                    <span className="font-heading text-xl font-bold text-surface-tint">
+                  <div className="flex gap-4 md:gap-6 items-start md:items-center flex-grow">
+                    <span className="font-heading text-xl font-bold text-surface-tint shrink-0 mt-0.5 md:mt-0">
                       {stage.num}
                     </span>
-                    <h3 className="font-heading text-xl md:text-2xl text-primary font-normal">
+                    <h3 className="font-heading text-lg sm:text-xl md:text-2xl text-primary font-normal leading-tight">
                       {stage.title}
                     </h3>
                   </div>
-                  <span className="font-body text-xs text-on-surface-variant font-semibold tracking-wider uppercase">
+                  <span className="font-body text-[10px] md:text-xs text-on-surface-variant font-semibold tracking-wider uppercase whitespace-nowrap ml-4 shrink-0 mt-1.5 md:mt-0">
                     {stage.duration}
                   </span>
                 </button>

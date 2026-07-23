@@ -297,27 +297,30 @@ export default function ValueChain() {
             moats.
           </p>
           <div
-            className={`mt-12 flex items-center justify-center gap-4 ${isVisible ? "animate-fade-in-up delay-500" : "opacity-0"}`}
+            className={`mt-8 sm:mt-12 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 w-full px-4 ${isVisible ? "animate-fade-in-up delay-500" : "opacity-0"}`}
           >
-            <span className="text-xs font-body text-on-surface-variant/50 uppercase tracking-widest">
-              Lower Risk
-            </span>
-            <div className="flex items-center gap-0.5">
-              <svg
-                className="w-4 h-4 text-surface-tint/40"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                strokeWidth={2}
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M14 5l7 7m0 0l-7 7m7-7H3"
-                />
-              </svg>
+            <div className="flex items-center gap-2 sm:gap-4">
+              <span className="text-[10px] sm:text-xs font-body text-on-surface-variant/50 uppercase tracking-widest shrink-0 whitespace-nowrap">
+                Lower Risk
+              </span>
+              <div className="flex items-center gap-0.5">
+                <svg
+                  className="w-3 h-3 sm:w-4 sm:h-4 text-surface-tint/40"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth={2}
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M14 5l7 7m0 0l-7 7m7-7H3"
+                  />
+                </svg>
+              </div>
             </div>
-            <div className="flex items-center gap-1">
+
+            <div className="flex items-center gap-1 transform scale-75 sm:scale-100 origin-center my-1 sm:my-0">
               {[...Array(7)].map((_, i) => (
                 <div
                   key={i}
@@ -329,24 +332,27 @@ export default function ValueChain() {
                 />
               ))}
             </div>
-            <div className="flex items-center gap-0.5">
-              <svg
-                className="w-4 h-4 text-primary/40"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                strokeWidth={2}
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M14 5l7 7m0 0l-7 7m7-7H3"
-                />
-              </svg>
+
+            <div className="flex items-center gap-2 sm:gap-4">
+              <div className="flex items-center gap-0.5">
+                <svg
+                  className="w-3 h-3 sm:w-4 sm:h-4 text-primary/40"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth={2}
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M14 5l7 7m0 0l-7 7m7-7H3"
+                  />
+                </svg>
+              </div>
+              <span className="text-[10px] sm:text-xs font-body text-primary/60 uppercase tracking-widest font-semibold shrink-0 whitespace-nowrap">
+                Higher Value
+              </span>
             </div>
-            <span className="text-xs font-body text-primary/60 uppercase tracking-widest font-semibold">
-              Higher Value
-            </span>
           </div>
         </div>
 

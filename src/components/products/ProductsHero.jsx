@@ -35,7 +35,7 @@ export default function ProductsHero() {
   return (
     <section
       ref={containerRef}
-      className="relative w-full h-[85vh] overflow-hidden bg-primary flex items-center justify-center pt-24"
+      className="relative w-full h-[85vh] min-h-[600px] overflow-hidden bg-primary flex items-center justify-center pt-32 lg:pt-24"
     >
       {/* Background Image */}
       <div
@@ -46,18 +46,18 @@ export default function ProductsHero() {
 
       {/* Immersive Dark Gradient Overlays */}
       <div className="absolute inset-0 bg-primary/70 mix-blend-multiply" />
-      <div className="absolute inset-0 bg-gradient-to-t from-background via-primary/50 to-transparent" />
+      <div className="hidden md:block absolute inset-0 bg-gradient-to-t from-background via-primary/50 to-transparent" />
 
       {/* Content */}
       <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
         <span className="hero-element inline-block text-olive-scale-400 font-body text-xs md:text-sm font-semibold uppercase tracking-[0.3em] mb-6 border border-olive-scale-400/30 px-4 py-2 rounded-full bg-olive-scale-400/10 backdrop-blur-md">
           Advanced Carbon Portfolio
         </span>
-        <h1 className="hero-element font-heading text-5xl md:text-6xl lg:text-7xl text-white font-normal leading-[1.1] mb-6 drop-shadow-2xl">
+        <h1 className="hero-element font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white font-normal leading-[1.15] mb-6 drop-shadow-2xl">
           From Biomass to{" "}
           <span className="italic text-olive-scale-400">High Value Carbon.</span>
         </h1>
-        <p className="hero-element font-body text-lg md:text-xl text-white/80 max-w-3xl mx-auto leading-relaxed mb-10">
+        <p className="hero-element font-body text-base sm:text-lg md:text-xl text-white/80 max-w-3xl mx-auto leading-relaxed mb-8 sm:mb-10 px-2 sm:px-0">
           At Ratnanjali Bioenergy, we transform sustainably sourced biomass into
           a diversified portfolio of renewable fuels, carbon-rich products, and
           advanced engineered materials.
@@ -66,13 +66,13 @@ export default function ProductsHero() {
         <div className="hero-element flex flex-col sm:flex-row items-center justify-center gap-4">
           <a
             href="#ecosystem"
-            className="btn-primary w-full sm:w-auto text-center"
+            className="btn-primary w-full sm:w-auto justify-center"
           >
             Explore Portfolio
           </a>
           <a
             href="/contact"
-            className="px-8 py-4 rounded-full font-heading font-medium tracking-wide transition-all duration-300 border border-white/20 bg-white/5 text-white hover:bg-white/10 w-full sm:w-auto text-center"
+            className="inline-flex items-center justify-center px-7 py-3.5 rounded-full font-body font-semibold text-sm tracking-wide transition-all duration-300 border border-white/30 bg-white/5 text-white hover:bg-white/20 hover:-translate-y-0.5 w-full sm:w-auto"
           >
             Request Catalogue
           </a>

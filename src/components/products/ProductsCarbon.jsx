@@ -31,7 +31,7 @@ export default function ProductsCarbon() {
   return (
     <div 
       id="carbon" 
-      className="product-category-card sticky top-24 w-full min-h-[85vh] rounded-[3rem] bg-surface-container-lowest border border-outline-variant/35 p-8 md:p-12 mb-16 shadow-[0_15px_50px_rgba(0,0,0,0.03)] origin-top flex flex-col justify-between overflow-hidden"
+      className="product-category-card relative lg:sticky top-24 w-full h-auto lg:min-h-[85vh] rounded-[2.5rem] lg:rounded-[3rem] bg-surface-container-lowest border border-outline-variant/35 p-6 sm:p-8 md:p-12 mb-8 lg:mb-16 shadow-[0_15px_50px_rgba(0,0,0,0.03)] origin-top flex flex-col justify-between overflow-hidden"
       style={{ zIndex: 2 }}
     >
       <div className="absolute top-0 right-0 w-96 h-96 bg-surface-tint/5 rounded-full blur-3xl pointer-events-none" />

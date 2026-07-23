@@ -155,7 +155,7 @@ const revenueStreams = [
     market: "Regional bioenergy startups, infrastructure funds",
     terms: "Retainer-based fees & milestone royalties",
     growth: "8.5% CAGR",
-    image: "/images/about-engineering.jpg",
+    image: "/images/platform-engineering.jpg",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"

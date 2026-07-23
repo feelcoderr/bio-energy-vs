@@ -126,7 +126,7 @@ export default function EcosystemIntentSelector() {
                   </div>
                 </div>
 
-                <div className="lg:col-span-5 bg-primary text-white rounded-[2.5rem] p-10 shadow-ambient relative overflow-hidden flex flex-col justify-between h-full">
+                <div className="lg:col-span-5 bg-primary text-white rounded-[2rem] md:rounded-[2.5rem] p-6 sm:p-8 md:p-10 shadow-ambient relative overflow-hidden flex flex-col justify-between h-full">
                   <div className="absolute top-0 right-0 w-32 h-32 bg-olive-scale-400/10 rounded-full blur-3xl pointer-events-none" />
 
                   <div>

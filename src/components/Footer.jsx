@@ -33,7 +33,8 @@ export default function Footer() {
               <img
                 src="/images/logo-ratnanjali.png"
                 alt="Ratnanjali BioEnergy"
-                className="h-11 md:h-12 w-auto transition-transform duration-300 group-hover:scale-105"
+                className="h-14 md:h-16 w-auto max-w-[220px] sm:max-w-[260px] transition-transform duration-300 group-hover:scale-105 object-contain"
+                style={{ imageRendering: "-webkit-optimize-contrast" }}
               />
             </Link>
             <p className="font-body text-xs text-on-surface-variant leading-relaxed max-w-xs mt-2">

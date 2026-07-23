@@ -110,7 +110,7 @@ export default function PlatformImpact() {
                   key={metric.id}
                   onClick={() => setActiveMetric(metric.id)}
                   type="button"
-                  className={`text-left p-8 rounded-[2rem] border transition-all duration-500 flex flex-col justify-between items-start h-[220px] ${
+                  className={`text-left p-6 md:p-8 rounded-[1.5rem] md:rounded-[2rem] border transition-all duration-500 flex flex-col justify-between items-start h-auto min-h-[160px] md:h-[220px] ${
                     isActive
                       ? "bg-white/10 border-olive-scale-400/40 shadow-[0_0_30px_rgba(241,246,233,0.08)]"
                       : "bg-white/5 border-white/5 hover:border-white/20 hover:bg-white/10"
@@ -139,7 +139,7 @@ export default function PlatformImpact() {
           </div>
 
           {/* Interactive Chart/Analysis Panel (Right Column) */}
-          <div className="lg:col-span-5 glass-panel bg-white/5 border border-white/10 rounded-[3rem] p-10 flex flex-col justify-between relative overflow-hidden">
+          <div className="lg:col-span-5 glass-panel bg-white/5 border border-white/10 rounded-[2rem] md:rounded-[3rem] p-6 sm:p-8 md:p-10 flex flex-col justify-between relative overflow-hidden mt-4 lg:mt-0">
             <div className="space-y-6">
               <div>
                 <span className="text-[9px] font-body font-bold text-olive-scale-400 uppercase tracking-widest block mb-1">
@@ -212,7 +212,7 @@ export default function PlatformImpact() {
         </div>
 
         {/* Bottom MRV / Durability Strip */}
-        <div className="impact-reveal mt-12 bg-white/5 border border-white/10 rounded-[2rem] p-8 flex flex-col md:flex-row items-center justify-between gap-6">
+        <div className="impact-reveal mt-8 md:mt-12 bg-white/5 border border-white/10 rounded-[1.5rem] md:rounded-[2rem] p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex gap-4 items-center">
             <div className="w-10 h-10 rounded-full bg-olive-scale-400/10 flex items-center justify-center border border-olive-scale-400/30 shrink-0">
               <span className="font-heading text-lg font-bold text-olive-scale-400">

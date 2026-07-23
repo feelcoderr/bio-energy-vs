@@ -152,7 +152,7 @@ export default function PlatformMarkets() {
                 key={ind.id}
                 onClick={() => setActiveTab(ind.id)}
                 type="button"
-                className={`w-full text-left px-6 py-4.5 rounded-2xl border transition-all duration-300 font-heading text-lg relative ${
+                className={`w-full text-left px-5 py-3.5 md:px-6 md:py-4.5 rounded-2xl border transition-all duration-300 font-heading text-base md:text-lg relative ${
                   activeTab === ind.id
                     ? "bg-primary text-white border-primary shadow-ambient-sm lg:after:content-[''] lg:after:absolute lg:after:-right-3 lg:after:top-1/2 lg:after:-translate-y-1/2 lg:after:w-0 lg:after:h-0 lg:after:border-y-[10px] lg:after:border-y-transparent lg:after:border-l-[12px] lg:after:border-l-primary"
                     : "bg-white border-outline-variant/30 text-on-surface-variant hover:border-outline hover:text-primary"
@@ -164,7 +164,7 @@ export default function PlatformMarkets() {
           </div>
 
           {/* Tab Content Details Box */}
-          <div className="lg:col-span-8 bg-surface-container-low border border-outline-variant/35 rounded-[2.5rem] p-10 shadow-ambient-sm min-h-[360px] flex flex-col justify-between relative overflow-hidden">
+          <div className="lg:col-span-8 bg-surface-container-low border border-outline-variant/35 rounded-[2rem] md:rounded-[2.5rem] p-6 sm:p-8 md:p-10 shadow-ambient-sm min-h-0 md:min-h-[360px] flex flex-col justify-between relative overflow-hidden">
             <div className="absolute top-0 right-0 w-48 h-48 bg-surface-tint/5 rounded-full blur-3xl pointer-events-none" />
 
             <div className="market-content-inner space-y-8">
