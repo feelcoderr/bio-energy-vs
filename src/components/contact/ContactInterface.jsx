@@ -492,7 +492,7 @@ export default function ContactInterface() {
 
                 <div className="flex flex-col xl:flex-row gap-4">
                   <a
-                    href="tel:+917227021777"
+                    href="tel:+919081993737"
                     className="flex-1 inline-flex items-center justify-center gap-2.5 bg-white text-primary font-body text-sm font-semibold px-6 py-4 rounded-2xl hover:bg-white/90 transition-all duration-300 shadow-lg hover:-translate-y-1"
                   >
                     <svg
@@ -511,7 +511,7 @@ export default function ContactInterface() {
                     Call Us
                   </a>
                   <a
-                    href="https://wa.me/917227021777"
+                    href="https://wa.me/919081993737"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex-1 inline-flex items-center justify-center gap-2.5 bg-[#25D366] text-white font-body text-sm font-semibold px-6 py-4 rounded-2xl hover:brightness-110 transition-all duration-300 shadow-lg shadow-[#25D366]/30 hover:-translate-y-1"

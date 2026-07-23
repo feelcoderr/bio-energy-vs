@@ -65,24 +65,8 @@ export default function ProductsQuality() {
                 />
                 <div className="absolute inset-0 bg-primary/20 mix-blend-multiply" />
                 
-                {/* Floating Traceability UI element */}
-                <div className="relative z-10 h-[500px] flex items-end p-8">
-                  <div className="w-full bg-white/90 backdrop-blur-md rounded-2xl p-6 border border-white/20 shadow-lg translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                     <h4 className="font-heading text-lg text-primary mb-2 flex items-center gap-2">
-                        <svg className="w-5 h-5 text-surface-tint" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
-                        Digital Product Traceability
-                     </h4>
-                     <div className="w-full h-1.5 bg-outline-variant/30 rounded-full mb-3 overflow-hidden">
-                       <div className="h-full bg-surface-tint w-[100%] rounded-full relative">
-                         <div className="absolute inset-0 bg-white/30 w-full animate-[shimmer_2s_infinite]" />
-                       </div>
-                     </div>
-                     <div className="flex justify-between text-xs text-on-surface-variant font-medium">
-                       <span>Batch ID: #VZ-8902</span>
-                       <span className="text-primary">Verified</span>
-                     </div>
-                  </div>
-                </div>
+                {/* Image takes full height without floating UI */}
+                <div className="relative z-10 h-[500px]" />
              </div>
           </div>
 

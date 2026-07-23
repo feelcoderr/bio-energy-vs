@@ -118,14 +118,16 @@ export default function Hero() {
           aria-hidden="true"
           className="w-full h-full object-cover object-center lg:object-right-bottom"
         />
-        {/* Subtle color contrast mask to ensure text legibility on all viewports, especially mobile */}
-        <div className="absolute inset-0 bg-white/40 lg:bg-transparent pointer-events-none" />
+        {/* Strong gradient masks to ensure text legibility on all viewports */}
+        <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/80 to-transparent w-full lg:w-2/3 pointer-events-none z-0" />
+        <div className="absolute inset-0 bg-gradient-to-b from-white/90 via-white/50 to-transparent lg:hidden pointer-events-none z-0" />
+        <div className="absolute inset-0 bg-white/40 md:bg-white/20 lg:bg-transparent pointer-events-none backdrop-blur-[2px] lg:backdrop-blur-none z-0" />
       </div>
 
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col lg:flex-row items-center py-12 lg:py-20">
+        <div className="flex flex-col lg:flex-row items-center py-12 lg:py-20 mt-8 lg:mt-0">
           {/* ===== Left Content ===== */}
-          <div className="w-full lg:w-[45%] animate-fade-in-left">
+          <div className="w-full lg:w-[55%] animate-fade-in-left relative z-10">
             {/* Badge (Commented out because it is baked into the background image) */}
 
             {/* <span className="inline-block bg-olive-scale-100/90 text-olive-scale-700 rounded-full px-4 py-1.5 text-xs font-semibold tracking-wider uppercase mb-6 backdrop-blur-sm">

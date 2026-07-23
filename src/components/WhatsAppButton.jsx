@@ -4,7 +4,7 @@ export default function WhatsAppButton() {
   const [isHovered, setIsHovered] = useState(false);
 
   // Replace with your actual WhatsApp number (with country code, no spaces/dashes)
-  const whatsappNumber = "919876543210";
+  const whatsappNumber = "919081993737";
   const message = encodeURIComponent(
     "Hello! I'm interested in learning more about Ratnanjali BioEnergy's products and services."
   );
