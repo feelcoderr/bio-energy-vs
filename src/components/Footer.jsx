@@ -31,14 +31,9 @@ export default function Footer() {
               aria-label="Ratnanjali BioEnergy home"
             >
               <img
-                src="/images/verdaez-logo.png"
-                alt="Ratnanjali BioEnergy Icon"
-                className="h-11 w-auto transition-transform duration-300 group-hover:scale-105"
-              />
-              <img
-                src="/images/verdaez-logo-text.png"
+                src="/images/logo-ratnanjali.png"
                 alt="Ratnanjali BioEnergy"
-                className="h-10 w-auto"
+                className="h-11 md:h-12 w-auto transition-transform duration-300 group-hover:scale-105"
               />
             </Link>
             <p className="font-body text-xs text-on-surface-variant leading-relaxed max-w-xs mt-2">

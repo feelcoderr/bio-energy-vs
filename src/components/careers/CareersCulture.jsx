@@ -55,7 +55,7 @@ const cultureValues = [
   {
     title: "Decentralized Autonomy",
     tagline: "Empowering regional leads to govern localized hubs.",
-    desc: "Because we scale through modular 30 TPD to 300 TPD networks, we trust regional teams to direct feedstock procurement, local farmer cooperatives relationships, and facility maintenance directly.",
+    desc: "Because we scale through modular, replicable networks, we trust regional teams to direct feedstock procurement, local farmer cooperative relationships, and facility maintenance directly.",
     icon: (
       <svg
         className="h-6 w-6"

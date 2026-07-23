@@ -74,7 +74,7 @@ export default function ProductsAdvanced() {
             <div className="border-t border-outline-variant/20 pt-4 space-y-2">
               {product.features.map((feature, i) => (
                 <div key={i} className="flex items-center gap-2">
-                  <div className="w-1.5 h-1.5 rounded-full bg-verdaez-400 shrink-0" />
+                  <div className="w-1.5 h-1.5 rounded-full bg-olive-scale-400 shrink-0" />
                   <span className="font-body text-[11px] font-medium text-on-surface">{feature}</span>
                 </div>
               ))}

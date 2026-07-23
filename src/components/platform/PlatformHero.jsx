@@ -34,11 +34,11 @@ export default function PlatformHero() {
         },
       );
 
-      // Number counter effect for TPD
+      // Number counter effect for capacity scaling
       gsap.to(
-        { val: 30 },
+        { val: 0 },
         {
-          val: 300,
+          val: 100,
           duration: 2.5,
           ease: "power2.out",
           scrollTrigger: {
@@ -107,7 +107,7 @@ export default function PlatformHero() {
                 <span className="font-heading text-3xl text-surface-tint">
                   {tpdVal}{" "}
                   <span className="text-sm font-body font-medium text-on-surface-variant">
-                    TPD
+                    % Scale
                   </span>
                 </span>
               </div>
@@ -115,8 +115,8 @@ export default function PlatformHero() {
                 <div className="capacity-progress h-full bg-surface-tint rounded-full w-[10%]" />
               </div>
               <div className="flex justify-between text-[10px] font-body text-on-surface-variant/70 mt-2 font-medium">
-                <span>STAGE 1: 30 TPD (MODULAR DEPLOYMENT)</span>
-                <span>STAGE 2: 300 TPD (REGIONAL REPLICATION)</span>
+                <span>STAGE 1: MODULAR DEPLOYMENT</span>
+                <span>STAGE 2: REGIONAL REPLICATION</span>
               </div>
             </div>
 
@@ -147,7 +147,7 @@ export default function PlatformHero() {
             </div>
 
             <div className="mt-8 bg-surface-container-low rounded-2xl p-4 border border-outline-variant/20 flex gap-3 items-center">
-              <div className="w-2.5 h-2.5 rounded-full bg-verdaez-400 animate-pulse shrink-0" />
+              <div className="w-2.5 h-2.5 rounded-full bg-olive-scale-400 animate-pulse shrink-0" />
               <p className="font-body text-xs text-on-surface-variant leading-relaxed">
                 <strong>Economics-First Alignment:</strong> Designed to achieve
                 positive EBITDA at Phase 1 modular stage, allowing non-dilutive

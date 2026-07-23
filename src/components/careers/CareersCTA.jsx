@@ -76,22 +76,22 @@ export default function CareersCTA() {
                 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label htmlFor="speculative-name" className="block text-[10px] font-body font-bold text-on-surface-variant uppercase tracking-widest mb-1.5">Full Name</label>
+                    <label htmlFor="career-name" className="block text-[10px] font-body font-bold text-on-surface-variant/70 uppercase tracking-widest mb-1.5">Full Name</label>
                     <input 
                       type="text" 
-                      id="speculative-name" 
+                      id="career-name" 
                       required 
-                      placeholder="Jane Doe"
+                      placeholder="Your Full Name"
                       className="w-full bg-white border border-outline-variant/50 rounded-xl px-4 py-3 text-sm font-body focus:outline-none focus:border-surface-tint"
                     />
                   </div>
                   <div>
-                    <label htmlFor="speculative-email" className="block text-[10px] font-body font-bold text-on-surface-variant uppercase tracking-widest mb-1.5">Email Address</label>
+                    <label htmlFor="career-email" className="block text-[10px] font-body font-bold text-on-surface-variant/70 uppercase tracking-widest mb-1.5">Email Address</label>
                     <input 
                       type="email" 
-                      id="speculative-email" 
-                      required 
-                      placeholder="jane@example.com"
+                      id="career-email"
+                      required
+                      placeholder="Your Email Address"
                       className="w-full bg-white border border-outline-variant/50 rounded-xl px-4 py-3 text-sm font-body focus:outline-none focus:border-surface-tint"
                     />
                   </div>
@@ -99,46 +99,34 @@ export default function CareersCTA() {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label htmlFor="speculative-dept" className="block text-[10px] font-body font-bold text-on-surface-variant uppercase tracking-widest mb-1.5">Department</label>
-                    <select 
-                      id="speculative-dept"
-                      className="w-full bg-white border border-outline-variant/50 rounded-xl px-4 py-3 text-sm font-body focus:outline-none focus:border-surface-tint appearance-none"
-                    >
-                      <option>Engineering & Science</option>
-                      <option>Operations & Logistics</option>
-                      <option>Corporate & Audit</option>
-                    </select>
-                  </div>
-                  <div>
-                    <label htmlFor="speculative-role" className="block text-[10px] font-body font-bold text-on-surface-variant uppercase tracking-widest mb-1.5">Target Role / Scope</label>
+                    <label htmlFor="speculative-role" className="block text-[10px] font-body font-bold text-on-surface-variant/70 uppercase tracking-widest mb-1.5">Target Role / Scope</label>
                     <input 
                       type="text" 
                       id="speculative-role" 
                       required 
-                      placeholder="E.g., Pyrolysis Tech Specialist"
+                      placeholder="Your Target Role"
+                      className="w-full bg-white border border-outline-variant/50 rounded-xl px-4 py-3 text-sm font-body focus:outline-none focus:border-surface-tint"
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="speculative-resume" className="block text-[10px] font-body font-bold text-on-surface-variant/70 uppercase tracking-widest mb-1.5">LinkedIn / Portfolio URL</label>
+                    <input 
+                      type="url" 
+                      id="speculative-resume" 
+                      required 
+                      placeholder="Your LinkedIn Profile URL"
                       className="w-full bg-white border border-outline-variant/50 rounded-xl px-4 py-3 text-sm font-body focus:outline-none focus:border-surface-tint"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label htmlFor="speculative-resume" className="block text-[10px] font-body font-bold text-on-surface-variant uppercase tracking-widest mb-1.5">Resume / LinkedIn Profile URL</label>
-                  <input 
-                    type="url" 
-                    id="speculative-resume" 
-                    required 
-                    placeholder="https://linkedin.com/in/username"
-                    className="w-full bg-white border border-outline-variant/50 rounded-xl px-4 py-3 text-sm font-body focus:outline-none focus:border-surface-tint"
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="speculative-cover" className="block text-[10px] font-body font-bold text-on-surface-variant uppercase tracking-widest mb-1.5">Introduction / Core Achievements</label>
+                  <label htmlFor="speculative-cover" className="block text-[10px] font-body font-bold text-on-surface-variant/70 uppercase tracking-widest mb-1.5">Introduction / Experience</label>
                   <textarea 
                     id="speculative-cover" 
                     rows={4} 
                     required 
-                    placeholder="Detail your thermodynamic process experience or logistics projects scale..."
+                    placeholder="Your Experience & Achievements..."
                     className="w-full bg-white border border-outline-variant/50 rounded-xl px-4 py-3 text-sm font-body focus:outline-none focus:border-surface-tint resize-none"
                   />
                 </div>

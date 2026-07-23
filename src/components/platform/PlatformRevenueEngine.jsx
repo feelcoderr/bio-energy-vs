@@ -309,7 +309,7 @@ export default function PlatformRevenueEngine() {
                 {/* Back Side (Detailed metrics) */}
                 <div className="flip-card-back bg-primary text-white p-8 flex flex-col justify-between shadow-ambient">
                   <div>
-                    <span className="text-[9px] font-body font-bold uppercase tracking-widest text-verdaez-400 block mb-6">
+                    <span className="text-[9px] font-body font-bold uppercase tracking-widest text-olive-scale-400 block mb-6">
                       FINANCIAL PROFILE & BUYERS
                     </span>
 
@@ -318,7 +318,7 @@ export default function PlatformRevenueEngine() {
                         <span className="block text-[8px] uppercase tracking-widest text-white/50">
                           MARGIN PROFILE
                         </span>
-                        <span className="font-heading text-xl text-verdaez-200">
+                        <span className="font-heading text-xl text-olive-scale-200">
                           {stream.margin}
                         </span>
                       </div>
@@ -345,7 +345,7 @@ export default function PlatformRevenueEngine() {
                     <span className="text-white/60 uppercase text-[9px] tracking-wider font-semibold">
                       EST. CAGR: {stream.growth}
                     </span>
-                    <span className="text-verdaez-400 font-semibold font-heading text-sm">
+                    <span className="text-olive-scale-400 font-semibold font-heading text-sm">
                       Ratnanjali Bioenergy
                     </span>
                   </div>

@@ -127,10 +127,10 @@ export default function EcosystemIntentSelector() {
                 </div>
 
                 <div className="lg:col-span-5 bg-primary text-white rounded-[2.5rem] p-10 shadow-ambient relative overflow-hidden flex flex-col justify-between h-full">
-                  <div className="absolute top-0 right-0 w-32 h-32 bg-verdaez-400/10 rounded-full blur-3xl pointer-events-none" />
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-olive-scale-400/10 rounded-full blur-3xl pointer-events-none" />
 
                   <div>
-                    <span className="text-[9px] font-body font-bold text-verdaez-400 uppercase tracking-widest block mb-4">
+                    <span className="text-[9px] font-body font-bold text-olive-scale-400 uppercase tracking-widest block mb-4">
                       ROADMAP & MILESTONES
                     </span>
                     <h3 className="font-heading text-3xl text-white font-normal mb-6">
@@ -139,31 +139,31 @@ export default function EcosystemIntentSelector() {
 
                     <div className="space-y-4 text-xs font-body">
                       <div className="flex gap-4 items-start">
-                        <span className="text-verdaez-400 font-bold">01</span>
+                        <span className="text-olive-scale-400 font-bold">01</span>
                         <div>
                           <strong className="text-white">
                             Modular Prototype Launch
                           </strong>
                           <p className="text-white/70 mt-0.5">
-                            30 TPD facility operating with positive unit
+                            Initial facility operating with positive unit
                             economics.
                           </p>
                         </div>
                       </div>
                       <div className="flex gap-4 items-start">
-                        <span className="text-verdaez-400 font-bold">02</span>
+                        <span className="text-olive-scale-400 font-bold">02</span>
                         <div>
                           <strong className="text-white">
                             Regional Scaling
                           </strong>
                           <p className="text-white/70 mt-0.5">
-                            Replicating modules to aggregate up to 300 TPD
+                            Replicating modules to aggregate capacity
                             processing capacity.
                           </p>
                         </div>
                       </div>
                       <div className="flex gap-4 items-start">
-                        <span className="text-verdaez-400 font-bold">03</span>
+                        <span className="text-olive-scale-400 font-bold">03</span>
                         <div>
                           <strong className="text-white">
                             Platform Blueprints Licensing

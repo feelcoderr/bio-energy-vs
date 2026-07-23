@@ -86,7 +86,7 @@ export default function PlatformImpact() {
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 w-full">
         {/* Header */}
         <div className="impact-reveal text-center mb-24 max-w-3xl mx-auto">
-          <span className="text-[10px] font-body font-semibold uppercase tracking-[0.2em] text-verdaez-400 mb-4 inline-block px-4 py-1.5 border border-verdaez-400/30 rounded-full bg-verdaez-400/10 shadow-[0_0_15px_rgba(241,246,233,0.05)]">
+          <span className="text-[10px] font-body font-semibold uppercase tracking-[0.2em] text-olive-scale-400 mb-4 inline-block px-4 py-1.5 border border-olive-scale-400/30 rounded-full bg-olive-scale-400/10 shadow-[0_0_15px_rgba(241,246,233,0.05)]">
             Impact Dashboard
           </span>
           <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-white font-normal mb-6">
@@ -112,7 +112,7 @@ export default function PlatformImpact() {
                   type="button"
                   className={`text-left p-8 rounded-[2rem] border transition-all duration-500 flex flex-col justify-between items-start h-[220px] ${
                     isActive
-                      ? "bg-white/10 border-verdaez-400/40 shadow-[0_0_30px_rgba(241,246,233,0.08)]"
+                      ? "bg-white/10 border-olive-scale-400/40 shadow-[0_0_30px_rgba(241,246,233,0.08)]"
                       : "bg-white/5 border-white/5 hover:border-white/20 hover:bg-white/10"
                   }`}
                 >
@@ -121,7 +121,7 @@ export default function PlatformImpact() {
                       {metric.title}
                     </span>
                     <div
-                      className={`w-2 h-2 rounded-full ${isActive ? "bg-verdaez-400 animate-pulse" : "bg-white/20"}`}
+                      className={`w-2 h-2 rounded-full ${isActive ? "bg-olive-scale-400 animate-pulse" : "bg-white/20"}`}
                     />
                   </div>
 
@@ -142,7 +142,7 @@ export default function PlatformImpact() {
           <div className="lg:col-span-5 glass-panel bg-white/5 border border-white/10 rounded-[3rem] p-10 flex flex-col justify-between relative overflow-hidden">
             <div className="space-y-6">
               <div>
-                <span className="text-[9px] font-body font-bold text-verdaez-400 uppercase tracking-widest block mb-1">
+                <span className="text-[9px] font-body font-bold text-olive-scale-400 uppercase tracking-widest block mb-1">
                   METRIC DRILLDOWN
                 </span>
                 <h3 className="font-heading text-3xl text-white font-normal">
@@ -159,7 +159,7 @@ export default function PlatformImpact() {
                   <span className="block text-[8px] uppercase tracking-widest text-white/50">
                     {currentMetric.statName}
                   </span>
-                  <span className="font-heading text-lg text-verdaez-200 mt-1 block">
+                  <span className="font-heading text-lg text-olive-scale-200 mt-1 block">
                     {currentMetric.statVal}
                   </span>
                 </div>
@@ -167,7 +167,7 @@ export default function PlatformImpact() {
                   <span className="block text-[8px] uppercase tracking-widest text-white/50">
                     COMPLIANCE READINESS
                   </span>
-                  <span className="font-heading text-lg text-verdaez-200 mt-1 block">
+                  <span className="font-heading text-lg text-olive-scale-200 mt-1 block">
                     MRV Certified
                   </span>
                 </div>
@@ -184,7 +184,7 @@ export default function PlatformImpact() {
                   {currentMetric.sdg.map((tag) => (
                     <span
                       key={tag}
-                      className="text-[10px] font-body font-semibold text-verdaez-400"
+                      className="text-[10px] font-body font-semibold text-olive-scale-400"
                     >
                       {tag}
                     </span>
@@ -192,9 +192,9 @@ export default function PlatformImpact() {
                 </div>
               </div>
 
-              <div className="w-12 h-12 rounded-full border border-verdaez-400/30 flex items-center justify-center shrink-0">
+              <div className="w-12 h-12 rounded-full border border-olive-scale-400/30 flex items-center justify-center shrink-0">
                 <svg
-                  className="w-6 h-6 text-verdaez-400"
+                  className="w-6 h-6 text-olive-scale-400"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -214,8 +214,8 @@ export default function PlatformImpact() {
         {/* Bottom MRV / Durability Strip */}
         <div className="impact-reveal mt-12 bg-white/5 border border-white/10 rounded-[2rem] p-8 flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex gap-4 items-center">
-            <div className="w-10 h-10 rounded-full bg-verdaez-400/10 flex items-center justify-center border border-verdaez-400/30 shrink-0">
-              <span className="font-heading text-lg font-bold text-verdaez-400">
+            <div className="w-10 h-10 rounded-full bg-olive-scale-400/10 flex items-center justify-center border border-olive-scale-400/30 shrink-0">
+              <span className="font-heading text-lg font-bold text-olive-scale-400">
                 i
               </span>
             </div>

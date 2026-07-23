@@ -97,13 +97,8 @@ export default function Navbar() {
             className="flex items-center gap-2.5 shrink-0"
           >
             <img
-              className="h-11 w-auto object-contain hidden md:block"
-              src="/images/verdaez-logo.png"
-              alt="Ratnanjali BioEnergy Icon"
-            />
-            <img
-              className="h-10 w-auto object-contain hidden md:block"
-              src="/images/verdaez-logo-text.png"
+              className="h-10 md:h-12 w-auto object-contain"
+              src="/images/logo-ratnanjali.png"
               alt="Ratnanjali BioEnergy"
             />
           </Link>

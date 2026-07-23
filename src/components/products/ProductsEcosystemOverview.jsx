@@ -79,25 +79,25 @@ export default function ProductsEcosystemOverview() {
             </h3>
             <ul className="space-y-3 font-body text-on-surface-variant">
               <li className="flex items-center gap-2">
-                <span className="w-1.5 h-1.5 bg-verdaez-400 rounded-full" /> Ag
+                <span className="w-1.5 h-1.5 bg-olive-scale-400 rounded-full" /> Ag
                 & Industrial Biochar
               </li>
               <li className="flex items-center gap-2">
-                <span className="w-1.5 h-1.5 bg-verdaez-400 rounded-full" />{" "}
+                <span className="w-1.5 h-1.5 bg-olive-scale-400 rounded-full" />{" "}
                 Slow-Release Fertilizer
               </li>
               <li className="flex items-center gap-2">
-                <span className="w-1.5 h-1.5 bg-verdaez-400 rounded-full" />{" "}
+                <span className="w-1.5 h-1.5 bg-olive-scale-400 rounded-full" />{" "}
                 Biochar Filter Media
               </li>
               <li className="flex items-center gap-2">
-                <span className="w-1.5 h-1.5 bg-verdaez-400 rounded-full" />{" "}
+                <span className="w-1.5 h-1.5 bg-olive-scale-400 rounded-full" />{" "}
                 Activated Carbon
               </li>
             </ul>
           </div>
 
-          <div className="eco-pillar glass-card p-10 bg-white/60 border-t-4 border-t-verdaez-300">
+          <div className="eco-pillar glass-card p-10 bg-white/60 border-t-4 border-t-olive-scale-300">
             <h3 className="font-heading text-2xl text-primary mb-4">
               Advanced Materials
             </h3>

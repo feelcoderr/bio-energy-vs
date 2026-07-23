@@ -31,7 +31,7 @@ const stages = [
   {
     num: "03",
     title: "Technical Alignment",
-    desc: "Collaborate on modular biorefinery sizing (30 TPD to 300 TPD scale-up target) and draft off-take agreements.",
+    desc: "Collaborate on modular biorefinery sizing and scale-up planning, and draft off-take agreements.",
     checklist: [
       "Modular facility blueprint sizing and zoning specs",
       "Draft Letter of Intent (LOI) for off-take pricing structures",

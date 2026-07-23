@@ -132,7 +132,7 @@ export default function PlatformCTA() {
                     type="text"
                     id="name"
                     required
-                    placeholder="E.g., Jane Doe"
+                    placeholder="Your Full Name"
                     className="w-full bg-white border border-outline-variant/50 rounded-xl px-4 py-3 text-sm font-body focus:outline-none focus:border-surface-tint"
                   />
                 </div>
@@ -149,7 +149,7 @@ export default function PlatformCTA() {
                       type="email"
                       id="email"
                       required
-                      placeholder="E.g., jane@company.com"
+                      placeholder="Your Email Address"
                       className="w-full bg-white border border-outline-variant/50 rounded-xl px-4 py-3 text-sm font-body focus:outline-none focus:border-surface-tint"
                     />
                   </div>
@@ -164,7 +164,7 @@ export default function PlatformCTA() {
                       type="text"
                       id="org"
                       required
-                      placeholder="E.g., Carbon Utilities Ltd"
+                      placeholder="Your Organization / Company"
                       className="w-full bg-white border border-outline-variant/50 rounded-xl px-4 py-3 text-sm font-body focus:outline-none focus:border-surface-tint"
                     />
                   </div>
@@ -181,7 +181,7 @@ export default function PlatformCTA() {
                     id="message"
                     rows={4}
                     required
-                    placeholder="Detail your supply volumes or integration requirements..."
+                    placeholder="Your Project Scope or Message..."
                     className="w-full bg-white border border-outline-variant/50 rounded-xl px-4 py-3 text-sm font-body focus:outline-none focus:border-surface-tint resize-none"
                   />
                 </div>

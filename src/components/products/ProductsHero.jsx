@@ -50,12 +50,12 @@ export default function ProductsHero() {
 
       {/* Content */}
       <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
-        <span className="hero-element inline-block text-verdaez-400 font-body text-xs md:text-sm font-semibold uppercase tracking-[0.3em] mb-6 border border-verdaez-400/30 px-4 py-2 rounded-full bg-verdaez-400/10 backdrop-blur-md">
+        <span className="hero-element inline-block text-olive-scale-400 font-body text-xs md:text-sm font-semibold uppercase tracking-[0.3em] mb-6 border border-olive-scale-400/30 px-4 py-2 rounded-full bg-olive-scale-400/10 backdrop-blur-md">
           Advanced Carbon Portfolio
         </span>
         <h1 className="hero-element font-heading text-5xl md:text-6xl lg:text-7xl text-white font-normal leading-[1.1] mb-6 drop-shadow-2xl">
           From Biomass to{" "}
-          <span className="italic text-verdaez-400">High Value Carbon.</span>
+          <span className="italic text-olive-scale-400">High Value Carbon.</span>
         </h1>
         <p className="hero-element font-body text-lg md:text-xl text-white/80 max-w-3xl mx-auto leading-relaxed mb-10">
           At Ratnanjali Bioenergy, we transform sustainably sourced biomass into

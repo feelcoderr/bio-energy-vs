@@ -9,23 +9,26 @@ export default function AboutCollaboration() {
   const sectionRef = useRef(null);
   const [isHovered, setIsHovered] = useState(false);
 
-  useGSAP(() => {
-    const ctx = gsap.context(() => {
-      gsap.from(".collab-element", {
-        y: 40,
-        opacity: 0,
-        duration: 0.8,
-        stagger: 0.15,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top 80%",
-          once: true,
-        },
-      });
-    }, sectionRef);
-    return () => ctx.revert();
-  }, { scope: sectionRef });
+  useGSAP(
+    () => {
+      const ctx = gsap.context(() => {
+        gsap.from(".collab-element", {
+          y: 40,
+          opacity: 0,
+          duration: 0.8,
+          stagger: 0.15,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: "top 80%",
+            once: true,
+          },
+        });
+      }, sectionRef);
+      return () => ctx.revert();
+    },
+    { scope: sectionRef },
+  );
 
   return (
     <section
@@ -62,7 +65,7 @@ export default function AboutCollaboration() {
 
         {/* Collaboration Card */}
         <div
-          className="collab-element max-w-3xl mx-auto rounded-3xl overflow-hidden transition-all duration-500"
+          className="collab-element max-w-3xl mx-auto rounded-3xl overflow-hidden"
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
           style={{
@@ -137,7 +140,8 @@ export default function AboutCollaboration() {
                   width: "48px",
                   height: "2px",
                   borderRadius: "9999px",
-                  background: "linear-gradient(90deg, var(--color-surface-tint), var(--color-secondary))",
+                  background:
+                    "linear-gradient(90deg, var(--color-surface-tint), var(--color-secondary))",
                   marginBottom: "20px",
                 }}
               />
@@ -190,12 +194,15 @@ export default function AboutCollaboration() {
                   transition: "all 0.3s ease",
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.backgroundColor = "var(--color-surface-tint)";
+                  e.currentTarget.style.backgroundColor =
+                    "var(--color-surface-tint)";
                   e.currentTarget.style.color = "#FFFFFF";
-                  e.currentTarget.style.borderColor = "var(--color-surface-tint)";
+                  e.currentTarget.style.borderColor =
+                    "var(--color-surface-tint)";
                 }}
                 onMouseLeave={(e) => {
-                  e.currentTarget.style.backgroundColor = "rgba(100,128,50,0.08)";
+                  e.currentTarget.style.backgroundColor =
+                    "rgba(100,128,50,0.08)";
                   e.currentTarget.style.color = "var(--color-surface-tint)";
                   e.currentTarget.style.borderColor = "rgba(100,128,50,0.2)";
                 }}

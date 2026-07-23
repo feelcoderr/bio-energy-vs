@@ -217,7 +217,7 @@ export default function PlatformMarkets() {
                   <ul className="space-y-3">
                     {activeInd.applications.map((app, i) => (
                       <li key={i} className="flex gap-2.5 items-start">
-                        <span className="w-1.5 h-1.5 rounded-full bg-verdaez-400 mt-1.5 shrink-0" />
+                        <span className="w-1.5 h-1.5 rounded-full bg-olive-scale-400 mt-1.5 shrink-0" />
                         <span className="font-body text-xs text-on-surface leading-normal">
                           {app}
                         </span>

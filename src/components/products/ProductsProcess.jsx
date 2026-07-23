@@ -40,7 +40,7 @@ export default function ProductsProcess() {
   return (
     <section id="process" ref={containerRef} className="py-24 bg-primary text-white overflow-hidden h-screen flex flex-col justify-center">
       <div className="max-w-7xl mx-auto px-6 mb-16 shrink-0 w-full">
-        <span className="text-[10px] font-body font-semibold uppercase tracking-[0.2em] text-verdaez-400 mb-4 inline-block">
+        <span className="text-[10px] font-body font-semibold uppercase tracking-[0.2em] text-olive-scale-400 mb-4 inline-block">
           The Technology Behind Every Product
         </span>
         <h2 className="font-heading text-4xl md:text-5xl font-normal mb-6 text-white max-w-3xl">
@@ -58,11 +58,11 @@ export default function ProductsProcess() {
               key={step.id} 
               className="w-[280px] md:w-[350px] shrink-0 bg-white/5 border border-white/10 rounded-3xl p-8 backdrop-blur-md relative"
             >
-              <div className="text-6xl font-heading text-verdaez-400/20 absolute top-4 right-6 pointer-events-none">
+              <div className="text-6xl font-heading text-olive-scale-400/20 absolute top-4 right-6 pointer-events-none">
                 0{step.id}
               </div>
               <div className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center mb-6 border border-white/20">
-                <div className="w-3 h-3 bg-verdaez-400 rounded-full shadow-[0_0_15px_rgba(241,246,233,0.8)]" />
+                <div className="w-3 h-3 bg-olive-scale-400 rounded-full shadow-[0_0_15px_rgba(241,246,233,0.8)]" />
               </div>
               <h3 className="font-heading text-2xl text-white mb-4 relative z-10">{step.title}</h3>
               <p className="font-body text-white/70 leading-relaxed relative z-10">

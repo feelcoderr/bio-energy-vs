@@ -77,10 +77,10 @@ export default function ProductsFuture() {
           <span className="px-5 py-2 border border-white/20 rounded-full bg-white/5 backdrop-blur-sm text-sm">
             Conductive Additives
           </span>
-          <span className="px-5 py-2 border border-verdaez-400/50 rounded-full bg-verdaez-400/20 backdrop-blur-sm text-verdaez-200 text-sm">
+          <span className="px-5 py-2 border border-olive-scale-400/50 rounded-full bg-olive-scale-400/20 backdrop-blur-sm text-olive-scale-200 text-sm">
             Graphene Materials
           </span>
-          <span className="px-5 py-2 border border-verdaez-400/50 rounded-full bg-verdaez-400/20 backdrop-blur-sm text-verdaez-200 text-sm">
+          <span className="px-5 py-2 border border-olive-scale-400/50 rounded-full bg-olive-scale-400/20 backdrop-blur-sm text-olive-scale-200 text-sm">
             Carbon Composites
           </span>
         </div>

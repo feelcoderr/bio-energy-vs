@@ -2,13 +2,13 @@ import { useState, useEffect, useRef } from "react";
 
 const benefitsData = [
   {
-    title: "30 TPD Modular Start",
+    title: "Modular Plant Design",
     description:
       "Initial facility capacity engineered for rapid deployment and proven unit economics.",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        className="h-6 w-6 text-verdaez-600"
+        className="h-6 w-6 text-olive-scale-600"
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
@@ -23,13 +23,13 @@ const benefitsData = [
     ),
   },
   {
-    title: "300 TPD Scale Target",
+    title: "Scalable Growth Target",
     description:
-      "Modular scale up to 300 TPD within five years through replication.",
+      "Modular scale-up within five years through systematic replication.",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        className="h-6 w-6 text-verdaez-600"
+        className="h-6 w-6 text-olive-scale-600"
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
@@ -50,7 +50,7 @@ const benefitsData = [
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        className="h-6 w-6 text-verdaez-600"
+        className="h-6 w-6 text-olive-scale-600"
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
@@ -71,7 +71,7 @@ const benefitsData = [
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        className="h-6 w-6 text-verdaez-600"
+        className="h-6 w-6 text-olive-scale-600"
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
@@ -92,7 +92,7 @@ const benefitsData = [
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        className="h-6 w-6 text-verdaez-600"
+        className="h-6 w-6 text-olive-scale-600"
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
@@ -113,7 +113,7 @@ const benefitsData = [
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        className="h-6 w-6 text-verdaez-600"
+        className="h-6 w-6 text-olive-scale-600"
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"

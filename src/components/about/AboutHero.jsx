@@ -48,11 +48,11 @@ export default function AboutHero() {
 
       {/* Content */}
       <div ref={textRef} className="relative z-10 max-w-5xl mx-auto px-6 text-center">
-        <span className="inline-block text-verdaez-300 font-body text-sm font-semibold uppercase tracking-[0.3em] mb-6 drop-shadow-md">
+        <span className="inline-block text-olive-scale-300 font-body text-sm font-semibold uppercase tracking-[0.3em] mb-6 drop-shadow-md">
           A Bioenergy Company Designed for Circular Carbon Value
         </span>
         <h1 className="font-heading text-5xl md:text-6xl lg:text-7xl text-white font-normal leading-[1.1] drop-shadow-lg">
-          Engineering the <span className="italic text-verdaez-200">Circular Carbon Future</span>
+          Engineering the <span className="italic text-olive-scale-200">Circular Carbon Future</span>
         </h1>
       </div>
     </section>

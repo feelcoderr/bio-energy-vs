@@ -58,13 +58,13 @@ export default function AboutProblem() {
         <div className="pt-[50vh] pb-[50vh]">
           <div ref={statRef} className="space-y-32">
             <div className="glass-panel-light bg-surface-container-low p-12 rounded-[24px] border border-outline-variant/30 shadow-ambient">
-               <h3 className="text-6xl font-heading text-primary mb-2">90%</h3>
-               <p className="font-body text-lg text-on-surface-variant">Of agricultural residue is currently underutilized or burned.</p>
+               <h3 className="text-6xl font-heading text-primary mb-2">6+</h3>
+               <p className="font-body text-lg text-on-surface-variant">High-value products derived from a single biomass feedstock stream.</p>
             </div>
             
             <div className="glass-panel-light bg-surface-container-low p-12 rounded-[24px] border border-outline-variant/30 shadow-ambient">
-               <h3 className="text-6xl font-heading text-primary mb-2">300<span className="text-2xl text-surface-tint ml-1">TPD</span></h3>
-               <p className="font-body text-lg text-on-surface-variant">Our modular scaling target to process biomass locally and efficiently.</p>
+               <h3 className="text-6xl font-heading text-primary mb-2">100%</h3>
+               <p className="font-body text-lg text-on-surface-variant">Zero-waste processing — every fraction of biomass is converted into value.</p>
             </div>
 
             <div className="glass-panel-light bg-surface-container-low p-12 rounded-[24px] border border-outline-variant/30 shadow-ambient">

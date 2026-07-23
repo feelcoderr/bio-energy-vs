@@ -66,7 +66,7 @@ export default function ProductsJourney() {
       <div className="max-w-5xl mx-auto px-6 relative">
         {/* The central vertical line */}
         <div className="absolute left-1/2 top-0 bottom-0 w-[2px] bg-outline-variant/30 -translate-x-1/2 hidden md:block" />
-        <div className="journey-line absolute left-1/2 top-0 bottom-0 w-[2px] bg-gradient-to-b from-primary via-surface-tint to-verdaez-400 -translate-x-1/2 hidden md:block" />
+        <div className="journey-line absolute left-1/2 top-0 bottom-0 w-[2px] bg-gradient-to-b from-primary via-surface-tint to-olive-scale-400 -translate-x-1/2 hidden md:block" />
 
         <div className="space-y-16 relative z-10">
           {steps.map((step, idx) => {

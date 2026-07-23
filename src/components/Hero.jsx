@@ -7,7 +7,7 @@ const highlights = [
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        className="h-6 w-6 text-verdaez-600"
+        className="h-6 w-6 text-olive-scale-600"
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
@@ -31,7 +31,7 @@ const highlights = [
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        className="h-6 w-6 text-verdaez-600"
+        className="h-6 w-6 text-olive-scale-600"
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
@@ -50,7 +50,7 @@ const highlights = [
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        className="h-6 w-6 text-verdaez-600"
+        className="h-6 w-6 text-olive-scale-600"
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
@@ -69,7 +69,7 @@ const highlights = [
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        className="h-6 w-6 text-verdaez-600"
+        className="h-6 w-6 text-olive-scale-600"
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
@@ -88,7 +88,7 @@ const highlights = [
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        className="h-6 w-6 text-verdaez-600"
+        className="h-6 w-6 text-olive-scale-600"
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
@@ -128,7 +128,7 @@ export default function Hero() {
           <div className="w-full lg:w-[45%] animate-fade-in-left">
             {/* Badge (Commented out because it is baked into the background image) */}
 
-            {/* <span className="inline-block bg-verdaez-100/90 text-verdaez-700 rounded-full px-4 py-1.5 text-xs font-semibold tracking-wider uppercase mb-6 backdrop-blur-sm">
+            {/* <span className="inline-block bg-olive-scale-100/90 text-olive-scale-700 rounded-full px-4 py-1.5 text-xs font-semibold tracking-wider uppercase mb-6 backdrop-blur-sm">
               Biomass to Value · Circular Future
             </span> */}
 
@@ -145,8 +145,8 @@ export default function Hero() {
             <p className="text-body-lg text-on-surface-variant leading-relaxed max-w-xl mb-8">
               A scalable biorefinery platform converting agricultural waste into
               high-value fuels, carbon products, and measurable climate impact
-              starting at 30&nbsp;TPD and scaling to 300&nbsp;TPD within five
-              years.
+              through modular, replicable systems designed for rapid
+              growth.
             </p>
 
             {/* CTA Buttons */}
@@ -181,7 +181,7 @@ export default function Hero() {
                   key={item.label}
                   className="flex flex-col items-center gap-1.5"
                 >
-                  <span className="text-verdaez-600">{item.icon}</span>
+                  <span className="text-olive-scale-600">{item.icon}</span>
                   <span className="text-xs font-medium text-gray-600 text-center whitespace-nowrap">
                     {item.label}
                   </span>

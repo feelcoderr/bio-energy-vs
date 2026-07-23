@@ -176,11 +176,11 @@ function TierCard({ tier, index, isVisible }) {
           style={{ border: "1px solid var(--color-primary-container)" }}
         >
           {/* Accent bar */}
-          <div className="h-1.5 w-full bg-gradient-to-r from-verdaez-400 via-surface-tint to-verdaez-700 shrink-0" />
+          <div className="h-1.5 w-full bg-gradient-to-r from-olive-scale-400 via-surface-tint to-olive-scale-700 shrink-0" />
 
           <div className="p-6 flex flex-col flex-1 overflow-auto">
             {/* Label */}
-            <span className="text-[10px] font-body font-semibold uppercase tracking-[0.2em] text-verdaez-400 mb-1">
+            <span className="text-[10px] font-body font-semibold uppercase tracking-[0.2em] text-olive-scale-400 mb-1">
               {tier.label}
             </span>
 
@@ -200,7 +200,7 @@ function TierCard({ tier, index, isVisible }) {
                     border: "1px solid rgba(255,255,255,0.06)",
                   }}
                 >
-                  <span className="w-5 h-5 rounded-full bg-verdaez-600 text-white flex items-center justify-center text-[9px] font-bold shrink-0 mt-0.5">
+                  <span className="w-5 h-5 rounded-full bg-olive-scale-600 text-white flex items-center justify-center text-[9px] font-bold shrink-0 mt-0.5">
                     {i + 1}
                   </span>
                   <div>
@@ -220,7 +220,7 @@ function TierCard({ tier, index, isVisible }) {
               className="p-3.5 rounded-xl"
               style={{
                 background: "rgba(255,255,255,0.04)",
-                borderLeft: "3px solid var(--color-verdaez-400)",
+                borderLeft: "3px solid var(--color-olive-scale-400)",
               }}
             >
               <p className="text-[11px] text-white/50 leading-relaxed font-body italic">
@@ -238,7 +238,7 @@ function TierCard({ tier, index, isVisible }) {
                   <p className="text-[8px] font-body font-semibold uppercase tracking-widest text-white/25">
                     {stat.label}
                   </p>
-                  <p className="text-sm font-heading text-verdaez-300 mt-0.5">
+                  <p className="text-sm font-heading text-olive-scale-300 mt-0.5">
                     {stat.value}
                   </p>
                 </div>

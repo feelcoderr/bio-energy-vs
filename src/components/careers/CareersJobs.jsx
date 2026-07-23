@@ -10,13 +10,13 @@ const jobListings = [
     id: "process-eng",
     title: "Lead Pyrolysis Process Engineer",
     dept: "Engineering",
-    location: "Bangalore (Refinery Lab)",
+    location: "Ahmedabad (Refinery Lab)",
     type: "Full-Time (On-site)",
     desc: "Scale and optimize continuous-feed oxygen-free pyrolytic reactor geometries, directing gas separation and volatile carbon flow rates.",
     responsibilities: [
       "Oversee thermodynamic modeling of biomass feed conversion under various temperature ranges (450°C - 650°C)",
       "Troubleshoot continuous feed valve locks and ash removal augers",
-      "Collaborate on next-gen modular design blueprints (30 TPD plants)"
+      "Collaborate on next-gen modular design blueprints for scalable plants"
     ],
     requirements: [
       "B.Tech / M.Tech in Chemical Engineering or Mechanical Engineering",
@@ -46,7 +46,7 @@ const jobListings = [
     id: "carbon-auditor",
     title: "Carbon Credits & Sustainability Auditor",
     dept: "Corporate",
-    location: "Bangalore HQ",
+    location: "Ahmedabad HQ",
     type: "Full-Time (Hybrid)",
     desc: "Monitor compliance frameworks for carbon removal credits, coordinating direct Puro.earth geotracking audits.",
     responsibilities: [
@@ -64,7 +64,7 @@ const jobListings = [
     id: "materials-chemist",
     title: "Materials Chemist (Activated Carbon)",
     dept: "Engineering",
-    location: "Bangalore Lab",
+    location: "Ahmedabad Lab",
     type: "Full-Time (On-site)",
     desc: "Evaluate physical carbon densities and iodine numbers for processed biochars, optimizing activation parameters.",
     responsibilities: [

@@ -37,17 +37,17 @@
   --color-surface-variant: #E3E1C9;
 
   /* Legacy aliases mapped to warm Olive and Deep Olive Ink */
-  --color-verdaez-950: #151C12;
-  --color-verdaez-900: #242E1E;
-  --color-verdaez-800: #35442C;
-  --color-verdaez-700: #4B5F3E;
-  --color-verdaez-600: #648032;
-  --color-verdaez-500: #7A9B4B;
-  --color-verdaez-400: #93B462;
-  --color-verdaez-300: #B2CE87;
-  --color-verdaez-200: #D0E5B5;
-  --color-verdaez-100: #E6F2DB;
-  --color-verdaez-50: #F6F4EB;
+  --color-olive-scale-950: #151C12;
+  --color-olive-scale-900: #242E1E;
+  --color-olive-scale-800: #35442C;
+  --color-olive-scale-700: #4B5F3E;
+  --color-olive-scale-600: #648032;
+  --color-olive-scale-500: #7A9B4B;
+  --color-olive-scale-400: #93B462;
+  --color-olive-scale-300: #B2CE87;
+  --color-olive-scale-200: #D0E5B5;
+  --color-olive-scale-100: #E6F2DB;
+  --color-olive-scale-50: #F6F4EB;
 
   --color-gold-500: #C69855;
   --color-gold-400: #D8AF72;
