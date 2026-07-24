@@ -10,10 +10,12 @@ import Careers from './pages/Careers'
 import Contact from './pages/Contact'
 import CustomCursor from './components/CustomCursor'
 import WhatsAppButton from './components/WhatsAppButton'
+import ScrollToTop from './components/ScrollToTop'
 
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <div className="min-h-screen bg-background text-on-background">
         <CustomCursor />
         <Navbar />
