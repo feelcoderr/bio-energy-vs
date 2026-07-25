@@ -134,7 +134,7 @@ const nodes = [
   {
     id: "registries",
     name: "Carbon Registries",
-    role: "International verification bodies like Puro.earth & Verra.",
+    role: "International verification bodies.",
     valueExchanged:
       "Auditing biochar durability to issue verified digital CO2 removal credits (dCO2) bought by corporate net-zero clients.",
     metrics: "500+ years carbon sequestration stability.",

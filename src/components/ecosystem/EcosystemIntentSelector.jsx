@@ -106,11 +106,11 @@ export default function EcosystemIntentSelector() {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6 border-t border-outline-variant/30 pt-6">
                     <div>
                       <h4 className="font-heading text-lg text-primary font-semibold mb-2">
-                        High EBITDA Yield
+                        High Efficiency Yield
                       </h4>
                       <p className="font-body text-xs text-on-surface-variant leading-relaxed">
-                        Phase 1 modular start-up is designed for EBITDA yields
-                        exceeding 30% by securing low feedstock tariffs.
+                        Phase 1 modular start-up is designed for high operational efficiency
+                        by securing low feedstock tariffs.
                       </p>
                     </div>
                     <div>

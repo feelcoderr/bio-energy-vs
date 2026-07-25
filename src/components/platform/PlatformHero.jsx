@@ -150,7 +150,7 @@ export default function PlatformHero() {
               <div className="w-2.5 h-2.5 rounded-full bg-olive-scale-400 animate-pulse shrink-0" />
               <p className="font-body text-xs text-on-surface-variant leading-relaxed">
                 <strong>Economics-First Alignment:</strong> Designed to achieve
-                positive EBITDA at Phase 1 modular stage, allowing non-dilutive
+                positive cash flow at Phase 1 modular stage, allowing non-dilutive
                 replication.
               </p>
             </div>

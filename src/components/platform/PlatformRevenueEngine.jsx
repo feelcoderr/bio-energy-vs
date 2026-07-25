@@ -124,10 +124,10 @@ const revenueStreams = [
     category: "Advanced Nanotech",
     frontDesc:
       "High purity carbon matrices enabling next gen graphene synthesis, battery anodes, and composites.",
-    margin: "60%+ EBITDA (Targeted)",
+    margin: "Ultra-High Purity Graphene Precursors",
     market: "Electronics manufacturers, battery innovators",
     terms: "Joint development agreements & patent licensing",
-    growth: "28.5% CAGR",
+    growth: "1,500 MT/Year",
     image: "/images/product-graphene.jpg",
     icon: (
       <svg
@@ -151,10 +151,10 @@ const revenueStreams = [
     category: "Intellectual Property",
     frontDesc:
       "Blueprints, modular design consultation, feasibility studies, and technological licensing fees.",
-    margin: "70%+ Gross Margin",
+    margin: "Proprietary Biorefinery Blueprints",
     market: "Regional bioenergy startups, infrastructure funds",
     terms: "Retainer-based fees & milestone royalties",
-    growth: "8.5% CAGR",
+    growth: "5+ New Sites/Year",
     image: "/images/platform-engineering.jpg",
     icon: (
       <svg

@@ -23,7 +23,7 @@ const stages = [
     desc: "Ratnanjali Bioenergy chemists analyze sample feedstocks for moisture, ash, and volatile carbon content to confirm pyrolysis yields.",
     checklist: [
       "Laboratory testing of biomass sample characteristics",
-      "EBITDA and local logistics radius modeling",
+      "Economic viability and local logistics radius modeling",
       "Preliminary carbon sequestration yield projections",
     ],
     duration: "Week 2–4",
@@ -56,7 +56,7 @@ const stages = [
     desc: "Finalize long-term joint contracts for feedstock supply, off-take deliveries, or engineering blueprints licensing.",
     checklist: [
       "Execute multi-year procurement and off-take contracts",
-      "Secure project financing approvals (EBITDA backed)",
+      "Secure project financing approvals (Performance backed)",
       "Establish regional facility construction blueprints",
     ],
     duration: "Month 3+",
