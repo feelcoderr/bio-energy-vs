@@ -2,12 +2,19 @@ import { useState, useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { createInquiry } from "../../firebase/services/inquiryService";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function ContactInterface() {
   const [intent, setIntent] = useState("investor");
   const [formSubmitted, setFormSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "", email: "", message: "",
+    org: "", interestArea: "",
+    residueType: "", volume: "", targetProduct: ""
+  });
   const containerRef = useRef(null);
 
   useGSAP(
@@ -41,9 +48,26 @@ export default function ContactInterface() {
     { dependencies: [intent], scope: containerRef },
   );
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsSubmitting(true);
+    
+    await createInquiry({
+      intent,
+      ...formData
+    });
+    
+    setIsSubmitting(false);
     setFormSubmitted(true);
+    setFormData({
+      name: "", email: "", message: "",
+      org: "", interestArea: "",
+      residueType: "", volume: "", targetProduct: ""
+    });
+  };
+
+  const handleChange = (e) => {
+    setFormData(prev => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
   return (
@@ -180,6 +204,9 @@ export default function ContactInterface() {
                       <input
                         type="text"
                         id="contact-name"
+                        name="name"
+                        value={formData.name}
+                        onChange={handleChange}
                         required
                         placeholder="Your Name"
                         className="w-full bg-white/50 backdrop-blur-sm border border-outline-variant/30 rounded-2xl px-5 py-4 text-sm font-body text-primary placeholder-on-surface-variant/40 focus:outline-none focus:border-surface-tint/50 focus:bg-white focus:ring-4 focus:ring-surface-tint/10 transition-all duration-300 shadow-sm"
@@ -195,6 +222,9 @@ export default function ContactInterface() {
                       <input
                         type="email"
                         id="contact-email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleChange}
                         required
                         placeholder="Your Email"
                         className="w-full bg-white/50 backdrop-blur-sm border border-outline-variant/30 rounded-2xl px-5 py-4 text-sm font-body text-primary placeholder-on-surface-variant/40 focus:outline-none focus:border-surface-tint/50 focus:bg-white focus:ring-4 focus:ring-surface-tint/10 transition-all duration-300 shadow-sm"
@@ -216,6 +246,9 @@ export default function ContactInterface() {
                           <input
                             type="text"
                             id="investor-org"
+                            name="org"
+                            value={formData.org}
+                            onChange={handleChange}
                             required
                             placeholder="Your Organization"
                             className="w-full bg-white/50 backdrop-blur-sm border border-outline-variant/30 rounded-2xl px-5 py-4 text-sm font-body text-primary placeholder-on-surface-variant/40 focus:outline-none focus:border-surface-tint/50 focus:bg-white focus:ring-4 focus:ring-surface-tint/10 transition-all duration-300 shadow-sm"
@@ -231,8 +264,11 @@ export default function ContactInterface() {
                           <div className="relative">
                             <select
                               id="investor-scope"
+                              name="interestArea"
+                              value={formData.interestArea}
+                              onChange={handleChange}
                               className="w-full bg-white/50 backdrop-blur-sm border border-outline-variant/30 rounded-2xl px-5 py-4 text-sm font-body text-primary focus:outline-none focus:border-surface-tint/50 focus:bg-white focus:ring-4 focus:ring-surface-tint/10 transition-all duration-300 appearance-none shadow-sm cursor-pointer"
-                              defaultValue=""
+                              required
                             >
                               <option value="" disabled hidden>Select Interest Area</option>
                               <option value="Equity Capital Investment">Equity Capital Investment</option>
@@ -259,8 +295,11 @@ export default function ContactInterface() {
                           <div className="relative">
                             <select
                               id="supplier-residue"
+                              name="residueType"
+                              value={formData.residueType}
+                              onChange={handleChange}
+                              required
                               className="w-full bg-white/50 backdrop-blur-sm border border-outline-variant/30 rounded-2xl px-5 py-4 text-sm font-body text-primary focus:outline-none focus:border-surface-tint/50 focus:bg-white focus:ring-4 focus:ring-surface-tint/10 transition-all duration-300 appearance-none shadow-sm cursor-pointer"
-                              defaultValue=""
                             >
                               <option value="" disabled hidden>Select Residue Type</option>
                               <option value="Rice Husk / Straw">Rice Husk / Straw</option>
@@ -283,6 +322,9 @@ export default function ContactInterface() {
                           <input
                             type="text"
                             id="supplier-volume"
+                            name="volume"
+                            value={formData.volume}
+                            onChange={handleChange}
                             required
                             placeholder="e.g., 500 Tons"
                             className="w-full bg-white/50 backdrop-blur-sm border border-outline-variant/30 rounded-2xl px-5 py-4 text-sm font-body text-primary placeholder-on-surface-variant/40 focus:outline-none focus:border-surface-tint/50 focus:bg-white focus:ring-4 focus:ring-surface-tint/10 transition-all duration-300 shadow-sm"
@@ -303,8 +345,11 @@ export default function ContactInterface() {
                           <div className="relative">
                             <select
                               id="buyer-product"
+                              name="targetProduct"
+                              value={formData.targetProduct}
+                              onChange={handleChange}
+                              required
                               className="w-full bg-white/50 backdrop-blur-sm border border-outline-variant/30 rounded-2xl px-5 py-4 text-sm font-body text-primary focus:outline-none focus:border-surface-tint/50 focus:bg-white focus:ring-4 focus:ring-surface-tint/10 transition-all duration-300 appearance-none shadow-sm cursor-pointer"
-                              defaultValue=""
                             >
                               <option value="" disabled hidden>Select Target Product</option>
                               <option value="Biomass Fuel Pellets">Biomass Fuel Pellets</option>
@@ -327,6 +372,9 @@ export default function ContactInterface() {
                           <input
                             type="text"
                             id="buyer-volume"
+                            name="volume"
+                            value={formData.volume}
+                            onChange={handleChange}
                             required
                             placeholder="e.g., 1000 Tons"
                             className="w-full bg-white/50 backdrop-blur-sm border border-outline-variant/30 rounded-2xl px-5 py-4 text-sm font-body text-primary placeholder-on-surface-variant/40 focus:outline-none focus:border-surface-tint/50 focus:bg-white focus:ring-4 focus:ring-surface-tint/10 transition-all duration-300 shadow-sm"
@@ -344,6 +392,9 @@ export default function ContactInterface() {
                       </label>
                       <textarea
                         id="contact-msg"
+                        name="message"
+                        value={formData.message}
+                        onChange={handleChange}
                         rows={4}
                         required
                         placeholder="Your Message..."
@@ -355,9 +406,10 @@ export default function ContactInterface() {
 
                 <button
                   type="submit"
-                  className="w-full bg-primary hover:bg-surface-tint text-white font-body font-semibold text-sm uppercase tracking-widest py-4.5 rounded-2xl transition-all duration-300 shadow-[0_8px_20px_rgba(20,40,20,0.15)] hover:shadow-[0_12px_25px_rgba(100,128,50,0.25)] hover:-translate-y-1 mt-8"
+                  disabled={isSubmitting}
+                  className="w-full bg-primary hover:bg-surface-tint text-white font-body font-semibold text-sm uppercase tracking-widest py-4.5 rounded-2xl transition-all duration-300 shadow-[0_8px_20px_rgba(20,40,20,0.15)] hover:shadow-[0_12px_25px_rgba(100,128,50,0.25)] hover:-translate-y-1 mt-8 disabled:opacity-70 disabled:hover:translate-y-0"
                 >
-                  Submit Inquiry
+                  {isSubmitting ? "Submitting..." : "Submit Inquiry"}
                 </button>
               </form>
             )}

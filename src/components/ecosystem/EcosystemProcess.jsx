@@ -46,7 +46,7 @@ const stages = [
     checklist: [
       "Process 5-10 tons of feedstock sample",
       "Certify biochar carbon stability (H:C ratio testing)",
-      "Submit pilot dataset to Puro.earth alignment auditors",
+      "Submit pilot dataset to alignment auditors",
     ],
     duration: "Month 2–3",
   },

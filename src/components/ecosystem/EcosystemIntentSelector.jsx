@@ -109,8 +109,9 @@ export default function EcosystemIntentSelector() {
                         High Efficiency Yield
                       </h4>
                       <p className="font-body text-xs text-on-surface-variant leading-relaxed">
-                        Phase 1 modular start-up is designed for high operational efficiency
-                        by securing low feedstock tariffs.
+                        Phase 1 modular start-up is designed for high
+                        operational efficiency by securing low feedstock
+                        tariffs.
                       </p>
                     </div>
                     <div>
@@ -119,8 +120,7 @@ export default function EcosystemIntentSelector() {
                       </h4>
                       <p className="font-body text-xs text-on-surface-variant leading-relaxed">
                         Securing multi-year direct agreements for industrial
-                        pellets and Puro.earth carbon credits prior to
-                        construction.
+                        pellets and carbon credits prior to construction.
                       </p>
                     </div>
                   </div>
@@ -139,7 +139,9 @@ export default function EcosystemIntentSelector() {
 
                     <div className="space-y-4 text-xs font-body">
                       <div className="flex gap-4 items-start">
-                        <span className="text-olive-scale-400 font-bold">01</span>
+                        <span className="text-olive-scale-400 font-bold">
+                          01
+                        </span>
                         <div>
                           <strong className="text-white">
                             Modular Prototype Launch
@@ -151,19 +153,23 @@ export default function EcosystemIntentSelector() {
                         </div>
                       </div>
                       <div className="flex gap-4 items-start">
-                        <span className="text-olive-scale-400 font-bold">02</span>
+                        <span className="text-olive-scale-400 font-bold">
+                          02
+                        </span>
                         <div>
                           <strong className="text-white">
                             Regional Scaling
                           </strong>
                           <p className="text-white/70 mt-0.5">
-                            Replicating modules to aggregate capacity
-                            processing capacity.
+                            Replicating modules to aggregate capacity processing
+                            capacity.
                           </p>
                         </div>
                       </div>
                       <div className="flex gap-4 items-start">
-                        <span className="text-olive-scale-400 font-bold">03</span>
+                        <span className="text-olive-scale-400 font-bold">
+                          03
+                        </span>
                         <div>
                           <strong className="text-white">
                             Platform Blueprints Licensing

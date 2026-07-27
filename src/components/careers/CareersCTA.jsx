@@ -2,6 +2,7 @@ import { useRef, useState } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { createInquiry } from "../../firebase/services/inquiryService";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -25,9 +26,30 @@ export default function CareersCTA() {
     );
   }, { scope: containerRef });
 
-  const handleSubmit = (e) => {
+  const [formData, setFormData] = useState({
+    name: "", email: "", role: "", linkedin: "", message: ""
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsSubmitting(true);
+    
+    await createInquiry({
+      intent: "speculative",
+      name: formData.name,
+      email: formData.email,
+      role: formData.role,
+      linkedin: formData.linkedin,
+      message: formData.message
+    });
+    
+    setIsSubmitting(false);
     setFormSubmitted(true);
+  };
+
+  const handleChange = (e) => {
+    setFormData(prev => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
   return (
@@ -80,6 +102,9 @@ export default function CareersCTA() {
                     <input 
                       type="text" 
                       id="career-name" 
+                      name="name"
+                      value={formData.name}
+                      onChange={handleChange}
                       required 
                       placeholder="Your Full Name"
                       className="w-full bg-white border border-outline-variant/50 rounded-xl px-4 py-3 text-sm font-body focus:outline-none focus:border-surface-tint"
@@ -90,6 +115,9 @@ export default function CareersCTA() {
                     <input 
                       type="email" 
                       id="career-email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleChange}
                       required
                       placeholder="Your Email Address"
                       className="w-full bg-white border border-outline-variant/50 rounded-xl px-4 py-3 text-sm font-body focus:outline-none focus:border-surface-tint"
@@ -103,6 +131,9 @@ export default function CareersCTA() {
                     <input 
                       type="text" 
                       id="speculative-role" 
+                      name="role"
+                      value={formData.role}
+                      onChange={handleChange}
                       required 
                       placeholder="Your Target Role"
                       className="w-full bg-white border border-outline-variant/50 rounded-xl px-4 py-3 text-sm font-body focus:outline-none focus:border-surface-tint"
@@ -113,6 +144,9 @@ export default function CareersCTA() {
                     <input 
                       type="url" 
                       id="speculative-resume" 
+                      name="linkedin"
+                      value={formData.linkedin}
+                      onChange={handleChange}
                       required 
                       placeholder="Your LinkedIn Profile URL"
                       className="w-full bg-white border border-outline-variant/50 rounded-xl px-4 py-3 text-sm font-body focus:outline-none focus:border-surface-tint"
@@ -124,6 +158,9 @@ export default function CareersCTA() {
                   <label htmlFor="speculative-cover" className="block text-[10px] font-body font-bold text-on-surface-variant/70 uppercase tracking-widest mb-1.5">Introduction / Experience</label>
                   <textarea 
                     id="speculative-cover" 
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
                     rows={4} 
                     required 
                     placeholder="Your Experience & Achievements..."
@@ -133,9 +170,10 @@ export default function CareersCTA() {
 
                 <button 
                   type="submit" 
-                  className="btn-primary w-full justify-center text-xs uppercase tracking-widest py-4 mt-2"
+                  disabled={isSubmitting}
+                  className="btn-primary w-full justify-center text-xs uppercase tracking-widest py-4 mt-2 disabled:opacity-70"
                 >
-                  Submit Application
+                  {isSubmitting ? "Submitting..." : "Submit Application"}
                 </button>
               </form>
             )}

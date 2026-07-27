@@ -2,72 +2,72 @@
 
 @theme {
   /* New Semantic Design Tokens (Cohesive Olive, Obsidian, & Oatmeal Palette) */
-  --color-surface: #FCFBF7;
-  --color-surface-dim: #EDECD8;
-  --color-surface-bright: #FCFBF7;
-  --color-surface-container-lowest: #FFFFFF;
-  --color-surface-container-low: #F6F4EB;
-  --color-surface-container: #EDECD8;
-  --color-surface-container-high: #E3E1C9;
-  --color-surface-container-highest: #D8D6BE;
-  --color-on-surface: #151C12;
-  --color-on-surface-variant: #4D5346;
-  --color-inverse-surface: #2E3228;
-  --color-inverse-on-surface: #F5F6F0;
-  --color-outline: #7D8475;
-  --color-outline-variant: #C8CEC0;
+  --color-surface: #fcfbf7;
+  --color-surface-dim: #edecd8;
+  --color-surface-bright: #fcfbf7;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #f6f4eb;
+  --color-surface-container: #edecd8;
+  --color-surface-container-high: #e3e1c9;
+  --color-surface-container-highest: #d8d6be;
+  --color-on-surface: #151c12;
+  --color-on-surface-variant: #4d5346;
+  --color-inverse-surface: #2e3228;
+  --color-inverse-on-surface: #f5f6f0;
+  --color-outline: #7d8475;
+  --color-outline-variant: #c8cec0;
   --color-surface-tint: #648032;
-  --color-primary: #151C12;
-  --color-on-primary: #FFFFFF;
+  --color-primary: #151c12;
+  --color-on-primary: #ffffff;
   --color-primary-container: #648032;
-  --color-on-primary-container: #F1F6E9;
-  --color-inverse-primary: #A2C470;
-  --color-secondary: #C69855;
-  --color-on-secondary: #FFFFFF;
-  --color-secondary-container: #FAF5EB;
-  --color-on-secondary-container: #6E5127;
+  --color-on-primary-container: #f1f6e9;
+  --color-inverse-primary: #a2c470;
+  --color-secondary: #c69855;
+  --color-on-secondary: #ffffff;
+  --color-secondary-container: #faf5eb;
+  --color-on-secondary-container: #6e5127;
   --color-tertiary: #849667;
-  --color-on-tertiary: #FFFFFF;
-  --color-tertiary-container: #EEF3E7;
-  --color-on-tertiary-container: #3D4F28;
-  --color-error: #BA1A1A;
-  --color-on-error: #FFFFFF;
-  --color-background: #FCFBF7;
-  --color-on-background: #151C12;
-  --color-surface-variant: #E3E1C9;
+  --color-on-tertiary: #ffffff;
+  --color-tertiary-container: #eef3e7;
+  --color-on-tertiary-container: #3d4f28;
+  --color-error: #ba1a1a;
+  --color-on-error: #ffffff;
+  --color-background: #fcfbf7;
+  --color-on-background: #151c12;
+  --color-surface-variant: #e3e1c9;
 
   /* Legacy aliases mapped to warm Olive and Deep Olive Ink */
-  --color-olive-scale-950: #151C12;
-  --color-olive-scale-900: #242E1E;
-  --color-olive-scale-800: #35442C;
-  --color-olive-scale-700: #4B5F3E;
+  --color-olive-scale-950: #151c12;
+  --color-olive-scale-900: #242e1e;
+  --color-olive-scale-800: #35442c;
+  --color-olive-scale-700: #4b5f3e;
   --color-olive-scale-600: #648032;
-  --color-olive-scale-500: #7A9B4B;
-  --color-olive-scale-400: #93B462;
-  --color-olive-scale-300: #B2CE87;
-  --color-olive-scale-200: #D0E5B5;
-  --color-olive-scale-100: #E6F2DB;
-  --color-olive-scale-50: #F6F4EB;
+  --color-olive-scale-500: #7a9b4b;
+  --color-olive-scale-400: #93b462;
+  --color-olive-scale-300: #b2ce87;
+  --color-olive-scale-200: #d0e5b5;
+  --color-olive-scale-100: #e6f2db;
+  --color-olive-scale-50: #f6f4eb;
 
-  --color-gold-500: #C69855;
-  --color-gold-400: #D8AF72;
-  --color-gold-300: #ECD7B7;
+  --color-gold-500: #c69855;
+  --color-gold-400: #d8af72;
+  --color-gold-300: #ecd7b7;
 
-  --color-cream-50: #FCFBF7;
-  --color-cream-100: #F6F4EB;
-  --color-cream-200: #EDECD8;
+  --color-cream-50: #fcfbf7;
+  --color-cream-100: #f6f4eb;
+  --color-cream-200: #edecd8;
 
   /* Olive & Espresso Palette for Value Chain */
   --color-olive-600: #648032;
-  --color-olive-500: #7A9B4B;
-  --color-olive-400: #93B462;
-  --color-olive-300: #B2CE87;
-  --color-espresso-900: #1D1A15;
-  --color-espresso-800: #29251E;
+  --color-olive-500: #7a9b4b;
+  --color-olive-400: #93b462;
+  --color-olive-300: #b2ce87;
+  --color-espresso-900: #1d1a15;
+  --color-espresso-800: #29251e;
   --color-espresso-700: #353026;
-  --color-harvest-500: #C69855;
-  --color-harvest-400: #D8AF72;
-  --color-harvest-300: #ECD7B7;
+  --color-harvest-500: #c69855;
+  --color-harvest-400: #d8af72;
+  --color-harvest-300: #ecd7b7;
 
   /* New Typographic Pairings */
   --font-heading: "Libre Caslon Text", Georgia, serif;
@@ -271,7 +271,7 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #F6F4EB;
+  background: #f6f4eb;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -280,7 +280,7 @@
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #4B5F3E;
+  background: #4b5f3e;
 }
 
 /* 3D Card Flip Utilities (Premium Bounce & Speed) */
@@ -334,4 +334,14 @@
   background: rgba(255, 255, 255, 0.04);
   backdrop-filter: blur(16px);
   border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Hide scrollbar but allow scrolling */
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE & Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
 }

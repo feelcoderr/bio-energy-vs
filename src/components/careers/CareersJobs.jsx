@@ -2,34 +2,47 @@ import { useState, useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { getActiveCareers } from "../../firebase/services/careerService";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const jobListings = [];
-
 export default function CareersJobs() {
+  const [jobListings, setJobListings] = useState([]);
+  const [loading, setLoading] = useState(true);
   const [activeDept, setActiveDept] = useState("All");
   const [expandedJob, setExpandedJob] = useState(null);
   const containerRef = useRef(null);
 
-  useGSAP(() => {
-    gsap.fromTo(".jobs-reveal",
-      { opacity: 0, y: 30 },
-      {
-        opacity: 1,
-        y: 0,
-        duration: 1,
-        stagger: 0.15,
-        scrollTrigger: {
-          trigger: containerRef.current,
-          start: "top 80%",
-        }
-      }
-    );
-  }, { scope: containerRef });
+  useGSAP(
+    () => {
+      gsap.fromTo(
+        ".jobs-reveal",
+        { opacity: 0, y: 30 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1,
+          stagger: 0.15,
+          scrollTrigger: {
+            trigger: containerRef.current,
+            start: "top 80%",
+          },
+        },
+      );
 
-  const filteredJobs = jobListings.filter(job => 
-    activeDept === "All" || job.dept === activeDept
+      const fetchJobs = async () => {
+        setLoading(true);
+        const jobs = await getActiveCareers();
+        setJobListings(jobs);
+        setLoading(false);
+      };
+      fetchJobs();
+    },
+    { scope: containerRef },
+  );
+
+  const filteredJobs = jobListings.filter(
+    (job) => activeDept === "All" || job.dept === activeDept,
   );
 
   const handleApplyClick = (jobTitle) => {
@@ -45,9 +58,12 @@ export default function CareersJobs() {
   };
 
   return (
-    <section id="open-roles" ref={containerRef} className="py-32 bg-white border-t border-outline-variant/30">
+    <section
+      id="open-roles"
+      ref={containerRef}
+      className="py-32 bg-white border-t border-outline-variant/30"
+    >
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        
         {/* Section Header */}
         <div className="jobs-reveal text-center mb-16">
           <span className="text-[10px] font-body font-semibold uppercase tracking-[0.2em] text-surface-tint mb-4 inline-block px-4 py-1.5 border border-outline-variant/60 rounded-full bg-white shadow-ambient-sm">
@@ -57,38 +73,55 @@ export default function CareersJobs() {
             Help Us Scale Carbon Solutions
           </h2>
           <p className="font-body text-base md:text-lg text-on-surface-variant max-w-2xl mx-auto leading-relaxed">
-            Review our active job listings. Click a role to expand requirements and apply directly.
+            Review our active job listings. Click a role to expand requirements
+            and apply directly.
           </p>
         </div>
 
         {/* Filter Buttons */}
-        <div className="jobs-reveal flex flex-wrap justify-center gap-2 mb-12">
-          {["All", "Engineering", "Operations", "Corporate"].map(dept => (
-            <button
-              key={dept}
-              onClick={() => {
-                setActiveDept(dept);
-                setExpandedJob(null);
-              }}
-              type="button"
-              className={`px-6 py-2.5 rounded-full border transition-all duration-300 font-body text-xs font-semibold tracking-wider uppercase ${
-                activeDept === dept
-                  ? "bg-primary text-white border-primary shadow-ambient-sm"
-                  : "bg-white border-outline-variant/30 text-on-surface-variant hover:border-outline hover:text-primary"
-              }`}
-            >
-              {dept}
-            </button>
-          ))}
+        <div className="jobs-reveal mb-12">
+          <div
+            className="
+      flex
+      gap-3
+      overflow-x-auto
+      no-scrollbar
+      px-1
+      justify-start
+      sm:justify-center
+  "
+          >
+            {["All", "Engineering", "Operations", "Corporate"].map((dept) => (
+              <button
+                key={dept}
+                onClick={() => {
+                  setActiveDept(dept);
+                  setExpandedJob(null);
+                }}
+                type="button"
+                className={`px-6 py-2.5 rounded-full border transition-all duration-300 font-body text-xs font-semibold tracking-wider uppercase ${
+                  activeDept === dept
+                    ? "bg-primary text-white border-primary shadow-ambient-sm"
+                    : "bg-white border-outline-variant/30 text-on-surface-variant hover:border-outline hover:text-primary"
+                }`}
+              >
+                {dept}
+              </button>
+            ))}
+          </div>
         </div>
 
         {/* Jobs List Accordion */}
-        <div className="jobs-reveal space-y-4 max-w-4xl mx-auto">
-          {filteredJobs.length > 0 ? (
+        <div className="jobs-reveal space-y-4 max-w-4xl mx-auto min-h-[200px]">
+          {loading ? (
+            <div className="flex justify-center items-center py-20">
+              <div className="w-8 h-8 border-4 border-surface-tint border-t-transparent rounded-full animate-spin"></div>
+            </div>
+          ) : filteredJobs.length > 0 ? (
             filteredJobs.map((job) => {
               const isExpanded = expandedJob === job.id;
               return (
-                <div 
+                <div
                   key={job.id}
                   className="bg-surface-container-low/30 border border-outline-variant/35 rounded-3xl overflow-hidden shadow-ambient-sm transition-all duration-300"
                 >
@@ -111,28 +144,37 @@ export default function CareersJobs() {
                         <span>{job.type}</span>
                       </div>
                     </div>
-                    
+
                     <span className="w-10 h-10 rounded-full border border-outline-variant/50 flex items-center justify-center text-primary shrink-0 self-end sm:self-center hover:bg-white transition-colors">
-                      <svg 
+                      <svg
                         className={`w-4 h-4 transition-transform duration-300 ${isExpanded ? "rotate-180" : ""}`}
-                        fill="none" 
-                        viewBox="0 0 24 24" 
+                        fill="none"
+                        viewBox="0 0 24 24"
                         stroke="currentColor"
                       >
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M19 9l-7 7-7-7"
+                        />
                       </svg>
                     </span>
                   </button>
 
                   {/* Expanded Content */}
-                  <div 
+                  <div
                     className={`transition-all duration-500 overflow-hidden ${
-                      isExpanded ? "max-h-[800px] border-t border-outline-variant/30" : "max-h-0"
+                      isExpanded
+                        ? "max-h-[800px] border-t border-outline-variant/30"
+                        : "max-h-0"
                     }`}
                   >
                     <div className="p-6 md:p-8 space-y-6 bg-white">
                       <div>
-                        <span className="block text-[8px] font-body font-bold tracking-widest text-on-surface-variant/70 uppercase mb-2">ROLE OVERVIEW</span>
+                        <span className="block text-[8px] font-body font-bold tracking-widest text-on-surface-variant/70 uppercase mb-2">
+                          ROLE OVERVIEW
+                        </span>
                         <p className="font-body text-sm text-on-surface leading-relaxed">
                           {job.desc}
                         </p>
@@ -140,23 +182,35 @@ export default function CareersJobs() {
 
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                         <div>
-                          <span className="block text-[8px] font-body font-bold tracking-widest text-on-surface-variant/70 uppercase mb-3">KEY RESPONSIBILITIES</span>
+                          <span className="block text-[8px] font-body font-bold tracking-widest text-on-surface-variant/70 uppercase mb-3">
+                            KEY RESPONSIBILITIES
+                          </span>
                           <ul className="space-y-2">
                             {job.responsibilities.map((resp, i) => (
                               <li key={i} className="flex gap-2.5 items-start">
-                                <span className="text-surface-tint font-bold text-xs leading-none mt-0.5">•</span>
-                                <span className="font-body text-xs text-on-surface-variant leading-normal">{resp}</span>
+                                <span className="text-surface-tint font-bold text-xs leading-none mt-0.5">
+                                  •
+                                </span>
+                                <span className="font-body text-xs text-on-surface-variant leading-normal">
+                                  {resp}
+                                </span>
                               </li>
                             ))}
                           </ul>
                         </div>
                         <div>
-                          <span className="block text-[8px] font-body font-bold tracking-widest text-on-surface-variant/70 uppercase mb-3">REQUIREMENTS</span>
+                          <span className="block text-[8px] font-body font-bold tracking-widest text-on-surface-variant/70 uppercase mb-3">
+                            REQUIREMENTS
+                          </span>
                           <ul className="space-y-2">
                             {job.requirements.map((req, i) => (
                               <li key={i} className="flex gap-2.5 items-start">
-                                <span className="text-surface-tint font-bold text-xs leading-none mt-0.5">•</span>
-                                <span className="font-body text-xs text-on-surface-variant leading-normal">{req}</span>
+                                <span className="text-surface-tint font-bold text-xs leading-none mt-0.5">
+                                  •
+                                </span>
+                                <span className="font-body text-xs text-on-surface-variant leading-normal">
+                                  {req}
+                                </span>
                               </li>
                             ))}
                           </ul>
@@ -174,18 +228,22 @@ export default function CareersJobs() {
                       </div>
                     </div>
                   </div>
-
                 </div>
               );
             })
           ) : (
             <div className="text-center py-20 bg-surface-container-low/20 rounded-3xl border border-outline-variant/30">
-              <h3 className="font-heading text-2xl text-primary mb-2">Currently No Openings</h3>
-              <p className="text-center text-on-surface-variant max-w-lg mx-auto">We are currently fully staffed, but we are always looking for great talent. Feel free to submit a speculative application below.</p>
+              <h3 className="font-heading text-2xl text-primary mb-2">
+                Currently No Openings
+              </h3>
+              <p className="text-center text-on-surface-variant max-w-lg mx-auto">
+                We are currently fully staffed, but we are always looking for
+                great talent. Feel free to submit a speculative application
+                below.
+              </p>
             </div>
           )}
         </div>
-
       </div>
     </section>
   );
