@@ -27,7 +27,7 @@ export default function CareersJobs() {
             trigger: containerRef.current,
             start: "top 80%",
           },
-        },
+        }
       );
 
       const fetchJobs = async () => {
