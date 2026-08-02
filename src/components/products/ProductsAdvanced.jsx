@@ -6,7 +6,7 @@ const products = [
     title: 'Engineered Carbon Materials',
     subtitle: 'High-Performance Functional Carbons',
     desc: 'High-performance carbon products developed through advanced material engineering for specialized industrial applications requiring exact specifications.',
-    image: '/images/product-graphene.jpg',
+    image: '/images/product-graphene.webp',
     features: ['Functional Carbon Powders', 'Specialty Carbon Fillers', 'High-Purity Products', 'Process Additives'],
   },
   {
@@ -14,7 +14,7 @@ const products = [
     title: 'Conductive Carbon Additives',
     subtitle: 'Energy Storage & Electronics',
     desc: 'Carbon materials designed to improve electrical conductivity, durability, and performance in advanced industrial applications like batteries and supercapacitors.',
-    image: '/images/product-biochar.jpg',
+    image: '/images/product-biochar.webp',
     features: ['Battery Technologies', 'Supercapacitors', 'Electronic Components', 'Energy Storage Systems'],
   },
   {
@@ -22,7 +22,7 @@ const products = [
     title: 'Advanced Carbon Composites',
     subtitle: 'Structural Durability',
     desc: 'Engineered composite materials that combine carbon performance with structural durability for demanding industrial environments and resilient infrastructure.',
-    image: '/images/products-hero.jpg',
+    image: '/images/products-hero.webp',
     features: ['Infrastructure', 'Transportation', 'Industrial Components', 'Protective Coatings'],
   },
 ];

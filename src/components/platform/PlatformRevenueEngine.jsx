@@ -15,7 +15,7 @@ const revenueStreams = [
     market: "Industrial thermal, cement plants, power utilities",
     terms: "Multi-year fixed-volume off-take contracts",
     growth: "50,000 MT/Year",
-    image: "/images/product-pellets.jpg",
+    image: "/images/product-pellets.webp",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -47,7 +47,7 @@ const revenueStreams = [
     market: "Commercial agriculture, soil mixers, specialty farms",
     terms: "Spot sales & subscription-based supply agreements",
     growth: "20,000 MT/Year",
-    image: "/images/product-biochar.jpg",
+    image: "/images/product-biochar.webp",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -74,7 +74,7 @@ const revenueStreams = [
     market: "Water treatment plants, industrial gas filters",
     terms: "Annual municipal bids & direct industrial contracts",
     growth: "5,000 MT/Year",
-    image: "/images/product-filter.jpg",
+    image: "/images/product-filter.webp",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -101,7 +101,7 @@ const revenueStreams = [
     market: "Refineries, bio-chemical plants, maritime fuel users",
     terms: "Industrial fuel contracts and spot marketing",
     growth: "10,000 Liters/Day",
-    image: "/images/product-oil.jpg",
+    image: "/images/product-oil.webp",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -128,7 +128,7 @@ const revenueStreams = [
     market: "Electronics manufacturers, battery innovators",
     terms: "Joint development agreements & patent licensing",
     growth: "1,500 MT/Year",
-    image: "/images/product-graphene.jpg",
+    image: "/images/product-graphene.webp",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -155,7 +155,7 @@ const revenueStreams = [
     market: "Regional bioenergy startups, infrastructure funds",
     terms: "Retainer-based fees & milestone royalties",
     growth: "5+ New Sites/Year",
-    image: "/images/platform-engineering.jpg",
+    image: "/images/platform-engineering.webp",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"

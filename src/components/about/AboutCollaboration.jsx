@@ -97,7 +97,7 @@ export default function AboutCollaboration() {
               }}
             >
               <img
-                src="/images/AnandParivarLogo.png"
+                src="/images/AnandParivarLogo.webp"
                 alt="Anand Parivar - આનંદ પરિવાર"
                 style={{
                   width: "100%",

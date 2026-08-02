@@ -41,7 +41,7 @@ export default function ProductsHero() {
       <div
         ref={imageRef}
         className="absolute inset-0 w-full h-full bg-cover bg-center"
-        style={{ backgroundImage: "url('/images/products-hero.jpg')" }}
+        style={{ backgroundImage: "url('/images/products-hero.webp')" }}
       />
 
       {/* Immersive Dark Gradient Overlays */}

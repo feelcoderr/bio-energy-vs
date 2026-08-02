@@ -45,7 +45,7 @@ export default function ProductsFuture() {
       {/* Clearer, more sophisticated background image */}
       <div
         className="future-bg absolute inset-0 bg-cover bg-center opacity-20 pointer-events-none mix-blend-screen"
-        style={{ backgroundImage: "url('/images/lab-quality.jpg')" }}
+        style={{ backgroundImage: "url('/images/lab-quality.webp')" }}
       />
       <div className="absolute inset-0 bg-gradient-to-b from-primary via-primary/80 to-background pointer-events-none" />
 

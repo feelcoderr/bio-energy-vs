@@ -12,19 +12,19 @@ export default function AboutFounders() {
     {
       name: "Sanyam Shah",
       role: "CEO",
-      image: "/images/founder-1.jpeg",
+      image: "/images/founder-1.webp",
       linkedin: "https://www.linkedin.com/in/sanyam-shah-57b0891bb/",
     },
     {
       name: "Mokshit Shah",
       role: "COO",
-      image: "/images/founder-2.jpeg",
+      image: "/images/founder-2.webp",
       linkedin: "https://www.linkedin.com/in", // User didn't provide this link, but requested the section
     },
     {
       name: "Chetan Jani",
       role: "Associates",
-      image: "/images/founder-3.png",
+      image: "/images/founder-3.webp",
       linkedin: "https://www.linkedin.com/in/janichetankumar/",
     },
   ];

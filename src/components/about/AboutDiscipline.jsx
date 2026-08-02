@@ -95,7 +95,7 @@ export default function AboutDiscipline() {
 
               <div className="mt-12">
                 <img
-                  src="/images/about-discipline-team.jpg"
+                  src="/images/about-discipline-team.webp"
                   alt="Engineering Discipline"
                   className="rounded-[24px] shadow-ambient-lg object-cover w-full h-[300px]"
                 />

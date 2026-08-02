@@ -40,7 +40,7 @@ export default function AboutHero() {
       <div 
         ref={imageRef}
         className="absolute inset-[-10%] w-[120%] h-[120%] bg-cover bg-center"
-        style={{ backgroundImage: "url('/images/about-hero-facility.jpg')" }}
+        style={{ backgroundImage: "url('/images/about-hero-facility.webp')" }}
       />
       
       {/* Gradient Overlay for Text Legibility */}

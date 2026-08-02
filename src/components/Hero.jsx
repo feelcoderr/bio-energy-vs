@@ -113,7 +113,7 @@ export default function Hero() {
       {/* ===== Full Background Image ===== */}
       <div className="absolute inset-0">
         <img
-          src="/images/hero-bg.png"
+          src="/images/hero-bg.webp"
           alt=""
           aria-hidden="true"
           className="w-full h-full object-cover object-center lg:object-right-bottom"

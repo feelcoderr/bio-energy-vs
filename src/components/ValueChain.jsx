@@ -12,7 +12,7 @@ const tiers = [
     id: 1,
     label: "Tier 1 - Bioenergy Commodity",
     badge: "Low Risk, High Volume",
-    image: "/images/tier1-pellets.jpg",
+    image: "/images/tier1-pellets.webp",
     stats: [
       { label: "Margin", value: "15–25%" },
       { label: "Scale", value: "1–12M" },
@@ -39,7 +39,7 @@ const tiers = [
     id: 2,
     label: "Tier 2 - Specialized Biocarbon",
     badge: "Increasing Value, Diversified",
-    image: "/images/tier2-biochar.jpg",
+    image: "/images/tier2-biochar.webp",
     stats: [
       { label: "Margin", value: "30–45%" },
       { label: "Sequestration", value: "High" },
@@ -63,7 +63,7 @@ const tiers = [
     id: 3,
     label: "Tier 3 - Advanced Materials",
     badge: "High Margin, Deep Moats",
-    image: "/images/tier3-graphene.jpg",
+    image: "/images/tier3-graphene.webp",
     stats: [
       { label: "Margin", value: "50–70%+" },
       { label: "Innovation", value: "Spec." },

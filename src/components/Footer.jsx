@@ -6,7 +6,7 @@ export default function Footer() {
       {/* ===== Floating Biocarbon Background Watermarks (Elegant Visible Contrast) ===== */}
       <div className="absolute bottom-[80px] left-[-80px] w-[300px] h-[150px] opacity-[0.8] pointer-events-none z-0 mix-blend-multiply">
         {/* <img
-          src="/images/carbon-graphene-bg.png"
+          src="/images/carbon-graphene-bg.webp"
           alt=""
           aria-hidden="true"
           className="w-full h-full object-contain"
@@ -14,7 +14,7 @@ export default function Footer() {
       </div>
       <div className="absolute top-[150px] right-[-60px] w-[320px] h-[220px] opacity-[0.8] pointer-events-none z-0 mix-blend-multiply">
         <img
-          src="/images/biochar-bg.png"
+          src="/images/biochar-bg.webp"
           alt=""
           aria-hidden="true"
           className="w-full h-full object-contain"
@@ -31,7 +31,7 @@ export default function Footer() {
               aria-label="Ratnanjali BioEnergy home"
             >
               <img
-                src="/images/logo-ratnanjali.png"
+                src="/images/logo-ratnanjali.webp"
                 alt="Ratnanjali BioEnergy"
                 className="h-14 md:h-16 w-auto max-w-[220px] sm:max-w-[260px] transition-transform duration-300 group-hover:scale-105 object-contain"
                 style={{ imageRendering: "-webkit-optimize-contrast" }}

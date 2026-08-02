@@ -132,7 +132,7 @@ export default function CustomCursor() {
         .custom-cursor-dot {
           width: 22px;
           height: 22px;
-          background-image: url('/images/cursor.png');
+          background-image: url('/images/cursor.webp');
           background-size: contain;
           background-position: center;
           background-repeat: no-repeat;

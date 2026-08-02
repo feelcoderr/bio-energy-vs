@@ -61,7 +61,7 @@ export default function ProductsQuality() {
              <div className="relative rounded-3xl overflow-hidden shadow-ambient-lg group">
                 <div 
                   className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
-                  style={{ backgroundImage: "url('/images/lab-quality.jpg')" }}
+                  style={{ backgroundImage: "url('/images/lab-quality.webp')" }}
                 />
                 <div className="absolute inset-0 bg-primary/20 mix-blend-multiply" />
                 

@@ -11,7 +11,7 @@ const products = [
     title: 'Renewable Fuel Pellets',
     subtitle: 'High-Density Industrial Bioenergy',
     desc: 'Engineered for industrial heating, boilers, and thermal energy systems where consistency, combustion efficiency, and reliable fuel quality are essential.',
-    image: '/images/product-pellets.jpg',
+    image: '/images/product-pellets.webp',
     features: ['High Energy Density', 'Low Ash Formation', 'Uniform Size', 'Reliable Industrial Supply'],
     layout: 'left'
   },
@@ -20,7 +20,7 @@ const products = [
     title: 'Industrial & Agricultural Biochar',
     subtitle: 'Carbon Sequestration & Soil Health',
     desc: 'Carbon-rich biochar designed to improve soil performance, support environmental restoration, and provide sustainable carbon solutions for industrial applications.',
-    image: '/images/product-biochar.jpg',
+    image: '/images/product-biochar.webp',
     features: ['Soil Improvement', 'Water Retention', 'Environmental Remediation', 'Carbon Sequestration'],
     layout: 'right'
   },
@@ -29,7 +29,7 @@ const products = [
     title: 'Pyrolysis Oil Platform',
     subtitle: 'Chemical Feedstocks & Thermal Energy',
     desc: 'A renewable bio-oil platform supporting industrial heating, chemical processing, and future bio-based manufacturing through further upgrading and formulation.',
-    image: '/images/product-oil.jpg',
+    image: '/images/product-oil.webp',
     features: ['Industrial Fuel', 'Chemical Feedstocks', 'Resin Alternatives', 'Process Heating'],
     layout: 'left'
   },

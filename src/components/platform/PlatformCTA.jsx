@@ -2,12 +2,20 @@ import { useRef, useState } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { createInquiry } from "../../firebase/services/inquiryService";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function PlatformCTA() {
   const containerRef = useRef(null);
   const [formSubmitted, setFormSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    org: "",
+    message: ""
+  });
 
   useGSAP(
     () => {
@@ -29,9 +37,21 @@ export default function PlatformCTA() {
     { scope: containerRef },
   );
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsSubmitting(true);
+    
+    await createInquiry({
+      intent: "partner",
+      ...formData
+    });
+    
+    setIsSubmitting(false);
     setFormSubmitted(true);
+  };
+
+  const handleChange = (e) => {
+    setFormData(prev => ({ ...prev, [e.target.id]: e.target.value }));
   };
 
   return (
@@ -131,6 +151,8 @@ export default function PlatformCTA() {
                   <input
                     type="text"
                     id="name"
+                    value={formData.name}
+                    onChange={handleChange}
                     required
                     placeholder="Your Full Name"
                     className="w-full bg-white border border-outline-variant/50 rounded-xl px-4 py-3 text-sm font-body focus:outline-none focus:border-surface-tint"
@@ -148,6 +170,8 @@ export default function PlatformCTA() {
                     <input
                       type="email"
                       id="email"
+                      value={formData.email}
+                      onChange={handleChange}
                       required
                       placeholder="Your Email Address"
                       className="w-full bg-white border border-outline-variant/50 rounded-xl px-4 py-3 text-sm font-body focus:outline-none focus:border-surface-tint"
@@ -163,6 +187,8 @@ export default function PlatformCTA() {
                     <input
                       type="text"
                       id="org"
+                      value={formData.org}
+                      onChange={handleChange}
                       required
                       placeholder="Your Organization / Company"
                       className="w-full bg-white border border-outline-variant/50 rounded-xl px-4 py-3 text-sm font-body focus:outline-none focus:border-surface-tint"
@@ -179,6 +205,8 @@ export default function PlatformCTA() {
                   </label>
                   <textarea
                     id="message"
+                    value={formData.message}
+                    onChange={handleChange}
                     rows={4}
                     required
                     placeholder="Your Project Scope or Message..."
@@ -188,9 +216,10 @@ export default function PlatformCTA() {
 
                 <button
                   type="submit"
-                  className="btn-primary w-full justify-center text-xs uppercase tracking-widest py-4 mt-2"
+                  disabled={isSubmitting}
+                  className="btn-primary w-full justify-center text-xs uppercase tracking-widest py-4 mt-2 disabled:opacity-70"
                 >
-                  Submit Briefing Request
+                  {isSubmitting ? "Submitting..." : "Submit Briefing Request"}
                 </button>
               </form>
             )}

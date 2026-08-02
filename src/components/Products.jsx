@@ -6,37 +6,37 @@ const products = [
     name: "Fuel Pellets",
     description:
       "Clean, consistent energy for industrial boilers and heat applications. High calorific value with low ash content.",
-    image: "/images/fuel-pellets.png",
+    image: "/images/fuel-pellets.webp",
   },
   {
     name: "Biochar",
     description:
       "Premium soil amendment and carbon sequestration agent for healthier soils and verified climate impact.",
-    image: "/images/biochar.png",
+    image: "/images/biochar.webp",
   },
   {
     name: "Slow-Release Fertilizer",
     description:
       "Biochar enhanced fertilizer that boosts crop yield while reducing nutrient runoff and loss.",
-    image: "/images/slow-release-fertilizer.png",
+    image: "/images/slow-release-fertilizer.webp",
   },
   {
     name: "Filtration Media",
     description:
       "High performance activated carbon media for water treatment and industrial filtration systems.",
-    image: "/images/filter-media.png",
+    image: "/images/filter-media.webp",
   },
   {
     name: "Pyrolysis Oil Derivatives",
     description:
       "Valuable chemical fractions for fuels, solvents, and industrial process feedstocks.",
-    image: "/images/pyrolysis-oil.png",
+    image: "/images/pyrolysis-oil.webp",
   },
   {
     name: "Carbon & Graphene Derivatives",
     description:
       "Advanced carbon nanomaterials for high tech, energy storage, and industrial applications.",
-    image: "/images/carbon-graphene.png",
+    image: "/images/carbon-graphene.webp",
   },
 ];
 

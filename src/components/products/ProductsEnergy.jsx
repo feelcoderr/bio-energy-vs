@@ -6,7 +6,7 @@ const products = [
     title: 'Biomass Fuel Pellets',
     subtitle: 'High-Density Industrial Bioenergy',
     desc: 'High-density biomass pellets manufactured for industrial boilers, furnaces, and thermal energy systems requiring reliable, efficient, and sustainable fuel.',
-    image: '/images/product-pellets.jpg',
+    image: '/images/product-pellets.webp',
     features: ['High Calorific Value', 'Uniform Pellet Density', 'Low Moisture Content', 'Low Ash Generation'],
   },
   {
@@ -14,7 +14,7 @@ const products = [
     title: 'Pyrolysis Oil',
     subtitle: 'Renewable Liquid Fuel Platform',
     desc: 'A renewable liquid fuel produced during controlled biomass conversion, suitable for industrial heating, thermal processing, and further upgrading.',
-    image: '/images/product-oil.jpg',
+    image: '/images/product-oil.webp',
     features: ['Industrial Boiler Fuel', 'Chemical Feedstocks', 'Asphalt Modification', 'Process Heating'],
   },
   {
@@ -22,7 +22,7 @@ const products = [
     title: 'Process Syngas',
     subtitle: 'Integrated Thermal Recovery',
     desc: 'Combustible process gas generated during pyrolysis and recovered for internal energy integration or industrial heating applications, improving efficiency.',
-    image: '/images/product-syngas.jpg',
+    image: '/images/product-syngas.webp',
     features: ['Process Energy', 'Thermal Recovery', 'Heat Generation', 'Efficiency Improvement'],
   },
 ];

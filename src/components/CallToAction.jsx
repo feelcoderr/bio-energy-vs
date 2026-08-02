@@ -32,7 +32,7 @@ export default function CallToAction() {
       <div
         className="absolute inset-0 bg-cover bg-center transition-transform duration-[2000ms] ease-out"
         style={{
-          backgroundImage: "url('/images/cta-bg-biorefinery.jpg')",
+          backgroundImage: "url('/images/cta-bg-biorefinery.webp')",
           transform: isVisible ? "scale(1.03)" : "scale(1)",
         }}
       />

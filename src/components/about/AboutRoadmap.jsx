@@ -98,7 +98,7 @@ export default function AboutRoadmap() {
       {/* Background Image */}
       <div
         className="absolute inset-0 bg-cover bg-center opacity-30 mix-blend-overlay"
-        style={{ backgroundImage: "url('/images/about-carbon-cycle.jpg')" }}
+        style={{ backgroundImage: "url('/images/about-carbon-cycle.webp')" }}
       />
       <div className="absolute inset-0 bg-gradient-to-b from-primary/90 via-primary/50 to-primary/90" />
 

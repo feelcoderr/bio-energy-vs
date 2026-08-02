@@ -168,7 +168,7 @@ export default function PlatformBenefits() {
       {/* ===== Full Background Image ===== */}
       <div className="absolute inset-0">
         <img
-          src="/images/platform-bg.png"
+          src="/images/platform-bg.webp"
           alt=""
           aria-hidden="true"
           className="w-full h-full object-cover"

@@ -94,7 +94,7 @@ export default function Navbar() {
           >
             <img
               className="h-12 sm:h-14 md:h-16 w-auto max-w-[200px] sm:max-w-[260px] object-contain transition-transform duration-300 group-hover:scale-105"
-              src="/images/logo-ratnanjali.png"
+              src="/images/logo-ratnanjali.webp"
               alt="Ratnanjali BioEnergy"
               style={{ imageRendering: "-webkit-optimize-contrast" }}
             />
@@ -269,7 +269,7 @@ export default function Navbar() {
         <div className="h-20 shrink-0 border-b border-outline-variant/20 flex items-center justify-between px-6 bg-surface-container-lowest">
           <Link to="/" onClick={closeMobile} className="flex items-center gap-2.5 group">
             <img
-              src="/images/logo-ratnanjali.png"
+              src="/images/logo-ratnanjali.webp"
               alt="Ratnanjali BioEnergy"
               className="h-12 w-auto max-w-[180px] object-contain transition-transform duration-300 group-hover:scale-105"
               style={{ imageRendering: "-webkit-optimize-contrast" }}

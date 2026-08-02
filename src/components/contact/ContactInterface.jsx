@@ -11,9 +11,14 @@ export default function ContactInterface() {
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
-    name: "", email: "", message: "",
-    org: "", interestArea: "",
-    residueType: "", volume: "", targetProduct: ""
+    name: "",
+    email: "",
+    message: "",
+    org: "",
+    interestArea: "",
+    residueType: "",
+    volume: "",
+    targetProduct: "",
   });
   const containerRef = useRef(null);
 
@@ -51,23 +56,28 @@ export default function ContactInterface() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     await createInquiry({
       intent,
-      ...formData
+      ...formData,
     });
-    
+
     setIsSubmitting(false);
     setFormSubmitted(true);
     setFormData({
-      name: "", email: "", message: "",
-      org: "", interestArea: "",
-      residueType: "", volume: "", targetProduct: ""
+      name: "",
+      email: "",
+      message: "",
+      org: "",
+      interestArea: "",
+      residueType: "",
+      volume: "",
+      targetProduct: "",
     });
   };
 
   const handleChange = (e) => {
-    setFormData(prev => ({ ...prev, [e.target.name]: e.target.value }));
+    setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
   return (
@@ -88,7 +98,8 @@ export default function ContactInterface() {
             Connect With Us
           </h2>
           <p className="font-body text-base text-on-surface-variant leading-relaxed">
-            Select your primary interest below and our dedicated team will route your inquiry to the right specialists.
+            Select your primary interest below and our dedicated team will route
+            your inquiry to the right specialists.
           </p>
         </div>
 
@@ -142,7 +153,7 @@ export default function ContactInterface() {
           {/* Dynamic Form Column (Left - 7 cols) */}
           <div className="lg:col-span-7 bg-white/70 backdrop-blur-2xl border border-white/60 rounded-[2rem] md:rounded-[2.5rem] p-6 sm:p-8 md:p-12 shadow-[0_20px_40px_rgb(0,0,0,0.03)] flex flex-col justify-between hover:shadow-[0_20px_40px_rgb(0,0,0,0.06)] transition-all duration-500 relative overflow-hidden group">
             <div className="absolute inset-0 bg-gradient-to-br from-white/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
-            
+
             {formSubmitted ? (
               <div className="text-center py-20 flex-grow flex flex-col justify-center items-center relative z-10">
                 <div className="w-20 h-20 bg-surface-tint/10 text-surface-tint rounded-full flex items-center justify-center mb-8 shadow-inner">
@@ -164,8 +175,9 @@ export default function ContactInterface() {
                   Inquiry Logged
                 </h3>
                 <p className="font-body text-base text-on-surface-variant leading-relaxed max-w-md">
-                  Your details have been securely submitted to the Ratnanjali Bioenergy team.
-                  We prioritize direct routing and will contact you shortly.
+                  Your details have been securely submitted to the Ratnanjali
+                  Bioenergy team. We prioritize direct routing and will contact
+                  you shortly.
                 </p>
                 <button
                   onClick={() => setFormSubmitted(false)}
@@ -270,13 +282,33 @@ export default function ContactInterface() {
                               className="w-full bg-white/50 backdrop-blur-sm border border-outline-variant/30 rounded-2xl px-5 py-4 text-sm font-body text-primary focus:outline-none focus:border-surface-tint/50 focus:bg-white focus:ring-4 focus:ring-surface-tint/10 transition-all duration-300 appearance-none shadow-sm cursor-pointer"
                               required
                             >
-                              <option value="" disabled hidden>Select Interest Area</option>
-                              <option value="Equity Capital Investment">Equity Capital Investment</option>
-                              <option value="Blueprint Licensing & IP">Blueprint Licensing & IP</option>
-                              <option value="Joint Project Development">Joint Project Development</option>
+                              <option value="" disabled hidden>
+                                Select Interest Area
+                              </option>
+                              <option value="Equity Capital Investment">
+                                Equity Capital Investment
+                              </option>
+                              <option value="Blueprint Licensing & IP">
+                                Blueprint Licensing & IP
+                              </option>
+                              <option value="Joint Project Development">
+                                Joint Project Development
+                              </option>
                             </select>
                             <div className="absolute inset-y-0 right-0 flex items-center px-4 pointer-events-none text-on-surface-variant/50">
-                              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
+                              <svg
+                                className="w-4 h-4"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                              >
+                                <path
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                  strokeWidth="2"
+                                  d="M19 9l-7 7-7-7"
+                                ></path>
+                              </svg>
                             </div>
                           </div>
                         </div>
@@ -301,14 +333,36 @@ export default function ContactInterface() {
                               required
                               className="w-full bg-white/50 backdrop-blur-sm border border-outline-variant/30 rounded-2xl px-5 py-4 text-sm font-body text-primary focus:outline-none focus:border-surface-tint/50 focus:bg-white focus:ring-4 focus:ring-surface-tint/10 transition-all duration-300 appearance-none shadow-sm cursor-pointer"
                             >
-                              <option value="" disabled hidden>Select Residue Type</option>
-                              <option value="Rice Husk / Straw">Rice Husk / Straw</option>
-                              <option value="Sugarcane Bagasse">Sugarcane Bagasse</option>
-                              <option value="Forestry Offcuts / Sawdust">Forestry Offcuts / Sawdust</option>
-                              <option value="Wheat Straw / Stalks">Wheat Straw / Stalks</option>
+                              <option value="" disabled hidden>
+                                Select Residue Type
+                              </option>
+                              <option value="Rice Husk / Straw">
+                                Rice Husk / Straw
+                              </option>
+                              <option value="Sugarcane Bagasse">
+                                Sugarcane Bagasse
+                              </option>
+                              <option value="Forestry Offcuts / Sawdust">
+                                Forestry Offcuts / Sawdust
+                              </option>
+                              <option value="Wheat Straw / Stalks">
+                                Wheat Straw / Stalks
+                              </option>
                             </select>
                             <div className="absolute inset-y-0 right-0 flex items-center px-4 pointer-events-none text-on-surface-variant/50">
-                              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
+                              <svg
+                                className="w-4 h-4"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                              >
+                                <path
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                  strokeWidth="2"
+                                  d="M19 9l-7 7-7-7"
+                                ></path>
+                              </svg>
                             </div>
                           </div>
                         </div>
@@ -351,14 +405,36 @@ export default function ContactInterface() {
                               required
                               className="w-full bg-white/50 backdrop-blur-sm border border-outline-variant/30 rounded-2xl px-5 py-4 text-sm font-body text-primary focus:outline-none focus:border-surface-tint/50 focus:bg-white focus:ring-4 focus:ring-surface-tint/10 transition-all duration-300 appearance-none shadow-sm cursor-pointer"
                             >
-                              <option value="" disabled hidden>Select Target Product</option>
-                              <option value="Biomass Fuel Pellets">Biomass Fuel Pellets</option>
-                              <option value="Agricultural Biochar">Agricultural Biochar</option>
-                              <option value="Activated Carbon Media">Activated Carbon Media</option>
-                              <option value="Pyrolysis Bio-oil">Pyrolysis Bio-oil</option>
+                              <option value="" disabled hidden>
+                                Select Target Product
+                              </option>
+                              <option value="Biomass Fuel Pellets">
+                                Biomass Fuel Pellets
+                              </option>
+                              <option value="Agricultural Biochar">
+                                Agricultural Biochar
+                              </option>
+                              <option value="Activated Carbon Media">
+                                Activated Carbon Media
+                              </option>
+                              <option value="Pyrolysis Bio-oil">
+                                Pyrolysis Bio-oil
+                              </option>
                             </select>
                             <div className="absolute inset-y-0 right-0 flex items-center px-4 pointer-events-none text-on-surface-variant/50">
-                              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
+                              <svg
+                                className="w-4 h-4"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                              >
+                                <path
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                  strokeWidth="2"
+                                  d="M19 9l-7 7-7-7"
+                                ></path>
+                              </svg>
                             </div>
                           </div>
                         </div>
@@ -459,9 +535,12 @@ export default function ContactInterface() {
                     </svg>
                   </div>
                   <span className="mt-1">
-                    201&amp;202 Ratnanjali Square,<br />
-                    Near Gloriya Restaurant,<br />
-                    Bodakdev, Ahmedabad,<br />
+                    201&amp;202 Ratnanjali Square,
+                    <br />
+                    Near Gloriya Restaurant,
+                    <br />
+                    Bodakdev, Ahmedabad,
+                    <br />
                     Gujarat – 380054, India
                   </span>
                 </div>
@@ -485,7 +564,7 @@ export default function ContactInterface() {
                     </div>
                     <div>
                       <span className="block text-[10px] font-bold uppercase tracking-wider text-primary/60 mb-0.5">
-                        General Inquiry
+                        Inquiry
                       </span>
                       <a
                         href="mailto:info@ratnanjalibioenergy.com"
@@ -495,7 +574,7 @@ export default function ContactInterface() {
                       </a>
                     </div>
                   </div>
-                  <div className="flex items-center gap-4">
+                  {/* <div className="flex items-center gap-4">
                     <div className="w-10 h-10 rounded-full bg-surface-container-low flex items-center justify-center shrink-0">
                       <svg
                         className="w-5 h-5 text-surface-tint"
@@ -522,14 +601,14 @@ export default function ContactInterface() {
                         logistics@ratnanjalibioenergy.com
                       </a>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>
 
             {/* Direct Phone & Instant Connect Card */}
             <div className="bg-gradient-to-br from-primary to-surface-tint text-white rounded-[2rem] md:rounded-[2.5rem] p-6 sm:p-8 md:p-10 shadow-[0_20px_40px_rgba(100,128,50,0.2)] relative overflow-hidden group">
-              <div className="absolute inset-0 bg-[url('/images/biochar-bg.png')] opacity-10 mix-blend-overlay group-hover:scale-110 transition-transform duration-1000" />
+              <div className="absolute inset-0 bg-[url('/images/biochar-bg.webp')] opacity-10 mix-blend-overlay group-hover:scale-110 transition-transform duration-1000" />
               <div className="relative z-10">
                 <span className="text-[10px] font-body font-bold uppercase tracking-widest text-white/70 block mb-3">
                   Direct Line & WhatsApp
@@ -568,10 +647,7 @@ export default function ContactInterface() {
                     rel="noopener noreferrer"
                     className="flex-1 inline-flex items-center justify-center gap-2.5 bg-[#25D366] text-white font-body text-sm font-semibold px-6 py-4 rounded-2xl hover:brightness-110 transition-all duration-300 shadow-lg shadow-[#25D366]/30 hover:-translate-y-1"
                   >
-                    <svg
-                      className="w-5 h-5 fill-current"
-                      viewBox="0 0 32 32"
-                    >
+                    <svg className="w-5 h-5 fill-current" viewBox="0 0 32 32">
                       <path d="M16.004 3.2C9.158 3.2 3.6 8.758 3.6 15.604c0 2.186.574 4.324 1.666 6.204L3.2 28.8l7.18-2.014a12.342 12.342 0 005.624 1.35c6.846 0 12.396-5.558 12.396-12.404S22.85 3.2 16.004 3.2zm0 22.608a10.17 10.17 0 01-5.184-1.414l-.372-.22-3.858 1.082 1.024-3.752-.244-.386a10.12 10.12 0 01-1.57-5.514c0-5.622 4.576-10.198 10.204-10.198 5.626 0 10.196 4.576 10.196 10.198 0 5.624-4.57 10.204-10.196 10.204zm5.594-7.638c-.306-.154-1.814-.896-2.096-.998-.28-.1-.486-.154-.69.154-.204.306-.792.998-.972 1.204-.178.204-.358.23-.664.076-.306-.154-1.294-.476-2.464-1.52-.91-.812-1.526-1.814-1.706-2.12-.178-.306-.02-.472.134-.624.138-.138.306-.358.46-.538.154-.178.204-.306.306-.51.102-.204.052-.382-.026-.536-.076-.154-.69-1.662-.944-2.274-.25-.598-.502-.518-.69-.526-.178-.01-.382-.012-.586-.012-.204 0-.536.076-.816.382-.282.306-1.074 1.05-1.074 2.56s1.1 2.968 1.252 3.172c.154.204 2.162 3.3 5.24 4.628.732.316 1.304.504 1.75.646.736.234 1.406.2 1.934.122.59-.088 1.814-.742 2.07-1.458.256-.716.256-1.33.178-1.458-.076-.128-.28-.204-.586-.358z" />
                     </svg>
                     WhatsApp Chat

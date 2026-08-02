@@ -6,7 +6,7 @@ const products = [
     title: 'Agricultural Biochar',
     subtitle: 'Soil Health & Sequestration',
     desc: 'Engineered biochar designed to improve soil fertility, water retention, microbial activity, and long-term carbon storage. A foundational tool for regenerative agriculture.',
-    image: '/images/product-biochar.jpg',
+    image: '/images/product-biochar.webp',
     features: ['Carbon Sequestration', 'Moisture Retention', 'Regenerative Agriculture', 'Sustainable Farming'],
   },
   {
@@ -14,7 +14,7 @@ const products = [
     title: 'Biochar-Based Fertilizer',
     subtitle: 'Slow-Release Nutrient Delivery',
     desc: 'A biochar-enhanced nutrient delivery solution that improves fertilizer efficiency while minimizing nutrient loss and environmental runoff, leading to higher crop productivity.',
-    image: '/images/product-pellets.jpg',
+    image: '/images/product-pellets.webp',
     features: ['Improved Nutrient Availability', 'Reduced Leaching', 'Enhanced Root Development', 'Higher Productivity'],
   },
   {
@@ -22,7 +22,7 @@ const products = [
     title: 'Activated Carbon & Filter Media',
     subtitle: 'Industrial Purification & Adsorption',
     desc: 'Specialized high-surface-area filtration media engineered for water purification, wastewater treatment, odor removal, and environmental remediation systems.',
-    image: '/images/product-filter.jpg',
+    image: '/images/product-filter.webp',
     features: ['Water Purification', 'Air Filtration', 'Industrial Adsorption', 'Pollution Control'],
   },
 ];

@@ -20,7 +20,7 @@ export default function About() {
       <AboutProblem />
       <AboutPhilosophy />
       <AboutFounders />
-      <AboutCollaboration />
+      {/* <AboutCollaboration /> */}
       <AboutRoadmap />
       <AboutDiscipline />
       {/* Reusing existing CTA which was redesigned to match this theme perfectly */}
