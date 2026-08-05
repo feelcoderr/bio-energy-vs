@@ -204,7 +204,7 @@ export default function Footer() {
                 </svg>
               </a>
               <a
-                href="https://linkedin.com"
+                href=" https://www.linkedin.com/company/ratnanjali-bioenergy"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-on-surface-variant hover:text-primary transition-colors"
@@ -238,15 +238,24 @@ export default function Footer() {
             reserved.
           </p>
           <div className="flex gap-4 text-xs text-on-surface-variant font-body">
-            <Link to="/contact" className="hover:text-primary transition-colors">
+            <Link
+              to="/contact"
+              className="hover:text-primary transition-colors"
+            >
               Privacy Policy
             </Link>
             <span>|</span>
-            <Link to="/contact" className="hover:text-primary transition-colors">
+            <Link
+              to="/contact"
+              className="hover:text-primary transition-colors"
+            >
               Terms of Use
             </Link>
             <span>|</span>
-            <Link to="/contact" className="hover:text-primary transition-colors">
+            <Link
+              to="/contact"
+              className="hover:text-primary transition-colors"
+            >
               Cookie Settings
             </Link>
           </div>
