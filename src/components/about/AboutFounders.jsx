@@ -19,13 +19,19 @@ export default function AboutFounders() {
       name: "Mokshit Shah",
       role: "COO",
       image: "/images/founder-2.webp",
-      linkedin: "https://www.linkedin.com/in", // User didn't provide this link, but requested the section
+      linkedin: "https://www.linkedin.com/in/", // User didn't provide this link, but requested the section
     },
     {
       name: "Chetan Jani",
       role: "Associates",
       image: "/images/founder-3.webp",
       linkedin: "https://www.linkedin.com/in/janichetankumar/",
+    },
+    {
+      name: "Ramesh Bhujade",
+      role: "Non-Executive Director - Technical",
+      image: "/images/founder-4.jpeg",
+      linkedin: "https://www.linkedin.com/in",
     },
   ];
 
@@ -73,7 +79,7 @@ export default function AboutFounders() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {founders.map((founder, index) => (
             <div key={index} className="founder-card group">
               <div className="relative mb-6 rounded-3xl overflow-hidden aspect-[4/5] bg-surface-container-low shadow-ambient-sm transition-transform duration-500 group-hover:-translate-y-2 group-hover:shadow-ambient">
