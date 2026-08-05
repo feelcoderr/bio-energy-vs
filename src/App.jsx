@@ -8,6 +8,8 @@ import Platform from "./pages/Platform";
 import Ecosystem from "./pages/Ecosystem";
 import Careers from "./pages/Careers";
 import Contact from "./pages/Contact";
+import Terms from "./pages/Terms";
+import Privacy from "./pages/Privacy";
 import CustomCursor from "./components/CustomCursor";
 import WhatsAppButton from "./components/WhatsAppButton";
 import ScrollToTop from "./components/ScrollToTop";
@@ -47,6 +49,8 @@ function App() {
             <Route path="/ecosystem" element={<Ecosystem />} />
             <Route path="/careers" element={<Careers />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/terms" element={<Terms />} />
+            <Route path="/privacy" element={<Privacy />} />
           </Route>
 
           {/* Admin Routes (No Navbar/Footer) */}
