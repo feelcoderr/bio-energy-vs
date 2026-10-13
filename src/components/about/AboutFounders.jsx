@@ -21,12 +21,12 @@ export default function AboutFounders() {
       image: "/images/founder-2.webp",
       linkedin: "https://www.linkedin.com/in/", // User didn't provide this link, but requested the section
     },
-    {
-      name: "Chetan Jani",
-      role: "Associates",
-      image: "/images/founder-3.webp",
-      linkedin: "https://www.linkedin.com/in/janichetankumar/",
-    },
+    // {
+    //   name: "Chetan Jani",
+    //   role: "Associates",
+    //   image: "/images/founder-3.webp",
+    //   linkedin: "https://www.linkedin.com/in/janichetankumar/",
+    // },
     {
       name: "Ramesh Bhujade",
       role: "Non-Executive Director - Technical",
