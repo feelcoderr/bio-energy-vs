@@ -79,7 +79,7 @@ export default function AboutFounders() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-8 lg:gap-12">
           {founders.map((founder, index) => (
             <div key={index} className="founder-card group">
               <div className="relative mb-6 rounded-3xl overflow-hidden aspect-[4/5] bg-surface-container-low shadow-ambient-sm transition-transform duration-500 group-hover:-translate-y-2 group-hover:shadow-ambient">
